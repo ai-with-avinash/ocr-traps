@@ -6,7 +6,6 @@ Captures accuracy, latency, throughput, cost, and structured extraction quality.
 ## Quick Start
 
 ### macOS / Linux
-
 ```bash
 # 1. Clone and setup
 git clone <your-repo-url>
@@ -21,23 +20,19 @@ source venv/bin/activate
 cp .env.example .env
 # Edit .env with your API keys
 
-# 4. Setup HuggingFace (see section below)
-huggingface-cli login
+# 4. Test dataset is already included — verify it's there
+ls test-dataset/
 
-# 5. Download test documents
-python download_dataset.py --output-dir ./test-dataset --samples 5
-
-# 6. Run evaluations
+# 5. Run evaluations
 python run_single.py --model tesseract --input test-dataset/02_complex_tables/forms/0012199830.png
 python run_model.py --model azure_adi
 python run_batch.py
 
-# 7. Generate report
+# 6. Generate report
 python evaluate.py --results-dir results/latest
 ```
 
 ### Windows
-
 ```powershell
 # 1. Clone and setup
 git clone <your-repo-url>
@@ -58,19 +53,37 @@ pip install -r requirements.txt
 copy .env.example .env
 # Edit .env with your API keys
 
-# 6. Setup HuggingFace (see section below)
-huggingface-cli login
+# 6. Test dataset is already included — verify it's there
+dir test-dataset
 
-# 7. Download test documents
-python download_dataset.py --output-dir ./test-dataset --samples 5
-
-# 8. Run evaluations
+# 7. Run evaluations
 python run_single.py --model tesseract --input test-dataset/02_complex_tables/forms/0012199830.png
 python run_model.py --model azure_adi
 python run_batch.py
 
-# 9. Generate report
+# 8. Generate report
 python evaluate.py --results-dir results/latest
+```
+
+## Test Dataset
+
+The curated test dataset (110-160 documents) is committed to the repo under `test-dataset/`. **No need to run the download script** — just clone the repo and you're ready to go.
+
+The dataset covers:
+- Printed English (invoices, contracts, reports)
+- Complex tables & layouts (financial, forms, nested)
+- Handwritten (English + Indian languages)
+- Indian languages (Hindi, Telugu, Tamil, Bengali)
+- European languages (Spanish, French, German)
+- Low quality scans (faded, skewed, noisy)
+- Mixed content (images, equations, receipts)
+- Organization internal documents
+
+Ground truth files are in `test-dataset/ground_truth/` and are automatically matched by the framework during evaluation.
+
+To add more documents later, you can still run:
+```bash
+python download_dataset.py --output-dir ./test-dataset --samples 5
 ```
 
 ## Models Supported (14)
@@ -94,31 +107,28 @@ python evaluate.py --results-dir results/latest
 
 ## Prerequisites
 
-### HuggingFace Setup (Required for Dataset Download)
+### HuggingFace Setup (Optional — only if adding more datasets)
 
-Several test datasets are hosted on HuggingFace and require authentication. Each team member needs to do this **once**:
+The test dataset is already committed to the repo. HuggingFace login is only needed if you want to download additional documents using the download script.
 
 1. Create a free account at https://huggingface.co/join
 2. Go to https://huggingface.co/settings/tokens
 3. Click **"New token"** → name it anything → select **"Read"** access → create
 4. In your terminal:
-   ```bash
+```bash
    pip install huggingface_hub
    huggingface-cli login
    # Paste your token when prompted
-   ```
+```
 5. Some datasets are **"gated"** — visit these pages and click **"Accept"** if prompted:
    - https://huggingface.co/datasets/getomni/ocr-benchmark
    - https://huggingface.co/datasets/unstructured-io/SCORE-Bench
    - https://huggingface.co/datasets/aharley/rvl_cdip
 
-After this, `python download_dataset.py` will work without auth errors.
-
 ### Cloud API Keys
 
 API keys are stored in `.env` (gitignored) and automatically loaded at runtime.
 Copy `.env.example` to `.env` and fill in your credentials:
-
 ```bash
 # macOS / Linux
 cp .env.example .env
@@ -132,7 +142,6 @@ Non-secret settings (model IDs, regions, languages) remain in `configs/config.ya
 ## First Run Checklist (Verified ✅)
 
 After setup, validate the pipeline works with this exact command:
-
 ```bash
 python run_single.py --model tesseract --input test-dataset/02_complex_tables/forms/0012199830.png
 ```
@@ -140,7 +149,6 @@ python run_single.py --model tesseract --input test-dataset/02_complex_tables/fo
 **Expected output:** ~495 chars extracted, CER ~0.53, latency ~4000ms
 
 Then test a cloud model (requires Mistral API key in `.env`):
-
 ```bash
 python run_single.py --model mistral_ocr --input test-dataset/02_complex_tables/forms/0012199830.png
 ```
@@ -168,7 +176,6 @@ Each member should:
 5. Log results in `docs/OCR_Test_Dataset_Tracker_v2.xlsx`
 
 ## Usage
-
 ```bash
 # List all available models
 python run_batch.py --list
@@ -218,11 +225,11 @@ python evaluate.py --results-dir results/latest --export-csv
 - **Tesseract multi-lang garbling**: Setting `lang: eng+hin+tel+tam+ben` can cause English text to be misread as Indic scripts. Use `lang: eng` for English-only documents in `configs/config.yaml`
 - **HuggingFace 401 errors**: Run `huggingface-cli login` and accept gated dataset terms (see Prerequisites section above)
 - **IndicPhotoOCR download fails**: The download script may fail for some image URLs. Clone the repo manually instead:
-  ```bash
+```bash
   git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git /tmp/IndicPhotoOCR
   cp /tmp/IndicPhotoOCR/test_images/*.jpg test-dataset/04_indian_languages/hindi/
   rm -rf /tmp/IndicPhotoOCR
-  ```
+```
 - **PaddleOCR on Apple Silicon**: If you get GPU errors, set `use_gpu: false` in `configs/config.yaml` under the `paddleocr` section
 - **Large VLM models (DeepSeek, Qwen, olmOCR)**: First run downloads several GB of model weights. Ensure sufficient disk space and a stable internet connection
 
@@ -234,11 +241,10 @@ python evaluate.py --results-dir results/latest --export-csv
 | [docs/OCR_Test_Dataset_Tracker_v2.xlsx](docs/OCR_Test_Dataset_Tracker_v2.xlsx) | Test dataset tracker — document inventory, model registry, metrics guide, team assignments, references |
 
 ## Project Structure
-
 ```
 ocr-eval-framework/
 ├── setup_env.sh              # Environment setup script (macOS/Linux)
-├── download_dataset.py       # Download test documents
+├── download_dataset.py       # Download additional test documents
 ├── requirements.txt          # Python dependencies
 ├── .env.example              # API key template (copy to .env)
 ├── docs/
@@ -272,6 +278,6 @@ ocr-eval-framework/
 ├── run_model.py              # One model + all documents
 ├── run_batch.py              # All models + all documents
 ├── evaluate.py               # Compute metrics + generate report
-├── test-dataset/             # Downloaded test documents (gitignored)
+├── test-dataset/             # Curated test documents (committed to repo)
 └── results/                  # Evaluation results (gitignored)
 ```
