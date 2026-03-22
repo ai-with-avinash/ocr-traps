@@ -12,9 +12,6 @@ configs/config.local.yaml
 # Results (large, regenerable)
 results/
 
-# Downloaded datasets (large)
-test-dataset/
-
 # Temp
 _tmp_*/
 *.log
