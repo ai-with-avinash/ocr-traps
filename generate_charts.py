@@ -62,12 +62,18 @@ def load_data():
     with open('results/expanded_gt_metrics/model_summaries.json') as f:
         summaries = json.load(f)
 
-    return rows, summaries
+    with open('results/expanded_gt_metrics/corpus_summary.json') as f:
+        corpus_summary = json.load(f)
+
+    with open('results/expanded_gt_metrics/statistical_tests.json') as f:
+        statistical_tests = json.load(f)
+
+    return rows, summaries, corpus_summary, statistical_tests
 
 
-def fig1_f1_comparison(rows, summaries):
+def fig1_f1_comparison(rows, summaries, corpus_summary):
     """Bar chart of avg F1 by model (expanded GT)."""
-    models = ['tesseract', 'mistral_ocr', 'surya', 'sarvam_ocr', 'docling', 'got_ocr']
+    models = ['tesseract', 'mistral_ocr', 'surya', 'sarvam_ocr', 'docling']
     # Use non-circular metrics for Mistral (forms only)
     f1_vals = []
     ns = []
@@ -95,7 +101,8 @@ def fig1_f1_comparison(rows, summaries):
                 ha='center', va='bottom', fontsize=9)
 
     ax.set_ylabel('Average F1 Score')
-    ax.set_title('Token-Level F1 by Model (Expanded GT, 45 docs)')
+    gt_total = corpus_summary['ground_truth']['total_documents']
+    ax.set_title(f'Token-Level F1 by Phase 1 Model (GT-evaluable docs, n={gt_total})')
     ax.set_xticks(x)
     ax.set_xticklabels([DISPLAY_NAMES[m] for m in models], rotation=15, ha='right')
     ax.set_ylim(0, 1.1)
@@ -107,7 +114,7 @@ def fig1_f1_comparison(rows, summaries):
     print('  fig1_f1_comparison.png')
 
 
-def fig2_cer_comparison(rows, summaries):
+def fig2_cer_comparison(rows, summaries, corpus_summary):
     """Bar chart of avg CER by model."""
     models = ['tesseract', 'surya', 'sarvam_ocr', 'docling', 'paddleocr']
     # Exclude Mistral (circular) and GOT-OCR (off-scale CER=4.76)
@@ -123,7 +130,8 @@ def fig2_cer_comparison(rows, summaries):
                 f'{val:.3f}\n(n={n})', ha='center', va='bottom', fontsize=9)
 
     ax.set_ylabel('Average CER (lower is better)')
-    ax.set_title('Character Error Rate by Model (Expanded GT)')
+    gt_total = corpus_summary['ground_truth']['total_documents']
+    ax.set_title(f'Character Error Rate by Model (GT-evaluable docs, n={gt_total})')
     ax.set_xticks(x)
     ax.set_xticklabels([DISPLAY_NAMES[m] for m in models], rotation=15, ha='right')
     ax.set_ylim(0, max(vals) * 1.3)
@@ -136,7 +144,7 @@ def fig2_cer_comparison(rows, summaries):
 
 def fig3_category_f1_heatmap(rows):
     """Heatmap of F1 by model x category."""
-    models = ['tesseract', 'surya', 'sarvam_ocr', 'docling', 'got_ocr']
+    models = ['tesseract', 'surya', 'sarvam_ocr', 'docling']
     categories = [
         '02_complex_tables/financial',
         '02_complex_tables/forms',
@@ -173,7 +181,7 @@ def fig3_category_f1_heatmap(rows):
                 ax.text(j, i, f'{val:.3f}', ha='center', va='center', fontsize=9, color=color)
 
     plt.colorbar(im, ax=ax, label='F1 Score')
-    ax.set_title('F1 Score by Model and Category (Expanded GT)')
+    ax.set_title('Category-wise F1 by Phase 1 Model (Non-circular comparisons)')
     fig.savefig(FIGURES_DIR / 'fig3_category_heatmap.png')
     plt.close(fig)
     print('  fig3_category_heatmap.png')
@@ -181,7 +189,7 @@ def fig3_category_f1_heatmap(rows):
 
 def fig4_error_decomposition(summaries):
     """Stacked bar chart of S/I/D error profiles."""
-    models = ['tesseract', 'mistral_ocr', 'surya', 'sarvam_ocr', 'docling', 'got_ocr']
+    models = ['tesseract', 'mistral_ocr', 'surya', 'sarvam_ocr', 'docling']
     models = [m for m in models if m in summaries]
 
     fig, ax = plt.subplots(figsize=(9, 5))
@@ -202,7 +210,7 @@ def fig4_error_decomposition(summaries):
         ax.text(i, 102, f'n={summaries[m]["n"]}\n{total:,}', ha='center', va='bottom', fontsize=7)
 
     ax.set_ylabel('Error Composition (%)')
-    ax.set_title('Error Decomposition: Substitution / Insertion / Deletion')
+    ax.set_title('Error Decomposition by Phase 1 Model')
     ax.set_xticks(x)
     ax.set_xticklabels([DISPLAY_NAMES[m] for m in models], rotation=15, ha='right')
     ax.set_ylim(0, 120)
@@ -229,7 +237,10 @@ def fig5_precision_recall(rows, summaries):
     # F1 contour lines
     for f1_val in [0.5, 0.6, 0.7, 0.8]:
         r_range = np.linspace(0.01, 1, 100)
-        p_range = (f1_val * r_range) / (2 * r_range - f1_val)
+        denom = 2 * r_range - f1_val
+        p_range = np.full_like(r_range, np.nan, dtype=float)
+        nonzero = np.abs(denom) > 1e-9
+        p_range[nonzero] = (f1_val * r_range[nonzero]) / denom[nonzero]
         valid = (p_range > 0) & (p_range <= 1)
         ax.plot(r_range[valid], p_range[valid], '--', color='gray', alpha=0.3, linewidth=0.8)
         # Label
@@ -249,32 +260,25 @@ def fig5_precision_recall(rows, summaries):
     print('  fig5_precision_recall.png')
 
 
-def fig6_success_rates(rows):
-    """Bar chart of success rates from batch runs."""
-    # Use known success rates from batch results
-    success_data = {
-        'tesseract': {'total': 60, 'of': 91},
-        'mistral_ocr': {'total': 91, 'of': 91},
-        'surya': {'total': 71, 'of': 91},
-        'sarvam_ocr': {'total': 62, 'of': 91},
-        'docling': {'total': 67, 'of': 91},
-        'got_ocr': {'total': 29, 'of': 91},  # current progress
-    }
-
-    models = list(success_data.keys())
-    rates = [success_data[m]['total'] / success_data[m]['of'] * 100 for m in models]
+def fig6_success_rates(corpus_summary):
+    """Bar chart of success rates from the locked visible corpus."""
+    models = ['tesseract', 'mistral_ocr', 'surya', 'sarvam_ocr', 'docling']
+    coverage = corpus_summary['model_run_coverage']
+    visible_total = corpus_summary['visible_document_count']
+    rates = [coverage[m]['success_rate_pct'] for m in models if m in coverage]
+    models = [m for m in models if m in coverage]
 
     fig, ax = plt.subplots(figsize=(8, 5))
     x = np.arange(len(models))
     bars = ax.bar(x, rates, color=[COLORS[m] for m in models], edgecolor='white')
 
     for bar, m in zip(bars, models):
-        d = success_data[m]
+        d = coverage[m]
         ax.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
-                f'{d["total"]}/{d["of"]}', ha='center', va='bottom', fontsize=9)
+                f'{d["successful_visible_docs"]}/{visible_total}', ha='center', va='bottom', fontsize=9)
 
     ax.set_ylabel('Success Rate (%)')
-    ax.set_title('Full-Dataset Success Rates')
+    ax.set_title(f'Visible-Corpus Success Rates (n={visible_total} docs)')
     ax.set_xticks(x)
     ax.set_xticklabels([DISPLAY_NAMES[m] for m in models], rotation=15, ha='right')
     ax.set_ylim(0, 115)
@@ -284,42 +288,57 @@ def fig6_success_rates(rows):
     print('  fig6_success_rates.png')
 
 
-def fig7_category_success_heatmap():
+def fig7_category_success_heatmap(corpus_summary):
     """Heatmap of success rates by model x category."""
     models = ['tesseract', 'mistral_ocr', 'surya', 'sarvam_ocr', 'docling']
-    categories = ['financial', 'forms', 'multi_col', 'handwritten', 'hindi', 'equations', 'receipts']
-    cat_full = ['Financial\n(15)', 'Forms\n(5)', 'Multi-col\n(15)', 'Handwritten\n(30)',
-                'Hindi\n(1)', 'Equations\n(15)', 'Receipts\n(10)']
+    category_labels = [
+        ('02_complex_tables/financial', 'Financial'),
+        ('02_complex_tables/forms', 'Forms'),
+        ('02_complex_tables/multi_column', 'Multi-col'),
+        ('03_handwritten/hindi_devanagari', 'Handwritten'),
+        ('04_indian_languages/hindi', 'Hindi'),
+        ('06_mixed_content/equations_formulas', 'Equations'),
+        ('06_mixed_content/receipts', 'Receipts'),
+    ]
+    category_totals = corpus_summary['visible_documents_by_category']
+    coverage = corpus_summary['model_run_coverage']
+    cat_full = [f'{label}\n({category_totals.get(category, 0)})' for category, label in category_labels]
 
-    # Known success rates
-    data = {
-        'tesseract':   [15, 5, 15,  0, 1, 14, 10],
-        'mistral_ocr': [15, 5, 15, 30, 1, 15, 10],
-        'surya':       [15, 5, 15, 10, 1, 15, 10],
-        'sarvam_ocr':  [15, 5, 15, 24, 1,  2,  0],
-        'docling':     [15, 5, 15,  7, 0, 15, 10],
-    }
-    totals = [15, 5, 15, 30, 1, 15, 10]
+    matrix = []
+    annotations = []
+    for model in models:
+        model_rows = []
+        model_annotations = []
+        category_attempts = coverage[model]['category_attempts']
+        for category, _ in category_labels:
+            entry = category_attempts.get(category, {'visible_total': 0, 'successful': 0})
+            visible_total = entry.get('visible_total', category_totals.get(category, 0))
+            successful = entry.get('successful', 0)
+            rate = successful / visible_total * 100 if visible_total else 0
+            model_rows.append(rate)
+            model_annotations.append(f'{successful}/{visible_total}' if visible_total else '—')
+        matrix.append(model_rows)
+        annotations.append(model_annotations)
 
-    matrix = np.array([[data[m][j]/totals[j]*100 for j in range(len(categories))] for m in models])
+    matrix = np.array(matrix)
 
     fig, ax = plt.subplots(figsize=(10, 4.5))
     im = ax.imshow(matrix, cmap='RdYlGn', vmin=0, vmax=100, aspect='auto')
 
-    ax.set_xticks(np.arange(len(categories)))
+    ax.set_xticks(np.arange(len(category_labels)))
     ax.set_xticklabels(cat_full, fontsize=8)
     ax.set_yticks(np.arange(len(models)))
     ax.set_yticklabels([DISPLAY_NAMES[m] for m in models])
 
     for i in range(len(models)):
-        for j in range(len(categories)):
+        for j in range(len(category_labels)):
             val = matrix[i, j]
             color = 'white' if val < 30 or val > 90 else 'black'
-            ax.text(j, i, f'{data[models[i]][j]}/{totals[j]}', ha='center', va='center',
+            ax.text(j, i, annotations[i][j], ha='center', va='center',
                     fontsize=8, color=color, fontweight='bold')
 
     plt.colorbar(im, ax=ax, label='Success Rate (%)')
-    ax.set_title('Category-Level Success Rates')
+    ax.set_title('Category-Level Success Rates (Visible Corpus)')
     fig.savefig(FIGURES_DIR / 'fig7_category_success_heatmap.png')
     plt.close(fig)
     print('  fig7_category_success_heatmap.png')
@@ -479,7 +498,7 @@ def fig11_boxplot_f1(rows):
             labels.append(f'{DISPLAY_NAMES[m]}\n(n={len(f1s)})')
             colors_list.append(COLORS[m])
 
-    bp = ax.boxplot(data, labels=labels, patch_artist=True, showfliers=True,
+    bp = ax.boxplot(data, tick_labels=labels, patch_artist=True, showfliers=True,
                     flierprops=dict(marker='o', markersize=4, alpha=0.5))
     for patch, color in zip(bp['boxes'], colors_list):
         patch.set_facecolor(color)
@@ -529,15 +548,17 @@ def fig12_category_cer(rows):
     print('  fig12_category_cer.png')
 
 
-def fig13_gt_coverage():
+def fig13_gt_coverage(corpus_summary):
     """Pie chart of GT coverage."""
+    gt_by_category = corpus_summary['ground_truth']['documents_by_category']
+    no_gt_count = corpus_summary['ground_truth']['no_gt_count']
     categories = {
-        'Forms (FUNSD)': 5,
-        'Financial (consensus)': 9,
-        'Multi-column (consensus)': 11,
-        'Equations (consensus)': 10,
-        'Receipts (Mistral-derived)': 10,
-        'No GT': 46,
+        'Forms (human-verified)': gt_by_category.get('02_complex_tables/forms', 0),
+        'Financial (consensus)': gt_by_category.get('02_complex_tables/financial', 0),
+        'Multi-column (consensus)': gt_by_category.get('02_complex_tables/multi_column', 0),
+        'Equations (consensus)': gt_by_category.get('06_mixed_content/equations_formulas', 0),
+        'Receipts (consensus)': gt_by_category.get('06_mixed_content/receipts', 0),
+        'No GT': no_gt_count,
     }
 
     fig, ax = plt.subplots(figsize=(8, 6))
@@ -550,29 +571,31 @@ def fig13_gt_coverage():
     for t in autotexts:
         t.set_fontsize(8)
 
-    ax.set_title('Ground Truth Coverage (45 / 91 docs = 49.5%)')
+    gt_total = corpus_summary['ground_truth']['total_documents']
+    visible_total = corpus_summary['visible_document_count']
+    ax.set_title(f'Ground Truth Coverage ({gt_total} / {visible_total} docs)')
     fig.savefig(FIGURES_DIR / 'fig13_gt_coverage.png')
     plt.close(fig)
     print('  fig13_gt_coverage.png')
 
 
 def main():
-    rows, summaries = load_data()
+    rows, summaries, corpus_summary, _statistical_tests = load_data()
     print('Generating charts...')
 
-    fig1_f1_comparison(rows, summaries)
-    fig2_cer_comparison(rows, summaries)
+    fig1_f1_comparison(rows, summaries, corpus_summary)
+    fig2_cer_comparison(rows, summaries, corpus_summary)
     fig3_category_f1_heatmap(rows)
     fig4_error_decomposition(summaries)
     fig5_precision_recall(rows, summaries)
-    fig6_success_rates(rows)
-    fig7_category_success_heatmap()
+    fig6_success_rates(corpus_summary)
+    fig7_category_success_heatmap(corpus_summary)
     fig8_forms_comparison(rows)
     fig9_radar(summaries)
     fig10_significance(rows)
     fig11_boxplot_f1(rows)
     fig12_category_cer(rows)
-    fig13_gt_coverage()
+    fig13_gt_coverage(corpus_summary)
 
     print(f'\nAll 13 charts saved to {FIGURES_DIR}/')
 

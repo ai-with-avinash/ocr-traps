@@ -26,6 +26,8 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
+from utils.dataset_inventory import build_manifest
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
@@ -701,20 +703,15 @@ def generate_summary(base_dir, log_fp):
     log("📊 DOWNLOAD SUMMARY", log_fp)
     log("=" * 60, log_fp)
 
-    total = 0
-    manifest = {}
-    for folder in FOLDER_STRUCTURE:
-        if folder.startswith("ground_truth"):
-            continue
-        full_path = Path(base_dir) / folder
-        files = [f for f in full_path.iterdir() if f.is_file()] if full_path.exists() else []
-        count = len(files)
-        total += count
-        manifest[folder] = [f.name for f in files]
+    visible_folders = [folder for folder in FOLDER_STRUCTURE if not folder.startswith("ground_truth")]
+    total, manifest = build_manifest(base_dir, visible_folders)
+
+    for folder in visible_folders:
+        count = len(manifest[folder])
         status = "✅" if count > 0 else "⬜"
         log(f"  {status} {folder}: {count} files", log_fp)
 
-    log(f"\n  Total documents downloaded: {total}", log_fp)
+    log(f"\n  Total visible OCR input documents: {total}", log_fp)
     log("  Target: 100-150 documents", log_fp)
 
     if total < 100:
@@ -727,8 +724,20 @@ def generate_summary(base_dir, log_fp):
     # Save manifest
     manifest_path = Path(base_dir) / "manifest.json"
     with open(manifest_path, "w") as f:
-        json.dump({"generated": datetime.now().isoformat(), "total_files": total,
-                    "folders": manifest}, f, indent=2)
+        json.dump(
+            {
+                "generated": datetime.now().isoformat(),
+                "semantics": (
+                    "Visible OCR input documents only; excludes hidden files, "
+                    "ground-truth/support artifacts, manifests, and logs."
+                ),
+                "total_visible_documents": total,
+                "total_files": total,
+                "folders": manifest,
+            },
+            f,
+            indent=2,
+        )
     log(f"\n  📄 Manifest saved to: {manifest_path}", log_fp)
 
     # Reminder about manual steps

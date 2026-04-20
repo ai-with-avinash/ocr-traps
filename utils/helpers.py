@@ -4,6 +4,8 @@ import os
 import yaml
 from pathlib import Path
 
+from utils.dataset_inventory import find_documents, get_document_category
+
 
 def _load_dotenv(env_path: str = ".env") -> None:
     """Load .env file into os.environ (no third-party dependency)."""
@@ -70,36 +72,6 @@ def get_device(config: dict) -> str:
             return "mps"
         return "cpu"
     return device
-
-
-def find_documents(dataset_dir: str, extensions=None) -> list:
-    """Recursively find all document files in the dataset directory."""
-    extensions = extensions or [".jpg", ".jpeg", ".png", ".tif", ".tiff", ".pdf", ".bmp"]
-    dataset_path = Path(dataset_dir)
-    if not dataset_path.exists():
-        raise FileNotFoundError(f"Dataset directory not found: {dataset_dir}")
-
-    files = []
-    for ext in extensions:
-        files.extend(dataset_path.rglob(f"*{ext}"))
-
-    # Exclude ground_truth folder and hidden files
-    files = [f for f in files
-             if "ground_truth" not in str(f)
-             and not f.name.startswith(".")
-             and "_tmp_" not in str(f)]
-
-    return sorted(files, key=lambda f: str(f))
-
-
-def get_document_category(doc_path: str) -> str:
-    """Extract category from document path (e.g., '01_printed_english/invoices')."""
-    parts = Path(doc_path).parts
-    for i, p in enumerate(parts):
-        if p.startswith(("01_", "02_", "03_", "04_", "05_", "06_", "07_")):
-            return "/".join(parts[i:i+2]) if i+1 < len(parts) else parts[i]
-    return "unknown"
-
 
 def get_ground_truth(doc_path: str, gt_dir: str) -> str:
     """Find ground truth text for a document, if available."""

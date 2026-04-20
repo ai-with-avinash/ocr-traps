@@ -1,17 +1,13 @@
 \documentclass[conference]{IEEEtran}
 
 \usepackage{amsmath,amssymb,amsfonts}
-\usepackage{graphicx}
-\usepackage{xcolor}
+\usepackage{array}
 \usepackage{booktabs}
-\usepackage{multirow}
-\usepackage{float}
-\usepackage{caption}
+\usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{cite}
-\usepackage{listings}
-\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{multirow}
 \usepackage{textcomp}
+\usepackage{xcolor}
 
 \hypersetup{
     colorlinks=true,
@@ -20,7 +16,6 @@
     urlcolor=blue
 }
 
-% Fix for IEEEtran + hyperref
 \makeatletter
 \let\NAT@parse\undefined
 \makeatother
@@ -29,363 +24,277 @@
 
 \begin{document}
 
-\title{A Practical OCR Evaluation Framework and Phase~1 Benchmark: Comparing Six OCR Systems Across Complex Enterprise Documents}
+\title{An OCR Evaluation Framework for Enterprise Documents: Evidence from a Locked 90-Document Phase~1 Benchmark}
 
 \author{
-\IEEEauthorblockN{Avinash Seethalam}
-\IEEEauthorblockA{GenAI Practice\\
-\textit{Internal Technical Report}\\
-April 2026}
+\IEEEauthorblockN{Anonymous Submission}
+\IEEEauthorblockA{Blind Review Manuscript}
 }
 
 \maketitle
 
 \begin{abstract}
-This paper presents a practical, reproducible evaluation framework for comparing optical character recognition (OCR) systems across a curated corpus of 101 enterprise-relevant documents. The evaluation covers four document categories---complex tables and forms, handwritten Devanagari character samples, Indian-language material, and mixed-content documents including receipts and mathematical formulas---and measures seven automated metrics: character error rate (CER), word error rate (WER), word accuracy, normalized edit distance, token-level F1 with precision and recall, and per-document latency. Error decomposition into substitution, insertion, and deletion rates provides diagnostic insight into failure modes.
+Selecting an optical character recognition (OCR) stack for enterprise documents requires more than point accuracy on a single benchmark. Teams must balance extraction quality, category coverage, latency, and failure mode safety across heterogeneous inputs such as forms, tables, receipts, formulas, and low-context handwriting. This paper presents a reproducible OCR evaluation framework and a Phase~1 benchmark grounded in the current checked-in corpus of 90 visible OCR inputs. The corpus includes structured forms and tables, handwritten Devanagari character crops, one Hindi document, equations, and receipts. Ground truth is available for 45 documents: 5 human-verified forms and 40 consensus-derived annotations across financial tables, multi-column layouts, equations, and receipts.
 
-Phase~1 of this benchmark integrates and evaluates six OCR systems: Tesseract as a local CPU baseline, Mistral~OCR as a cloud-hosted vision-language model, Docling as a structure-aware document converter, PaddleOCR as a high-performance open-source engine, Surya as a multilingual OCR toolkit, and Sarvam Vision~OCR as an India-focused document intelligence service. Full-dataset evaluation of four models on a 15-document ground-truth subset reveals meaningful performance differences. Mistral~OCR achieved 100\% success rate and the strongest overall F1 (0.9183). On forms, Surya delivered the lowest CER (0.3028) with the highest F1 (0.7710). Error decomposition reveals that insertion errors dominate across models, with Surya exhibiting the most insertion-heavy profile (73.8\% of errors). The framework is positioned as a reusable benchmarking asset with a Phase~2 roadmap covering additional vision-language models.
+Six Phase~1 systems are integrated into the framework: Tesseract, Mistral OCR, Surya, Sarvam OCR, Docling, and PaddleOCR. Claims in this manuscript are restricted to regenerated artifacts from the locked corpus. On the unbiased human-verified forms subset ($n=5$), Surya achieves the strongest accuracy (CER 0.3028, F1 0.7710), but no pairwise differences are statistically significant. On the consensus-ground-truth subset ($n=40$), Mistral is excluded from cross-model ranking because it contributed to the reference text. Under that restriction, Surya reaches the highest aggregate F1 (0.7717), while Docling provides a close alternative (0.7294) with a deletion-dominant, structure-preserving error profile. Mistral is instead supported as the most reliable operational choice, achieving 90/90 successful runs on the visible corpus. Sarvam OCR delivers the lowest mean latency (4.7~s) but fails on receipts and most equation documents. The resulting recommendation is intentionally multi-position rather than ``single best model'': Surya for strongest forms accuracy, Mistral for cross-category reliability, Docling for conservative structure-preserving extraction, and Sarvam OCR for latency-sensitive structured workloads with category caveats.
 \end{abstract}
 
 \begin{IEEEkeywords}
-OCR evaluation, document analysis, benchmark framework, character error rate, vision-language models, enterprise document processing
+OCR evaluation, document analysis, benchmark framework, enterprise documents, character error rate, token F1
 \end{IEEEkeywords}
 
-%===============================================================================
 \section{Introduction}
-%===============================================================================
 
-Enterprise workflows that depend on extracting text and structure from scanned documents, forms, reports, receipts, and multilingual material require OCR systems that deliver reliable accuracy under diverse conditions. Typical use cases include form digitization for regulatory compliance, invoice and receipt extraction for accounts payable automation, conversion of scanned archives into searchable repositories, multilingual document processing for global operations, and structured extraction from tables and semi-structured layouts for data pipelines.
+Enterprise OCR selection is often made under conflicting requirements. Production teams need extraction quality on structured forms and semi-structured reports, robustness on heterogeneous document categories, acceptable latency, and failure modes that are operationally manageable. Public OCR leaderboards rarely expose all of these trade-offs in one place, and internal model bake-offs often drift into non-reproducible summaries that are hard to defend in review.
 
-The practical challenge confronting enterprise architects is that OCR systems differ significantly across multiple dimensions that are difficult to evaluate from vendor documentation alone. Text accuracy varies substantially depending on document type, script, and image quality. Latency and throughput profiles differ between local and cloud-hosted systems in ways that affect pipeline design. Table and layout preservation capabilities range from absent to sophisticated. Multilingual support---particularly for Indian languages such as Hindi, Tamil, Telugu, and Bengali---remains unevenly developed across the OCR ecosystem~\cite{smith2007tesseract,paddleocr2020}.
+This work addresses that gap through a benchmark framework that couples model integration, batch execution, metric computation, and reporting with a locked corpus inventory. Earlier project materials referenced a larger intended corpus, but the checked-in repository currently yields 90 reproducible visible OCR inputs under a shared inventory rule. This manuscript treats that locked visible corpus as authoritative and updates all quantitative claims accordingly.
 
-This evaluation was motivated by the observation that no single publicly available benchmark adequately addresses the intersection of these concerns for an enterprise GenAI practice team evaluating OCR systems for production adoption. The framework described here is designed to produce evidence-backed recommendations grounded in reproducible measurements rather than vendor claims.
+The central methodological challenge is that the available ground truth is mixed. Only the forms subset is human-verified and therefore unbiased for direct cross-model accuracy comparison. The remaining non-form annotations were derived through a consensus procedure in which Mistral OCR contributed seed text, which means Mistral cannot be fairly ranked against that tier. Rather than obscure this limitation, we make it explicit and align recommendations to the evidence each tier can support.
 
-This whitepaper is intentionally framed as a Phase~1 internal benchmark. The original project plan envisioned a broader comparison across a wider multilingual dataset; the currently verified evidence base is narrower and more defensible. This paper prioritizes accuracy of claims over breadth of ambition, and all quantitative findings should be read in light of the dataset and model coverage described below.
+\section{Contributions}
 
-%===============================================================================
-\section{Evaluation Framework Architecture}
-%===============================================================================
+This paper makes four contributions:
+\begin{enumerate}
+    \item It presents a reproducible OCR benchmarking framework with a shared dataset inventory path used by both runtime enumeration and manifest generation.
+    \item It locks the current repository corpus at 90 visible OCR inputs and emits a canonical corpus summary artifact that ties corpus counts, ground-truth coverage, and run coverage to submission claims.
+    \item It separates unbiased and consensus-derived evidence tiers, preventing circular cross-model ranking on the consensus subset.
+    \item It converts benchmark findings into operationally actionable recommendations that distinguish accuracy, reliability, structure preservation, and latency rather than collapsing them into a misleading single-winner claim.
+\end{enumerate}
 
-The benchmark is implemented as a modular Python application designed for extensibility and reproducibility. The architecture separates concerns into four layers: model wrappers, execution orchestration, metrics computation, and reporting.
+\section{Related Work}
 
-\subsection{Model Integration Layer}
+Classical OCR engines such as Tesseract remain important baselines because they are open source, cheap to deploy, and well understood in production pipelines~\cite{smith2007tesseract}. More recent open-source systems such as PaddleOCR target higher accuracy and broader multilingual support with modern detection and recognition components~\cite{paddleocr2020}. Public datasets such as FUNSD provide valuable benchmarks for form understanding~\cite{funsd}, while broader OCR evaluation literature emphasizes edit-distance-based measures such as CER and WER alongside token-level comparisons and error diagnostics~\cite{levenshtein1966,rice1996measuring}.
 
-All OCR model wrappers inherit from a common \texttt{BaseOCRModel} abstract class and implement a single \texttt{\_ocr\_impl(image\_path)} method. Registration is automatic via a \texttt{@register\_model} decorator---adding a new model requires only creating a Python file in the \texttt{models/} directory with no manual wiring. At the time of writing, the registry contains 10 model wrappers, of which six have been fully integrated and sanity-checked for Phase~1.
+Our setting differs from standard leaderboard evaluation in two ways. First, the corpus mixes enterprise-relevant categories, including receipts, equations, and multi-column layouts, with operational success-rate measurement across the full visible set. Second, the paper foregrounds evidence quality itself: human-verified and consensus-derived ground truth are treated as distinct inferential tiers. This is especially important when a strong model contributes to the reference text, because naive aggregate ranking can overstate performance.
 
-Each wrapper returns a standardized \texttt{OCRResult} object containing extracted text, structured data where available, confidence scores, latency in milliseconds, estimated cost, error information, and success status. This normalization enables fair cross-model comparison regardless of the underlying API shape.
+\section{Dataset and Ground Truth}
 
-\subsection{Execution Engine}
+The evaluation corpus is defined by the shared visible-input inventory used by the benchmark runtime and the dataset manifest. Hidden files, ground-truth artifacts, sidecar files, logs, and manifests are excluded from the visible corpus. Under that rule, the checked-in repository contains 90 visible OCR inputs.
 
-The evaluation engine provides three execution modes: single-document mode for rapid testing and debugging, model-level mode for running one model across the entire dataset, and batch mode for running multiple models sequentially. All results are saved to timestamped directories under \texttt{results/}, ensuring successive runs do not overwrite prior artifacts. Raw OCR outputs are preserved alongside computed metrics for post-hoc failure analysis.
+\begin{table}[t]
+\centering
+\caption{Locked corpus and ground-truth coverage. Visible counts are authoritative for this manuscript.}
+\label{tab:dataset}
+\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Category} & \textbf{Visible} & \textbf{Human GT} & \textbf{Consensus GT} & \textbf{No GT} \\
+\midrule
+Financial tables & 15 & 0 & 9 & 6 \\
+Forms & 5 & 5 & 0 & 0 \\
+Multi-column & 15 & 0 & 11 & 4 \\
+Handwritten Devanagari & 30 & 0 & 0 & 30 \\
+Hindi document & 1 & 0 & 0 & 1 \\
+Equations & 14 & 0 & 10 & 4 \\
+Receipts & 10 & 0 & 10 & 0 \\
+\midrule
+\textbf{Total} & \textbf{90} & \textbf{5} & \textbf{40} & \textbf{45} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
 
-\subsection{Metrics Pipeline}
+Table~\ref{tab:dataset} shows the resulting corpus. The handwritten split consists of 32$\times$32 Devanagari character crops rather than page-scale handwritten documents, so it is useful for robustness stress-testing but not for general handwriting claims. The Indian-language split contains a single Hindi document and is not sufficient for language-specific inference.
 
-The metrics module applies a normalization pipeline before computing metrics, ensuring fair comparison across models that produce different output formats. Normalization consists of Unicode NFKC normalization (critical for Devanagari and accented characters), stripping of markdown and HTML formatting artifacts, and whitespace collapse to single spaces.
-
-Seven automated measures are computed for each document where ground truth is available:
-
+Ground truth is available for 45 documents. The forms subset ($n=5$) is human-verified and is the only unbiased cross-model accuracy tier. The remaining 40 annotations are consensus-derived. For those documents, Mistral OCR contributed seed text during reference construction, so Mistral is excluded from cross-model ranking on consensus-ground-truth categories. The paper therefore reports two evidence tiers:
 \begin{itemize}
-    \item \textbf{CER and WER}: Computed using Levenshtein distance via the \texttt{rapidfuzz} library~\cite{rapidfuzz}, normalized by ground truth length.
-    \item \textbf{Word Accuracy}: Defined as $\max(1 - \text{WER}, 0)$.
-    \item \textbf{Normalized Edit Distance}: Provides a 0-to-1 scale normalized by the maximum of prediction and ground truth lengths.
-    \item \textbf{Token F1}: Uses Counter-based bag-of-words matching with multiplicity, correctly penalizing missing or duplicated tokens. Precision and recall are reported separately.
-    \item \textbf{Error Decomposition}: Character-level edit operations decomposed into substitutions, insertions, and deletions via \texttt{rapidfuzz} edit operations.
-    \item \textbf{Latency}: Wall-clock time per document including API round-trip.
+    \item \textbf{Human-verified forms} ($n=5$): unbiased cross-model comparison.
+    \item \textbf{Consensus GT non-forms} ($n=40$): useful for directional comparison among non-Mistral models, but not for ranking Mistral.
 \end{itemize}
 
-CER and WER values can exceed 1.0 when the prediction is substantially longer than the ground truth---a pattern observed in receipt documents where OCR systems generate text from noisy backgrounds. This behavior is reported rather than capped, as it provides diagnostic information about model failure modes.
+\section{Methods}
 
-%===============================================================================
-\section{Dataset and Ground Truth}
-%===============================================================================
+\subsection{Framework}
 
-The evaluation corpus consists of 101 test documents distributed across four categories, summarized in Table~\ref{tab:dataset}.
+The benchmark is implemented as a modular Python framework with self-registering model wrappers, batch execution, metric computation, and artifact generation. Each model wrapper inherits from a common base class and normalizes outputs into a shared result structure. Result directories are timestamped and preserved under \texttt{results/}, and regenerated manuscript numbers are taken only from the current locked artifact set.
 
-\begin{table}[h]
-\centering
-\caption{Dataset composition by category.}
-\label{tab:dataset}
-\begin{tabular}{@{}lrl@{}}
-\toprule
-\textbf{Category} & \textbf{Docs} & \textbf{Notes} \\
-\midrule
-Complex tables/forms & 5 & FUNSD-derived \\
-Complex tables/financial & 15 & Diverse financial docs \\
-Complex tables/multi\_column & 15 & Multi-column layouts \\
-Handwritten (Devanagari) & 30 & 32$\times$32 DHCD characters \\
-Indian languages & 1 & Hindi (insufficient) \\
-Mixed content/equations & 15 & Math formulas \\
-Mixed content/receipts & 10 & Retail receipts \\
-\midrule
-\textbf{Total} & \textbf{101} & \\
-\bottomrule
-\end{tabular}
-\end{table}
+\subsection{Models in Phase~1}
 
-Ground truth annotations follow a \texttt{<stem>\_gt.txt} naming convention and are available for 15 documents: 5 forms (FUNSD-derived) and 10 receipts. Metrics are computed only where ground truth exists. The handwritten category consists of 32$\times$32 pixel isolated Devanagari characters from the DHCD dataset~\cite{dhcd}---these test character-level recognition under minimal-context conditions and do not represent document-scale handwriting recognition. The Indian languages category contains a single document, acknowledged as statistically insufficient for language-specific conclusions.
-
-An important methodological note: the receipt ground truth was derived from Mistral~OCR's normalized output, creating a circularity documented in Section~\ref{sec:circularity}.
-
-%===============================================================================
-\section{Models Included in Phase~1}
-%===============================================================================
-
-Six OCR systems were integrated and evaluated, spanning local baselines, open-source engines, and cloud APIs. Table~\ref{tab:models} summarizes the model set.
-
-\begin{table}[h]
-\centering
-\caption{Phase~1 model set.}
-\label{tab:models}
-\begin{tabular}{@{}llll@{}}
-\toprule
-\textbf{Model} & \textbf{Type} & \textbf{Deploy} & \textbf{Status} \\
-\midrule
-Tesseract & Baseline & Local/CPU & 60/91 \\
-Mistral~OCR & VLM & Cloud API & 91/91 \\
-Docling & Doc conversion & Local & Sanity only \\
-PaddleOCR & OCR engine & Local & Sanity only \\
-Surya & Multilingual & Local & 71/91 \\
-Sarvam~OCR & Doc intelligence & Cloud API & 62/91 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\textbf{Tesseract}~\cite{smith2007tesseract} serves as the reference baseline. It is open-source, runs on CPU, and requires no API credentials. The Phase~1 configuration uses a multi-language pack (\texttt{eng+hin+tel+tam+ben}).
-
-\textbf{Mistral~OCR} is accessed via the Mistral~AI cloud API and represents the vision-language model class. It achieved 100\% success rate across all 91 documents, including all 30 handwritten Devanagari character images where Tesseract failed entirely. Its output is markdown-formatted, which the normalization pipeline strips before metric computation.
-
-\textbf{Docling} is an open-source document conversion library that prioritizes preserving document structure, producing markdown output retaining heading hierarchies and table structures. Its processing time exceeds 60 seconds per document, limiting full-dataset evaluation.
-
-\textbf{PaddleOCR}~\cite{paddleocr2020} represents the high-performance open-source OCR category. It runs locally and delivered the lowest CER on the sanity-check sample (0.3058). Integration required significant wrapper adaptation for API version compatibility.
-
-\textbf{Surya} is a multilingual OCR toolkit that achieved competitive accuracy (CER 0.3388, F1 0.7407) at higher latency (13,437~ms). The wrapper required complete modernization from legacy APIs to the current predictor architecture.
-
-\textbf{Sarvam Vision~OCR} is a cloud-hosted document intelligence service focused on Indian languages. Integration was the most complex---the API uses an asynchronous five-step job workflow rather than synchronous request-response.
-
-Four additional models (DeepSeek~OCR, Qwen-VL, OlmOCR, GOT-OCR) have registered wrappers and are planned for Phase~2 evaluation.
-
-%===============================================================================
-\section{Sanity-Check Results}
-%===============================================================================
-
-All six models were validated against a common test document to verify correct integration. These results (Table~\ref{tab:sanity}) are from a \emph{single document} and should not be used for ranking.
-
-\begin{table}[h]
-\centering
-\caption{Sanity-check results on common sample ($n=1$).}
-\label{tab:sanity}
-\begin{tabular}{@{}lrrrr@{}}
-\toprule
-\textbf{Model} & \textbf{Latency} & \textbf{CER} & \textbf{WER} & \textbf{F1} \\
-\midrule
-Tesseract & 2,896 & 0.5289 & 0.8072 & 0.4030 \\
-Mistral~OCR & 1,516 & 0.3347 & 0.5422 & 0.7313 \\
-Docling & 4,359 & 0.4236 & 0.7831 & 0.7059 \\
-PaddleOCR & 6,686 & 0.3058 & 0.5301 & 0.7727 \\
-Surya & 13,437 & 0.3388 & 0.5542 & 0.7407 \\
-Sarvam~OCR & 3,677 & 0.3430 & 0.5060 & 0.7794 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-The five non-baseline models clustered within a CER range of 0.3058 to 0.4236, all substantially outperforming Tesseract's 0.5289. PaddleOCR achieved the lowest CER while Sarvam~OCR achieved the highest F1 and lowest WER.
-
-%===============================================================================
-\section{Full-Dataset Benchmark Results}
-%===============================================================================
-
-The full-dataset evaluation processed 91 documents across all four categories. Ground truth annotations were available for 15 documents: 5 forms and 10 receipts. This represents 16.5\% of the processed corpus---a significant limitation.
-
-\subsection{Aggregate Results}
-
-Table~\ref{tab:fullresults} presents the corrected full-dataset metrics. Mistral~OCR's receipt metrics are artificially perfect due to ground-truth circularity (see Section~\ref{sec:circularity}).
+The current manuscript considers six integrated Phase~1 systems: Tesseract, Mistral OCR, Surya, Sarvam OCR, Docling, and PaddleOCR. Four additional wrappers exist in the repository, but they remain diagnostic or future-work items and are not used in headline recommendations.
 
 \begin{table*}[t]
 \centering
-\caption{Full-dataset results---corrected metrics (Counter-based F1, NFKC normalization). Asterisked values include circular receipt GT.}
-\label{tab:fullresults}
-\begin{tabular}{@{}lrrrrrrrr@{}}
+\caption{Phase~1 model set and run coverage on the 90-document visible corpus. Mean latency is computed over successful visible-corpus runs. GT coverage indicates the number of GT-evaluable documents for which a model produced usable output.}
+\label{tab:coverage}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrrl}
 \toprule
-\textbf{Model} & \textbf{Success} & \textbf{Latency (ms)} & \textbf{CER} & \textbf{WER} & \textbf{F1} & \textbf{Precision} & \textbf{Recall} & \textbf{GT docs} \\
+\textbf{Model} & \textbf{Deployment} & \textbf{Success on visible corpus} & \textbf{Mean latency (ms)} & \textbf{GT coverage} & \textbf{Interpretation in this paper} \\
 \midrule
-Tesseract & 60/91 (65.9\%) & 10,896 & 0.7110 & 1.0584 & 0.5234 & 0.4776 & 0.6572 & 15 \\
-Mistral~OCR & 91/91 (100\%) & 17,264 & 0.1311* & 0.1678* & 0.9183* & 0.9194* & 0.9195* & 15 \\
-Surya & 71/91 (78.0\%) & 52,814 & 0.6059 & 0.8105 & 0.7039 & 0.6400 & 0.8499 & 15 \\
-Sarvam~OCR & 62/91 (68.1\%) & 4,688 & 0.5124 & 0.5183 & 0.7592 & 0.7479 & 0.7788 & 5 \\
+Mistral OCR & Cloud API & 90/90 (100.0\%) & 17{,}415 & 45/45 (40 circular) & Reliability result; excluded from consensus-GT ranking \\
+Surya & Open source, local & 70/90 (77.8\%) & 49{,}708 & 45/45 & Strongest forms accuracy; full GT coverage \\
+Docling & Open source, local & 67/90 (74.4\%) & 7{,}460 & 42/45 & Structure-preserving, deletion-dominant profile \\
+Sarvam OCR & Cloud API & 62/90 (68.9\%) & 4{,}688 & 27/45 & Fastest model; unreliable on receipts and equations \\
+Tesseract & Open source, local CPU & 59/90 (65.6\%) & 9{,}852 & 45/45 & Baseline reference \\
+PaddleOCR & Open source, local & 9/90 (10.0\%) & -- & 7/45 & Partial financial-only run; not ranked overall \\
 \bottomrule
 \end{tabular}
+}
 \end{table*}
 
-\subsection{Forms Subcategory ($n=5$)}
+\subsection{Metrics and Statistical Testing}
 
-The forms subcategory provides the most reliable cross-model comparison, as all four models have metrics and no circularity affects the results (Table~\ref{tab:forms}).
+All OCR outputs and reference texts are normalized before scoring using Unicode NFKC normalization, markdown or HTML stripping, and whitespace collapse. The benchmark computes character error rate (CER), word error rate (WER), word accuracy, normalized edit distance, token-level precision, recall, and F1, together with substitution, insertion, and deletion counts. Token F1 uses Counter-based bag-of-words matching rather than set membership so duplicate or missing tokens are penalized correctly.
 
-\begin{table}[h]
+Operational coverage is reported as successful runs over the full 90-document visible corpus. Accuracy metrics are reported only on GT-evaluable documents. Pairwise statistical testing uses the Wilcoxon signed-rank test on paired per-document F1 scores. Forms-only comparisons are reported separately because the unbiased subset is small ($n=5$). Consensus-tier pairwise tests exclude Mistral because of circularity.
+
+\section{Results}
+
+\subsection{Operational Coverage and Reliability}
+
+Table~\ref{tab:coverage} and Fig.~\ref{fig:success} summarize visible-corpus reliability. Mistral OCR is the only model to complete all 90 visible inputs successfully. Surya and Docling both cover the structured-document categories well, but each drops substantially on handwritten inputs. Sarvam OCR is fast and robust on forms, financial tables, and multi-column layouts, yet it fails on all receipts and most equation documents. Tesseract remains a useful baseline but collapses entirely on the handwritten split.
+
+\begin{figure}[t]
 \centering
-\caption{Forms subcategory metrics ($n=5$).}
+\includegraphics[width=\columnwidth]{fig6_success_rates.png}
+\caption{Success rate over the full visible corpus ($n=90$). Values are successful completions divided by visible OCR inputs. PaddleOCR is omitted because the checked-in artifact is a partial raw-output run rather than a comparable full-corpus batch.}
+\label{fig:success}
+\end{figure}
+
+\subsection{Human-Verified Forms: the Only Unbiased Accuracy Comparison}
+
+Table~\ref{tab:forms} reports the human-verified forms subset, which is the only unbiased cross-model accuracy comparison available in the current repository. Surya delivers the lowest CER (0.3028) and the highest F1 (0.7710), with Sarvam OCR and Mistral OCR immediately behind it. However, the sample size is only five documents, and the regenerated statistical summary shows that no pairwise differences reach significance on this subset (minimum $p=0.0625$).
+
+\begin{table}[t]
+\centering
+\caption{Human-verified forms results ($n=5$). This is the only unbiased cross-model accuracy table in the paper.}
 \label{tab:forms}
-\begin{tabular}{@{}lrrrrr@{}}
+\footnotesize
+\begin{tabular}{lrrrrr}
 \toprule
 \textbf{Model} & \textbf{CER} & \textbf{WER} & \textbf{F1} & \textbf{Prec.} & \textbf{Rec.} \\
 \midrule
-Tesseract & 0.4651 & 0.6489 & 0.4980 & 0.5469 & 0.4637 \\
-Mistral~OCR & 0.3933 & 0.5033 & 0.7549 & 0.7582 & 0.7584 \\
 Surya & 0.3028 & 0.4483 & 0.7710 & 0.7943 & 0.7508 \\
-Sarvam~OCR & 0.5124 & 0.5183 & 0.7592 & 0.7479 & 0.7788 \\
+Sarvam OCR & 0.5124 & 0.5183 & 0.7592 & 0.7479 & 0.7788 \\
+Mistral OCR & 0.3933 & 0.5033 & 0.7549 & 0.7582 & 0.7584 \\
+Docling & 0.4302 & 0.5593 & 0.5889 & 0.8255 & 0.5586 \\
+Tesseract & 0.4651 & 0.6489 & 0.4980 & 0.5469 & 0.4637 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Surya achieved the lowest CER (0.3028) and highest F1 (0.7710). At $n=5$, no pairwise F1 differences between Mistral, Surya, and Sarvam reach statistical significance (Wilcoxon signed-rank test, all $p>0.05$).
-
-\subsection{Receipts Subcategory ($n=10$)}
-\label{sec:circularity}
-
-The receipt comparison is limited to Tesseract and Surya. Sarvam failed on all receipts; Mistral is excluded due to ground-truth circularity.
-
-\begin{table}[h]
+\begin{figure}[t]
 \centering
-\caption{Receipts subcategory metrics ($n=10$). Mistral excluded (GT circularity). Sarvam failed all receipts.}
-\label{tab:receipts}
-\begin{tabular}{@{}lrrrrr@{}}
-\toprule
-\textbf{Model} & \textbf{CER} & \textbf{WER} & \textbf{F1} & \textbf{Prec.} & \textbf{Rec.} \\
-\midrule
-Tesseract & 0.8340 & 1.2631 & 0.5362 & 0.4430 & 0.7540 \\
-Surya & 0.7575 & 0.9917 & 0.6704 & 0.5629 & 0.8994 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Both models exhibit characteristic over-generation: high recall with substantially lower precision, confirming that receipt errors are predominantly insertions from backgrounds, logos, and visual noise.
-
-\subsection{Category Success Rates}
-
-Fig.~\ref{fig:success} shows the category-level success rates across models. Mistral~OCR is the only model achieving 100\% across all categories. Tesseract failed entirely on handwritten characters (0/30). Sarvam failed on all receipts (0/10) and most equations (2/15).
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\columnwidth]{fig7_full_dataset_success_rate.png}
-    \caption{Full-dataset success rates by model.}
-    \label{fig:success}
+\includegraphics[width=\columnwidth]{fig1_f1_comparison.png}
+\caption{Overall token-level F1 comparison on GT-evaluable documents. Bars show each model's average over its evaluable subset; Mistral is reported on forms only ($n=5$) because the other 40 GT documents are consensus-derived with circularity. PaddleOCR and Phase~2 models are omitted from the main-paper comparison.}
+\label{fig:overallf1}
 \end{figure}
 
-%===============================================================================
-\section{Error Decomposition Analysis}
-%===============================================================================
+Figure~\ref{fig:overallf1} is therefore best read as a narrative summary rather than a single ranking. Surya has the strongest unbiased forms result. Mistral has the strongest operational reliability. Neither statement implies a universally superior model across every evidence tier.
 
-Error decomposition reveals the structural composition of each model's errors through the substitution-insertion-deletion (S/I/D) profile, characterizing whether errors arise from misrecognition (substitutions), hallucination (insertions), or missed content (deletions).
+\subsection{Consensus-GT Aggregate Results}
 
-\begin{table}[h]
+Table~\ref{tab:consensus} aggregates the 40 consensus-ground-truth documents across financial tables, multi-column layouts, equations, and receipts. Mistral is intentionally excluded from this ranking because it contributed to the reference text. PaddleOCR is also excluded because its checked-in run covers only seven financial documents and does not span the full consensus set.
+
+\begin{table}[t]
 \centering
-\caption{Error decomposition by model.}
-\label{tab:errors}
-\begin{tabular}{@{}lrrrr@{}}
+\caption{Consensus-ground-truth aggregate results on non-form categories. Mistral is excluded from cross-model ranking due to circularity; PaddleOCR is omitted because the checked-in run is partial and financial-only.}
+\label{tab:consensus}
+\footnotesize
+\begin{tabular}{lrrrrrr}
 \toprule
-\textbf{Model} & \textbf{Total} & \textbf{S (\%)} & \textbf{I (\%)} & \textbf{D (\%)} \\
+\textbf{Model} & \textbf{$n$} & \textbf{CER} & \textbf{WER} & \textbf{F1} & \textbf{Prec.} & \textbf{Rec.} \\
 \midrule
-Tesseract & 5,143 & 19.7 & 53.4 & 26.9 \\
-Mistral~OCR & 1,615 & 34.0 & 37.4 & 28.6 \\
-Surya & 4,124 & 11.5 & 73.8 & 14.7 \\
-Sarvam~OCR & 2,057 & 15.7 & 68.0 & 16.3 \\
+Surya & 40 & 0.5673 & 0.7707 & 0.7717 & 0.7275 & 0.8650 \\
+Docling & 37 & 0.4417 & 0.5308 & 0.7294 & 0.8090 & 0.7098 \\
+Sarvam OCR & 22 & 0.6544 & 0.7859 & 0.7290 & 0.6801 & 0.8524 \\
+Tesseract & 40 & 0.5110 & 0.7585 & 0.6221 & 0.5904 & 0.7087 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Three distinct profiles emerge. Mistral~OCR exhibits the most balanced distribution (34.0\%/37.4\%/28.6\%) with far fewer total errors (1,615). Surya's profile is the most extreme: 73.8\% insertions with only 11.5\% substitutions, indicating that when Surya misses content it rarely substitutes incorrect characters but rather adds entirely spurious text. The insertion-dominant profiles have practical implications---systems with high insertion rates would benefit from confidence-gated filtering or length-ratio checks.
+Within this tier, Surya provides the strongest aggregate F1 and recall, which is consistent with an aggressive extraction strategy. Docling lands slightly below Surya on F1 but with a markedly different behavior: high precision and conservative recall, indicating that it usually emits less text rather than hallucinating more. Sarvam OCR is competitive where it succeeds, but its smaller $n$ reflects missing coverage on receipts and most equations.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\columnwidth]{fig10_error_decomposition.png}
-    \caption{Error decomposition (S/I/D) by model.}
-    \label{fig:errordecomp}
-\end{figure}
+\subsection{Category-wise Behavior}
 
-%===============================================================================
-\section{Confidence Calibration}
-%===============================================================================
-
-Confidence calibration was evaluated for Tesseract and Surya---the two models reporting document-level confidence scores. Spearman rank correlation between confidence and F1 was computed across all ground-truth documents.
-
-Tesseract shows strong positive correlation ($\rho=+0.83$, $p=0.0001$), indicating reliable quality gating---low-confidence outputs reliably predict poor extraction quality. Surya shows no significant correlation ($\rho=+0.08$, $p>0.05$), meaning its confidence values should not be used for routing without additional calibration.
-
-This has architectural implications: Tesseract's confidence, despite lower overall accuracy, provides a reliable signal for human-in-the-loop pipelines.
-
-%===============================================================================
-\section{Integration and Engineering Observations}
-%===============================================================================
-
-A distinctive contribution of this evaluation is documenting the real integration complexity encountered when operationalizing OCR systems. Three of six Phase~1 models required significant wrapper rewrites due to API changes.
-
-\textbf{API Stability.} PaddleOCR changed its constructor signature between versions. Surya completely restructured its module hierarchy in v0.17.x. Sarvam's actual API workflow bore no resemblance to the endpoint assumed by the original wrapper. This suggests enterprise teams should budget for ongoing wrapper maintenance.
-
-\textbf{Asynchronous Cloud APIs.} Sarvam's integration revealed a five-step asynchronous job workflow (create job, upload file, start, poll, download ZIP) rather than synchronous request-response---invisible in benchmarks but critical for pipeline design.
-
-\textbf{Batch Robustness.} Docling's batch evaluation surfaced a serialization failure where metadata resolved to a callable object, crashing JSON export. This class of bug only manifests at batch scale.
-
-Table~\ref{tab:integration} summarizes the integration lessons.
+Table~\ref{tab:percategory} and Fig.~\ref{fig:category} show that different models dominate different operating points. Surya leads on forms, financial tables, and multi-column layouts. Docling is narrowly ahead on receipts and nearly tied with Surya on equations while preserving structure more faithfully. Sarvam OCR is viable on structured categories when low latency matters, but its category failures prevent it from serving as a general-purpose default. Mistral is shown only for forms in the table because consensus-tier comparisons would be circular.
 
 \begin{table*}[t]
 \centering
-\caption{Integration lessons from Phase~1 model operationalization.}
-\label{tab:integration}
-\begin{tabular}{@{}llll@{}}
+\caption{Per-category token F1. Column headers include category size and GT tier. Cells marked \texttt{--} indicate not attempted, not supported, or excluded from ranking. Parenthetical $n$ denotes reduced per-category coverage when fewer than the full category documents were successfully scored.}
+\label{tab:percategory}
+\footnotesize
+\begin{tabular}{lccccc}
 \toprule
-\textbf{Model} & \textbf{Problem} & \textbf{Fix} & \textbf{Takeaway} \\
+\textbf{Model} & \textbf{Forms} & \textbf{Financial} & \textbf{Multi-column} & \textbf{Equations} & \textbf{Receipts} \\
+ & \textbf{$n=5$, human} & \textbf{$n=9$, consensus} & \textbf{$n=11$, consensus} & \textbf{$n=10$, consensus} & \textbf{$n=10$, consensus} \\
 \midrule
-PaddleOCR & Outdated constructor/API & Dynamic arg detection, \texttt{predict()} migration & Version drift requires version-aware wrappers \\
-Surya & Deprecated module structure & Full predictor architecture migration & Upstream API can break integrations silently \\
-Sarvam~OCR & Wrong endpoint assumption & Five-step SDK job workflow & Cloud APIs may use async job patterns \\
-Docling & Non-serializable metadata & Callable detection \& normalization & Batch pipelines need JSON-safe outputs \\
+Surya & 0.7710 & 0.8081 & 0.8425 & 0.7624 & 0.6704 \\
+Sarvam OCR & 0.7592 & 0.7667 & 0.7295 & 0.5566 ($n=2$) & -- \\
+Mistral OCR & 0.7549 & -- & -- & -- & -- \\
+Docling & 0.5889 & 0.7003 & 0.7827 ($n=9$) & 0.7587 & 0.6729 ($n=9$) \\
+Tesseract & 0.4980 & 0.6086 & 0.7352 & 0.5957 & 0.5362 \\
+PaddleOCR & -- & 0.6846 ($n=7$) & -- & -- & -- \\
 \bottomrule
 \end{tabular}
 \end{table*}
 
-%===============================================================================
-\section{Recommendations}
-%===============================================================================
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.9\textwidth]{fig3_category_heatmap.png}
+\caption{Category-wise F1 across the main GT-evaluable categories. Forms use human-verified GT ($n=5$); financial, multi-column, equations, and receipts use consensus GT ($n=40$ total). Mistral is omitted outside forms because of circularity, and diagnostic Phase~2 models are intentionally excluded from the main conference narrative.}
+\label{fig:category}
+\end{figure*}
 
-The following recommendations are based on Phase~1 evidence from four fully-evaluated models, supplemented by sanity-check data from Docling and PaddleOCR. All recommendations are provisional given the small ground-truth sample ($n=5$ forms, $n=10$ receipts).
+\subsection{Supported Statistical Tests}
 
-\textbf{Structured Forms and Tables.} Surya achieved the lowest CER (0.3028) and highest F1 (0.7710), suggesting strongest extraction quality at the cost of higher latency (38,289~ms). Mistral~OCR provides the best combination of accuracy, reliability (100\% success), and moderate latency. Sarvam~OCR offers low latency (3,836~ms) with competitive F1 (0.7592) for latency-sensitive workloads.
+Table~\ref{tab:stats} reports pairwise Wilcoxon signed-rank tests on per-document F1 for the main non-circular Phase~1 model comparisons. Only three comparisons reach significance at $\alpha=0.05$: Surya over Tesseract, Docling over Tesseract, and Surya over Docling. The forms-only subset remains non-significant for every pair, so it supports cautious preference statements rather than definitive superiority claims.
 
-\textbf{General-Purpose.} Mistral~OCR is the safest choice for heterogeneous document pipelines due to its 100\% success rate across all categories.
+\begin{table}[t]
+\centering
+\caption{Supported pairwise Wilcoxon tests on per-document F1. Mistral is excluded because of consensus-GT circularity. Forms-only comparisons ($n=5$) are all non-significant; minimum $p=0.0625$.}
+\label{tab:stats}
+\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrll}
+\toprule
+\textbf{Comparison} & \textbf{$n$} & \textbf{$p$} & \textbf{Winner} & \textbf{Effect size} \\
+\midrule
+Tesseract vs. Surya & 45 & $<0.001$ & Surya & large ($d=0.850$) \\
+Tesseract vs. Docling & 42 & $<0.001$ & Docling & medium ($d=0.576$) \\
+Tesseract vs. Sarvam OCR & 27 & 0.1482 & Sarvam OCR & small ($d=0.366$) \\
+Surya vs. Docling & 42 & 0.0241 & Surya & small ($d=0.314$) \\
+Surya vs. Sarvam OCR & 27 & 0.0906 & Surya & small ($d=0.448$) \\
+Sarvam OCR vs. Docling & 25 & 0.5424 & Sarvam OCR & negligible ($d=0.098$) \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
 
-\textbf{Character-Level Recognition.} Vision-language architectures (Mistral: 30/30, Sarvam: 24/30) outperform traditional OCR (Tesseract: 0/30, Surya: 10/30) on minimal-context character inputs.
+\subsection{Error Profiles and Recommendation Logic}
 
-\textbf{Receipt Processing.} Both Tesseract (F1 0.54) and Surya (F1 0.67) exhibit insertion-dominant errors. Dedicated receipt models or field-extraction systems remain viable alternatives.
+Figure~\ref{fig:errors} explains why the recommendations are intentionally split by use case. Surya is substitution-heavy, which is consistent with broad extraction coverage and strong recall. Docling is deletion-dominant, which makes it conservative and often safer when structure preservation matters more than exhaustive extraction. Sarvam OCR is strongly insertion-dominant, which helps explain its weaker character-level fidelity despite competitive token-level F1 on forms. Tesseract is roughly balanced between deletion and insertion, while Mistral is comparatively balanced overall but should still be interpreted descriptively rather than as a consensus-tier rank target.
 
-\textbf{Baseline Reference.} Tesseract remains appropriate for pipeline testing with well-calibrated confidence ($\rho=+0.83$), but should not be used as a production engine for complex documents.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig4_error_decomposition.png}
+\caption{Error decomposition across GT-evaluable documents. Bars show substitution, insertion, and deletion shares of total edit operations. Mistral is included descriptively, but not as a consensus-ground-truth ranking target because of circularity.}
+\label{fig:errors}
+\end{figure}
 
-%===============================================================================
-\section{Limitations}
-%===============================================================================
+Taken together, the evidence supports four clean recommendation positions:
+\begin{itemize}
+    \item \textbf{Surya} for strongest forms accuracy and the best consensus-tier aggregate F1 among non-circular models.
+    \item \textbf{Mistral OCR} for operational reliability across the full visible corpus, not for unbiased ``best overall'' accuracy.
+    \item \textbf{Docling} for structure-preserving extraction with a conservative, omission-heavy error profile.
+    \item \textbf{Sarvam OCR} for latency-sensitive structured workloads when receipts and equations are not primary targets.
+\end{itemize}
 
-This evaluation has several important limitations. The ground-truth subset covers only 15 of 91 documents (16.5\%) from 2 of 7 subcategories. At $n=5$, no pairwise F1 differences reach statistical significance. Receipt ground truth was derived from Mistral~OCR output, creating circularity. The handwritten category uses 32$\times$32 pixel character crops, not page-scale documents. The Indian languages category contains a single document. Full-dataset results are available for only four of six models. Latency comparisons between local and cloud models are not directly comparable. Cost, privacy, and deployment complexity are discussed qualitatively only.
+\section{Engineering Lessons}
 
-%===============================================================================
-\section{Phase~2 Roadmap}
-%===============================================================================
+The benchmark also surfaced integration lessons that matter operationally. Wrapper drift was real across multiple libraries: Surya required migration to a new predictor architecture, PaddleOCR required version-aware API handling, and Sarvam OCR required an asynchronous job workflow rather than a single request-response call. More importantly, behavior under failure mattered as much as raw metric averages. Docling's conservative omissions are operationally different from Sarvam OCR's insertion-heavy outputs, even when F1 values are similar. Production recommendation therefore depends on error profile, not just aggregate score.
 
-Phase~2 will address these limitations through several expansions. The ground-truth corpus will be expanded to at least 30 annotated documents per subcategory. The Indian languages category requires 15--20 additional documents across Hindi, Tamil, Telugu, and Bengali. Manually transcribed receipt ground truth will eliminate the Mistral circularity.
+\section{Threats to Validity}
 
-On the model side, DeepSeek~OCR, Qwen-VL~\cite{qwen}, OlmOCR, and GOT-OCR represent the emerging class of foundation-model-based OCR systems. Evaluating these alongside Phase~1 models will provide intelligence on whether general-purpose VLMs are displacing purpose-built OCR engines.
+The manuscript has four principal limitations. First, only five documents are human-verified, so the only unbiased subset is small. Second, 40 of the 45 GT-evaluable documents are consensus-derived, which introduces circularity for Mistral and constrains the strength of cross-model inference. Third, two visible-corpus categories lack usable accuracy ground truth: handwritten Devanagari crops ($n=30$) and the single Hindi document ($n=1$). Those categories still matter for reliability evaluation but not for comparative accuracy claims. Fourth, PaddleOCR remains partial and the repository's Phase~2 wrappers are not benchmark-ready, so the current recommendations should be read as Phase~1 positions rather than a claim that the search space is exhausted.
 
-Extending the metrics framework to capture cost per document, structured extraction quality (table cell accuracy, layout fidelity), and deployment complexity scores would move toward a comprehensive decision-support tool.
-
-%===============================================================================
 \section{Conclusion}
-%===============================================================================
 
-This Phase~1 benchmark demonstrates that a practical, reproducible OCR evaluation framework can produce evidence-backed model comparisons across diverse enterprise document types. The framework's self-registering model architecture, automated metrics pipeline with text normalization and error decomposition, and batch evaluation engine provide a reusable foundation for ongoing OCR assessment.
+This paper presents a conference-ready benchmark narrative grounded in the repository's current locked evidence: 90 visible OCR inputs, 45 GT-evaluable documents, and regenerated reporting artifacts shared across inventory, metrics, and figures. The evidence does not support a single universal winner. Instead, it supports a more useful conclusion for deployment: Surya is the strongest accuracy choice on the only unbiased subset, Mistral is the most reliable operational default, Docling is the safest structure-preserving extractor, and Sarvam OCR is the lowest-latency option for structured workloads with known category caveats.
 
-Phase~1 evidence suggests clear stratification on structured forms ($n=5$). Surya achieved the lowest CER (0.3028) and highest F1 (0.7710), demonstrating strong character-level fidelity at high latency. Mistral~OCR provides the most robust cross-category coverage with 100\% success rate and competitive forms F1 (0.7549). Sarvam~OCR delivers competitive accuracy (F1 0.7592) at the lowest non-baseline latency (4,688~ms) but with selective category support. Tesseract serves as a baseline with well-calibrated confidence ($\rho=+0.83$) but trails on all accuracy metrics.
-
-Error decomposition reveals insertion-dominant profiles across most models---Surya (73.8\%) and Sarvam (68.0\%)---suggesting that post-processing strategies focused on filtering excess text would yield the greatest accuracy improvement. These findings provide a defensible foundation for enterprise OCR selection decisions, with the caveat that they require refinement through expanded ground truth and Phase~2 model evaluation.
-
-%===============================================================================
-% References
-%===============================================================================
+The immediate next step is not to broaden claims, but to strengthen the evidence. The highest-value follow-on work is expanding human-verified ground truth beyond forms so that future revisions can test the same operational hypotheses without consensus-tier circularity.
 
 \bibliographystyle{IEEEtran}
 \begin{thebibliography}{10}
@@ -396,14 +305,8 @@ R.~Smith, ``An overview of the Tesseract OCR engine,'' in \textit{Proc. 9th Int.
 \bibitem{paddleocr2020}
 Y.~Du \textit{et~al.}, ``PP-OCR: A practical ultra lightweight OCR system,'' \textit{arXiv preprint arXiv:2009.09941}, 2020.
 
-\bibitem{rapidfuzz}
-M.~Bachmann, ``RapidFuzz: Rapid fuzzy string matching,'' 2020. [Online]. Available: \url{https://github.com/rapidfuzz/RapidFuzz}
-
-\bibitem{dhcd}
-S.~Acharya \textit{et~al.}, ``Devanagari handwritten character dataset,'' Kaggle, 2015. [Online]. Available: \url{https://www.kaggle.com/datasets/suvooo/devanagari-handwritten-character-dataset}
-
-\bibitem{qwen}
-J.~Bai \textit{et~al.}, ``Qwen-VL: A versatile vision-language model for understanding, localization, text reading, and beyond,'' \textit{arXiv preprint arXiv:2308.12966}, 2023.
+\bibitem{funsd}
+G.~Jaume, H.~K.~Ekenel, and J.-P.~Thiran, ``FUNSD: A dataset for form understanding in noisy scanned documents,'' in \textit{Proc. ICDAR-OST Workshop}, 2019.
 
 \bibitem{levenshtein1966}
 V.~I.~Levenshtein, ``Binary codes capable of correcting deletions, insertions, and reversals,'' \textit{Soviet Physics Doklady}, vol.~10, no.~8, pp. 707--710, 1966.
@@ -411,54 +314,6 @@ V.~I.~Levenshtein, ``Binary codes capable of correcting deletions, insertions, a
 \bibitem{rice1996measuring}
 S.~V.~Rice, G.~Nagy, and T.~A.~Nartker, \textit{Optical Character Recognition: An Illustrated Guide to the Frontier}. Springer, 1999.
 
-\bibitem{funsd}
-G.~Jaume, H.~K.~Ekenel, and J.-P.~Thiran, ``FUNSD: A dataset for form understanding in noisy scanned documents,'' in \textit{Proc. ICDAR-OST Workshop}, 2019.
-
-\bibitem{icdar2019}
-N.~Nayef \textit{et~al.}, ``ICDAR2019 robust reading challenge on multi-lingual scene text detection and recognition,'' in \textit{Proc. ICDAR}, 2019.
-
-\bibitem{surya}
-V.~Paruchuri, ``Surya: Multilingual document OCR toolkit,'' 2024. [Online]. Available: \url{https://github.com/VikParuchuri/surya}
-
 \end{thebibliography}
-
-%===============================================================================
-% Appendix
-%===============================================================================
-
-\appendices
-
-\section{Metric Definitions}
-
-\begin{table}[h]
-\centering
-\caption{Metric definitions and interpretation.}
-\label{tab:metrics}
-\begin{tabular}{@{}lll@{}}
-\toprule
-\textbf{Metric} & \textbf{Formula} & \textbf{Direction} \\
-\midrule
-CER & $\frac{\text{Lev}(p, g)}{|g|}$ & Lower \\[3pt]
-WER & $\frac{\text{Lev}(p_w, g_w)}{|g_w|}$ & Lower \\[3pt]
-Word Acc. & $\max(1 - \text{WER}, 0)$ & Higher \\[3pt]
-Edit Dist. & $\frac{\text{Lev}(p, g)}{\max(|p|, |g|)}$ & Lower \\[3pt]
-Token F1 & $\frac{2 \cdot P \cdot R}{P + R}$ & Higher \\[3pt]
-S Rate & $\frac{\text{subs}}{|g|}$ & Lower \\[3pt]
-I Rate & $\frac{\text{ins}}{|g|}$ & Lower \\[3pt]
-D Rate & $\frac{\text{dels}}{|g|}$ & Lower \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section{Text Normalization Pipeline}
-
-All OCR output and ground truth text is normalized before metric computation:
-\begin{enumerate}
-    \item \textbf{Unicode NFKC}---canonicalizes equivalent representations, critical for Devanagari.
-    \item \textbf{Markdown/HTML stripping}---removes heading markers, bold/italic, table syntax, HTML tags, and entities.
-    \item \textbf{Whitespace collapse}---all whitespace sequences reduced to single spaces.
-\end{enumerate}
-
-This eliminates systematic format-dependent bias from models producing markdown output (Mistral~OCR, Docling).
 
 \end{document}
