@@ -3,7 +3,7 @@
 import importlib
 import pkgutil
 from pathlib import Path
-from models.base import BaseOCRModel, OCRResult
+from models.base import BaseOCRModel, OCRResult as OCRResult
 
 MODEL_REGISTRY = {}
 

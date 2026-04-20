@@ -90,15 +90,15 @@ def generate_report(results_dir: str) -> str:
         cer_class = "good" if cer and cer < 0.05 else "medium" if cer and cer < 0.15 else "bad" if cer else ""
         f1_class = "good" if f1 and f1 > 0.85 else "medium" if f1 and f1 > 0.70 else "bad" if f1 else ""
 
-        html += f'<tr>'
+        html += '<tr>'
         html += f'<td><strong>{s["model"]}</strong></td>'
         html += f'<td>{success_pct:.0f}% ({s["successful"]}/{s["total"]})</td>'
         html += f'<td>{latency:.0f}ms</td>'
         html += f'<td class="{cer_class}">{cer:.4f}</td>' if cer is not None else '<td>-</td>'
         html += f'<td>{wer:.4f}</td>' if wer is not None else '<td>-</td>'
         html += f'<td class="{f1_class}">{f1:.4f}</td>' if f1 is not None else '<td>-</td>'
-        html += f'<td>-</td>'
-        html += f'</tr>'
+        html += '<td>-</td>'
+        html += '</tr>'
 
     html += '</table>'
 

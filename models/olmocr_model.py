@@ -1,4 +1,4 @@
-"""olmOCR wrapper — Allen AI VLM-based OCR."""
+"""olmOCR wrapper — Allen AI VLM-based OCR (Qwen2-VL architecture)."""
 
 from models import register_model
 from models.base import BaseOCRModel, OCRResult
@@ -13,7 +13,7 @@ class OlmOCR(BaseOCRModel):
     def display_name(self): return "olmOCR"
 
     def setup(self):
-        from transformers import AutoProcessor, Qwen2VLForConditionalGeneration
+        from transformers import AutoProcessor, AutoModelForImageTextToText
         import torch
 
         cfg = self.config.get("olmocr", {})
@@ -23,16 +23,22 @@ class OlmOCR(BaseOCRModel):
         print(f"  Loading olmOCR on {self._device}...")
         dtype = torch.float16 if self._device != "cpu" else torch.float32
         self._processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
-        self._model = Qwen2VLForConditionalGeneration.from_pretrained(
-            model_name, trust_remote_code=True, torch_dtype=dtype,
+        self._model = AutoModelForImageTextToText.from_pretrained(
+            model_name, trust_remote_code=True, dtype=dtype,
         ).to(self._device).eval()
         self._is_setup = True
 
     def _ocr_impl(self, image_path: str) -> OCRResult:
         from PIL import Image
         import torch
+        import gc
 
         img = Image.open(image_path).convert("RGB")
+        max_side = 1280
+        if max(img.size) > max_side:
+            ratio = max_side / max(img.size)
+            new_size = (int(img.size[0] * ratio), int(img.size[1] * ratio))
+            img = img.resize(new_size, Image.LANCZOS)
 
         messages = [{"role": "user", "content": [
             {"type": "image", "image": img},
@@ -44,10 +50,20 @@ class OlmOCR(BaseOCRModel):
         inputs = self._processor(text=[text_input], images=[img], return_tensors="pt",
                                   padding=True).to(self._device)
 
-        with torch.no_grad():
-            output_ids = self._model.generate(**inputs, max_new_tokens=4096)
+        try:
+            with torch.no_grad():
+                output_ids = self._model.generate(**inputs, max_new_tokens=4096)
 
-        output_ids = output_ids[:, inputs.input_ids.shape[1]:]
-        text = self._processor.batch_decode(output_ids, skip_special_tokens=True)[0]
+            output_ids = output_ids[:, inputs.input_ids.shape[1]:]
+            text = self._processor.batch_decode(output_ids, skip_special_tokens=True)[0]
+        finally:
+            del inputs
+            if 'output_ids' in locals():
+                del output_ids
+            gc.collect()
+            if self._device == "mps":
+                torch.mps.empty_cache()
+            elif self._device == "cuda":
+                torch.cuda.empty_cache()
 
         return OCRResult(raw_text=text, metadata={"device": str(self._device)})

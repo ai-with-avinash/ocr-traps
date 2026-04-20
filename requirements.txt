@@ -13,10 +13,7 @@ python-Levenshtein>=0.21
 nltk>=3.8
 rapidfuzz>=3.0
 
-# Cloud APIs
-azure-ai-documentintelligence>=1.0.0
-google-cloud-vision>=3.5
-boto3>=1.28
+# APIs (Mistral OCR, Sarvam OCR)
 mistralai>=1.0
 
 # Open-source OCR

@@ -24,13 +24,6 @@ def _load_dotenv(env_path: str = ".env") -> None:
 
 # Mapping: env var name -> (yaml section, yaml key)
 _ENV_TO_CONFIG = {
-    "AZURE_ENDPOINT": ("azure", "endpoint"),
-    "AZURE_API_KEY": ("azure", "api_key"),
-    "AZURE_MODEL_ID": ("azure", "model_id"),
-    "GOOGLE_APPLICATION_CREDENTIALS": ("google", "credentials_path"),
-    "AWS_REGION": ("aws", "region"),
-    "AWS_ACCESS_KEY_ID": ("aws", "access_key_id"),
-    "AWS_SECRET_ACCESS_KEY": ("aws", "secret_access_key"),
     "MISTRAL_API_KEY": ("mistral", "api_key"),
     "SARVAM_API_KEY": ("sarvam", "api_key"),
     "SARVAM_ENDPOINT": ("sarvam", "endpoint"),
@@ -42,7 +35,9 @@ def _overlay_env_vars(config: dict) -> dict:
     for env_var, (section, key) in _ENV_TO_CONFIG.items():
         value = os.environ.get(env_var)
         if value:
-            config.setdefault(section, {})[key] = value
+            if config.get(section) is None:
+                config[section] = {}
+            config[section][key] = value
     return config
 
 

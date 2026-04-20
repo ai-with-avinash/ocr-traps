@@ -1,7 +1,6 @@
 """Batch execution engine — runs models across documents with progress tracking."""
 
 import json
-import time
 from pathlib import Path
 from datetime import datetime
 from tqdm import tqdm
@@ -77,7 +76,8 @@ class EvalRunner:
 
             # Save raw output
             if self.config.get("execution", {}).get("save_raw_output", True) and result.success:
-                out_file = run_dir / "raw_outputs" / f"{model_name}__{doc_path.stem}.txt"
+                cat_slug = get_document_category(str(doc_path)).replace("/", "_")
+                out_file = run_dir / "raw_outputs" / f"{model_name}__{cat_slug}__{doc_path.stem}.txt"
                 out_file.write_text(result.raw_text, encoding="utf-8")
 
             # Compute metrics if ground truth available
@@ -123,7 +123,7 @@ class EvalRunner:
             return run_dir
 
         print(f"\n{'='*60}")
-        print(f"  BATCH EVALUATION")
+        print("  BATCH EVALUATION")
         print(f"  Models: {len(models_to_run)}")
         print(f"  Documents: {len(docs)}")
         print(f"  Total runs: {len(models_to_run) * len(docs)}")
@@ -153,7 +153,8 @@ class EvalRunner:
                 results.append(rd)
 
                 if self.config.get("execution", {}).get("save_raw_output", True) and result.success:
-                    out_file = run_dir / "raw_outputs" / f"{model_name}__{doc_path.stem}.txt"
+                    cat_slug = get_document_category(str(doc_path)).replace("/", "_")
+                    out_file = run_dir / "raw_outputs" / f"{model_name}__{cat_slug}__{doc_path.stem}.txt"
                     out_file.write_text(result.raw_text, encoding="utf-8")
 
                 if self.gt_dir:

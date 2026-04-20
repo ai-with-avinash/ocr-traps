@@ -21,10 +21,14 @@ class DoclingModel(BaseOCRModel):
         text = result.document.export_to_markdown()
         tables = []
         for table in result.document.tables:
-            tables.append(table.export_to_dataframe().to_dict())
+            tables.append(table.export_to_dataframe(doc=result.document).to_dict())
+
+        num_pages = getattr(result.document, 'num_pages', 1)
+        if callable(num_pages):
+            num_pages = num_pages()
 
         return OCRResult(
             raw_text=text,
             structured_data={"tables": tables} if tables else None,
-            metadata={"num_tables": len(tables), "num_pages": getattr(result.document, 'num_pages', 1)},
+            metadata={"num_tables": len(tables), "num_pages": num_pages},
         )

@@ -12,34 +12,36 @@ class SuryaModel(BaseOCRModel):
     def display_name(self): return "Surya OCR"
 
     def setup(self):
-        from surya.ocr import run_ocr
-        from surya.model.detection.model import load_model as load_det_model
-        from surya.model.detection.model import load_processor as load_det_proc
-        from surya.model.recognition.model import load_model as load_rec_model
-        from surya.model.recognition.processor import load_processor as load_rec_proc
+        from surya.common.surya.schema import TaskNames
+        from surya.detection import DetectionPredictor
+        from surya.foundation import FoundationPredictor
+        from surya.recognition import RecognitionPredictor
 
-        self._run_ocr = run_ocr
-        self._det_model = load_det_model()
-        self._det_proc = load_det_proc()
-        self._rec_model = load_rec_model()
-        self._rec_proc = load_rec_proc()
+        self._task_name = TaskNames.ocr_with_boxes
+        self._foundation_predictor = FoundationPredictor()
+        self._det_predictor = DetectionPredictor()
+        self._rec_predictor = RecognitionPredictor(self._foundation_predictor)
         self._langs = self.config.get("surya", {}).get("langs", ["en"])
         self._is_setup = True
 
     def _ocr_impl(self, image_path: str) -> OCRResult:
         from PIL import Image
-        img = Image.open(image_path)
-        results = self._run_ocr(
-            [img], [self._langs],
-            self._det_model, self._det_proc,
-            self._rec_model, self._rec_proc,
+
+        img = Image.open(image_path).convert("RGB")
+        results = self._rec_predictor(
+            [img],
+            task_names=[self._task_name],
+            det_predictor=self._det_predictor,
+            highres_images=[img],
+            math_mode=True,
         )
+
         lines = []
         confidences = []
         if results:
             for line in results[0].text_lines:
                 lines.append(line.text)
-                confidences.append(line.confidence)
+                confidences.append(line.confidence or 0)
 
         raw_text = "\n".join(lines)
         avg_conf = sum(confidences) / len(confidences) if confidences else 0

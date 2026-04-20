@@ -28,7 +28,7 @@ def main():
             f.write(result.raw_text)
         print(f"\n💾 Output saved to: {args.output}")
 
-    print(f"\n--- Full Result ---")
+    print("\n--- Full Result ---")
     print(json.dumps(result.to_dict(), indent=2, ensure_ascii=False, default=str))
 
 
