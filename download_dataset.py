@@ -147,7 +147,9 @@ def download_funsd(base_dir, n_samples, log_fp):
     log("📄 FUNSD — Annotated Forms Dataset", log_fp)
     log("=" * 60, log_fp)
 
-    import requests, zipfile, io
+    import requests
+    import zipfile
+    import io
 
     url = "https://guillaumejaume.github.io/FUNSD/dataset.zip"
     tmp_dir = Path(base_dir) / "_tmp_funsd"
@@ -300,7 +302,7 @@ def download_omni_benchmark(base_dir, n_samples, log_fp):
                 continue
 
         # Also try to get ground truth markdown
-        md_files = [f for f in all_files if f.endswith('.md') and 'readme' not in f.lower()]
+        _ = [f for f in all_files if f.endswith('.md') and 'readme' not in f.lower()]
 
         # Distribute across categories
         invoice_dest = Path(base_dir) / "01_printed_english" / "invoices"
@@ -449,7 +451,9 @@ def download_devanagari_handwritten(base_dir, n_samples, log_fp):
     log("📄 Devanagari Handwritten Character Dataset", log_fp)
     log("=" * 60, log_fp)
 
-    import requests, zipfile, io
+    import requests
+    import zipfile
+    import io
 
     url = "https://archive.ics.uci.edu/static/public/389/devanagari+handwritten+character+dataset.zip"
     tmp_dir = Path(base_dir) / "_tmp_devanagari"
@@ -505,7 +509,6 @@ def download_indicphotoocr_samples(base_dir, n_samples, log_fp):
     log("📄 IndicPhotoOCR — Indian Language Scene Text", log_fp)
     log("=" * 60, log_fp)
 
-    import requests
 
     # Download test images from the GitHub repo
     repo_raw = "https://raw.githubusercontent.com/Bhashini-IITJ/IndicPhotoOCR/main/test_images"
@@ -555,7 +558,7 @@ def download_sroie_info(base_dir, n_samples, log_fp):
     log("    https://rrc.cvc.uab.es/?ch=13", log_fp)
     log("  ℹ Alternative: search 'SROIE dataset' on Kaggle or HuggingFace", log_fp)
     log(f"  → Place {n_samples}-8 receipt images in: 06_mixed_content/receipts/", log_fp)
-    log(f"  → Place ground truth in: ground_truth/06_mixed_content/", log_fp)
+    log("  → Place ground truth in: ground_truth/06_mixed_content/", log_fp)
 
     # Try HuggingFace mirror
     try:
@@ -602,10 +605,10 @@ def download_iiithw_info(base_dir, n_samples, log_fp):
     log("  ℹ The IIIT Handwritten Word dataset must be requested from:", log_fp)
     log("    CVIT, IIIT Hyderabad — https://cvit.iiit.ac.in/research/projects/cvit-projects/indic-hw-data", log_fp)
     log("  ℹ Languages available: Hindi, Tamil, Telugu, Bengali, Malayalam, Gujarati, Kannada", log_fp)
-    log(f"  → Place Hindi samples in: 03_handwritten/hindi_devanagari/", log_fp)
-    log(f"  → Place Tamil/Bengali/Telugu/Malayalam in: 03_handwritten/other_indic/", log_fp)
-    log(f"  → Place Telugu printed/scene text in: 04_indian_languages/telugu/", log_fp)
-    log(f"  → Place ground truth .txt files in corresponding ground_truth/ folders", log_fp)
+    log("  → Place Hindi samples in: 03_handwritten/hindi_devanagari/", log_fp)
+    log("  → Place Tamil/Bengali/Telugu/Malayalam in: 03_handwritten/other_indic/", log_fp)
+    log("  → Place Telugu printed/scene text in: 04_indian_languages/telugu/", log_fp)
+    log("  → Place ground truth .txt files in corresponding ground_truth/ folders", log_fp)
 
 
 def download_iam_info(base_dir, n_samples, log_fp):
@@ -619,7 +622,7 @@ def download_iam_info(base_dir, n_samples, log_fp):
     log("  ℹ Register at: https://fki.tic.heia-fr.ch/databases/iam-handwriting-database", log_fp)
     log("  ℹ Free for research use after registration", log_fp)
     log(f"  → Place {n_samples}-7 samples in: 03_handwritten/english/", log_fp)
-    log(f"  → Place ground truth in: ground_truth/03_handwritten/", log_fp)
+    log("  → Place ground truth in: ground_truth/03_handwritten/", log_fp)
 
 
 def download_rvlcdip_samples(base_dir, n_samples, log_fp):
@@ -712,7 +715,7 @@ def generate_summary(base_dir, log_fp):
         log(f"  {status} {folder}: {count} files", log_fp)
 
     log(f"\n  Total documents downloaded: {total}", log_fp)
-    log(f"  Target: 100-150 documents", log_fp)
+    log("  Target: 100-150 documents", log_fp)
 
     if total < 100:
         log(f"\n  ⚠ {100 - total} more documents needed to reach minimum target.", log_fp)

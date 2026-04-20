@@ -75,14 +75,11 @@ pip install docling --quiet 2>/dev/null || echo "⚠ Docling install failed — 
 echo "Installing Surya OCR..."
 pip install surya-ocr --quiet 2>/dev/null || echo "⚠ Surya install failed — try manually: pip install surya-ocr"
 
-# --- Install Cloud SDKs ---
+# --- Install API SDKs ---
 echo ""
-echo "Installing cloud API SDKs..."
-pip install azure-ai-documentintelligence --quiet 2>/dev/null || true
-pip install google-cloud-vision --quiet 2>/dev/null || true
-pip install boto3 --quiet 2>/dev/null || true
+echo "Installing API SDKs..."
 pip install mistralai --quiet 2>/dev/null || true
-echo "✅ Cloud SDKs installed"
+echo "✅ API SDKs installed"
 
 # --- Install PyTorch (for VLM models) ---
 echo ""

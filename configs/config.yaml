@@ -18,21 +18,10 @@ execution:
   save_raw_output: true
 
 # ------------------------------------
-# Cloud API Credentials
+# API Credentials
 # ------------------------------------
 # All API keys are loaded from .env file via environment variables.
 # Only non-secret settings (model IDs, regions, etc.) belong here.
-
-azure:
-  model_id: "prebuilt-layout"
-  # AZURE_ENDPOINT and AZURE_API_KEY loaded from .env
-
-google:
-  # GOOGLE_APPLICATION_CREDENTIALS loaded from .env
-
-aws:
-  region: "us-east-1"
-  # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY loaded from .env
 
 mistral:
   model: "mistral-ocr-latest"
@@ -64,7 +53,7 @@ deepseek_ocr:
   model_path: "deepseek-ai/DeepSeek-OCR"
 
 qwen_vl:
-  model_name: "Qwen/Qwen2.5-VL-7B-Instruct"
+  model_name: "Qwen/Qwen2.5-VL-3B-Instruct"
 
 olmocr:
   model_name: "allenai/olmOCR-7B-0225-preview"
