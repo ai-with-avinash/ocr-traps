@@ -1,6 +1,1 @@
-{
-"company": "RESTORAN WAN SHENG",
-"date": "09-06-2018",
-"address": "NO.2, JALAN TEMENGGUNG 19/9, SEKSYEN 9, BANDAR MAHKOTA CHERAS, 43200 CHERAS, SELANGOR",
-"total": "4.80"
-}
+RESTORAN WAN SHENG 002043319-W No.2, Jalan Temenggung 19/9, Seksyen 9, Bandar Mahkota Cheras, 43200 Cheras, Selangor GST REG NO: 001335787520 Tax Invoice INV No.: 1183154 Cashier: Thandar Date : 09-06-2018 16:00:43 Total QTY: 4 Total (Excluding GST): 4.80 Total (Inclusive of GST): 4.80 TOTAL: 4.80 CASH : 4.80

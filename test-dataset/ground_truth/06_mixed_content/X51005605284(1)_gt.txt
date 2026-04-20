@@ -1,6 +1,1 @@
-{
-"company": "ADVANCO COMPANY",
-"date": "23/03/2018",
-"address": "NO 1&3, JALAN WANGSA DELIMA 12, WANGSA LINK, WANGSA MAJU, 53300 KUALA LUMPUR",
-"total": "83.00"
-}
+ADVANCO COMPANY Company Reg. No.: 725186-V NO 1&3, Jalan Wangsa Delima 12, Wangsa Link, Wangsa Maju, 53300 Kuala Lumpur 03-41318972 GST Reg: 001658445824 TAX INVOICE CB#: 398313 23/03/2018 3:13:19 M#: M2-0 Cashier: c2000- GST Summary Thank you & Please come again. Goods sold are not returnable for refund or exchange !!
