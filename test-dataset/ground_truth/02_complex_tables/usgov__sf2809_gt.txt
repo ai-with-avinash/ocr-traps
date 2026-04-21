@@ -1,0 +1,1221 @@
+Form Approved:
+                                                 Health Benefits Election Form                                                              OMB No. 3206-0160
+
+
+
+
+Uses for Standard Form (SF) 2809                                                    Item 9.    If you are covered by other health insurance, either in your
+Use this form to:                                                                              name or under a family member’s policy, check yes and
+                                                                                               complete item 10.
+•     Switch designated eligible family member; or
+                                                                                    Item 10.   Provide the information requested on any other health
+     Enroll or reenroll in the FEHB Program; or                                               insurance that covers you. An FEHB Self Plus One
+     Elect not to enroll in the FEHB Program (employees only); or                             enrollment covers the enrollee and one eligible family
+                                                                                               member designated by the enrollee. An FEHB Self and
+     Change your FEHB enrollment; or                                                          Family enrollment covers the enrollee and all eligible family
+                                                                                               members. If you or a family member is covered under
+     Cancel your FEHB enrollment; or                                                          another FEHB enrollment, check the FEHB box and
+     Suspend your FEHB enrollment (annuitants or former spouses                               stop. Contact your Human Resources office or retirement
+      only).                                                                                   system immediately as this is a dual coverage situation.
+                                                                                               Some examples of how this could occur are:
+Who May Use SF 2809                                                                               You are enrolling in an FEHB Self Only plan while
+1. Employees eligible to enroll in or currently enrolled in the FEHB                               your spouse has either an FEHB Self Plus One or Self
+   Program. Employees automatically participate in premium                                         and Family plan, in which you are already covered.
+   conversion unless they waive it, see page 6.                                                   You are enrolling in an FEHB Self Plus One plan while
+2. Annuitants in retirement systems other than the Civil Service                                   you are also covered under your spouse’s FEHB Self
+   Retirement System (CSRS) or Federal Employees Retirement                                        Plus One plan or FEHB Self and Family plan.
+   System (FERS), including individuals receiving monthly                                         You are enrolling in an FEHB Self and Family plan
+   compensation from the Office of Workers’ Compensation Programs                                  while your spouse is already enrolled in either a FEHB
+   (OWCP).                                                                                         Self Only plan, an FEHB Self Plus One plan that covers
+                                                                                                   you, or an FEHB Self and Family plan that covers you.
+      Note: Civil Service Retirement System (CSRS) and Federal
+      Employees Retirement System (FERS) annuitants and former                                    You are an employee under age 26 and have no eligible
+      spouses and children of CSRS/FERS annuitants -- Do not use                                   family members. You are enrolling in your own FEHB
+      this form. Instead, use form OPM 2809, which is available at                                 plan while you are covered under your parent’s FEHB
+      www.opm.gov/forms/OPM-forms, or call the Retirement Information                              Self Plus One plan or Self and Family plan.
+      Office toll-free at 1-888-767-6738.
+                                                                                                  You are an annuitant who is reemployed in the Federal
+3. Former spouses eligible to enroll in or currently enrolled in the                               government. You are enrolling in an FEHB plan as an
+   FEHB Program under the Spouse Equity law or similar statutes.                                   employee while you are covered under your own or a
+                                                                                                   family member’s FEHB plan.
+4. Individuals eligible for Temporary Continuation of Coverage (TCC)
+   under the FEHB Program, including:                                                          No person may be covered under more than one FEHB
+                                                                                               enrollment. However, in certain unusual circumstances, your
+           Former employees (who separated from service);                                     agency may allow you to enroll in order to:
+
+           Children who lose FEHB coverage; and                                                  Enable an employee under age 26 who is covered under
+                                                                                                   a parent’s Self Plus One or Self and Family FEHB
+           Former spouses who are not eligible for FEHB under item 3                              enrollment to enroll in FEHB to cover his or her own
+            above.                                                                                 spouse and/or child;
+
+                                                                                                  Enable an employee under age 26 who is covered under
+Instructions for Completing SF 2809                                                                a parent’s Self Plus One or Self and Family FEHB
+Type or Print. We have not provided instructions for                                               enrollment, but lives outside his or her parent’s HMO
+those items that have an explanation on the form.                                                  service area, to have FEHB coverage;
+
+Part A — Enrollee and Family Member Information                                                   Enable an employee who separates or divorces to enroll
+You must complete this part.                                                                       in FEHB to cover family members who move outside
+                                                                                                   the HMO service area of the covering FEHB Self Plus
+Item 2.         See the Privacy Act and Public Burden Statements on page 5.                        One or Self and Family enrollment.
+Item 5.         If you are separated but not divorced, you are still married.                  In these unusual situations, each enrollee must notify his or
+Item 7.                                                                                        her plan as to which family members are covered under
+                If you have Medicare, check which Parts you have, including
+                                                                                               which enrollment. See Dual Enrollment information on
+                prescription drug coverage under Medicare Part D.
+                                                                                               page 5.
+Item 8.         If you have Medicare, enter your Medicare Beneficiary
+                Identifier (MBI). This number is on your Medicare Card.
+                                                                                1                                                             Standard Form 2809
+Previous edition is not usable                                                                                                            Revised November 2019
+If your enrollment is for Self Plus One or Self and Family, complete the             Eligible children include your children born within marriage or adopted
+family member information as appropriate. (If you need extra space for               children; stepchildren; recognized natural children; or foster children
+additional family members, list them on a separate sheet and attach.)                who live with you in a regular parent-child relationship.
+
+Important: In order for your Self Plus One FEHB enrollment election to               Other relatives (for example, your parents) are not eligible for coverage
+be processed, you must complete the family member information for                    even if they live with you and are dependent upon you.
+your designated family member.
+                                                                                     If you are a former spouse or survivor annuitant, family members
+The instructions for completing items 13 through 24 for your initial                 eligible for coverage under your Self Plus One or Self and Family
+family member also apply to the information you provide for additional               enrollment are the natural or adopted children under age 26 of both you
+family members.                                                                      and your former or deceased spouse.
+Item 14.   Provide the Social Security Number for this family member if
+           he/she has one. If your family member does not have a Social              In some cases, a disabled child age 26 or older is eligible for coverage
+           Security Number, leave blank; benefits will not be withheld.              under your Self Plus One or Self and Family enrollment if you provide
+           (See Privacy Act Statement on page 5.)                                    adequate medical certification of a mental or physical disability that
+                                                                                     existed before his/her 26th birthday and renders the child incapable of
+Item 17.   Provide the code which indicates the relationship of each                 self-support.
+           eligible family member to you.
+                                                                                     Note: Your employing office can give you additional details about
+               Code                    Family Relationship                           family member eligibility including any certification or documentation
+                                                                                     that may be required for coverage. Contact your employing office for
+             01            Spouse                                                    more information about covering foster child(ren),“Employing office”
+             19            Child under age 26                                        means the office of an agency or retirement system that is responsible for
+             09            Adopted Child under age 26                                health benefits actions for an employee, annuitant, former spouse
+                                                                                     eligible for coverage under the Spouse Equity provisions, or individual
+             17            Stepchild under age 26                                    eligible for TCC.
+             10            Foster Child under age 26
+             99            Disabled child age 26 or older who is incapable           Survivor Benefits
+                           of self support because of a physical or mental           For your surviving family members to continue your FEHB enrollment
+                           disability that began before his/her 26th birthday.       after your death, all of the following requirements must be met:
+
+                                                                                     Self Plus One
+Item 18.   If your family member does not live with you, enter his/her                  You must have been enrolled for Self Plus One at the time of your
+           home address.                                                                 death; and
+                                                                                        Your designated family member must be entitled to an annuity as
+Item 19.   If your family member has Medicare, check which Parts
+                                                                                         your survivor.
+           (Part A [Hospital Insurance] and/or Part B [Medical
+                                                                                     Note: The only survivor eligible to continue the health benefits enroll-
+           Insurance]) he/she has, including prescription drug
+                                                                                     ment is the designated family member covered under FEHB on the date
+           coverage under Medicare Part D.
+                                                                                     of death as long as that individual is entitled to a survivor annuity. No
+Item 20.   If your family member has Medicare, enter his/her Medicare                other family members are entitled to continue the enrollment even
+           Beneficiary Identifier (MBI). This number is on his/her                   though they may be entitled to a survivor annuity.
+           Medicare Card.
+                                                                                     Self and Family
+Item 21.   If your family member is covered by other group insurance,
+           such as private, state, or Medicaid, check the box and                       You must have been enrolled for Self and Family at the time of your
+           complete item 22.                                                             death; and
+                                                                                        At least one family member must be entitled to an annuity as your
+Item 22.   Provide the information requested on any other health                         survivor.
+           insurance that covers this family member. If your family
+                                                                                     Note: All of your survivors who meet the definition of “family member”
+           member is covered under another FEHB plan, see
+                                                                                     can continue their health benefits coverage under your enrollment as
+           instructions for item 10.
+                                                                                     long as any one of them is entitled to a survivor annuity. If the survivor
+Item 23.   Enter email address, if applicable, for this family member.               annuitant is the only eligible family member, the retirement system will
+                                                                                     automatically change the enrollment to Self Only.
+Item 24.   Enter preferred telephone number, if applicable, for this
+           family member.
+
+Family Members Eligible for Coverage
+Unless you are a former spouse or survivor annuitant, family members
+eligible for coverage under your Self Plus One enrollment include one
+eligible family member (spouse or child under age 26) designated by
+you. A Self and Family enrollment includes you and all of your eligible
+family members.
+
+
+
+                                                                                 2                                                             Standard Form 2809
+                                                                                                                                            Revised November 2019
+Part B — FEHB Plan You Are Currently Enrolled In
+You must complete this part if you are changing, cancelling, or                 Following each number is a letter, which identifies a specific Qualifying
+suspending your enrollment.                                                     Life Event (QLE); for example, the event code “1A” refers to the initial
+                                                                                opportunity to enroll for an employee who elected to participate in
+Item 1.    Enter the name of the plan you are enrolled in from the front        premium conversion.
+           cover of the plan brochure.
+                                                                                Item 2.    Enter the date of the QLE using numbers to show month, day,
+Item 2.    Enter your current enrollment code from your plan ID card.                      and complete year; e.g., 06/30/2011. If you are electing to
+                                                                                           enroll, enter the date you became eligible to enroll (for
+Part C — FEHB Plan You Are Enrolling In or                                                 example, the date your appointment began). If you are
+Changing To                                                                                making an open season enrollment or change, enter the date
+                                                                                           on which the open season begins.
+Complete this part to enroll or change your enrollment in the FEHB
+Program.
+Item 1.    Enter the name of the plan you are enrolling in or changing          Part E — Election NOT to Enroll
+           to. The plan name is on the front cover of the brochure of the       Place an “X” in the box only if you are an employee and you do NOT
+           plan you want to be enrolled in.                                     wish to enroll in the FEHB Program. Be sure to read the information
+                                                                                titled Employees Who Elect Not to Enroll or Who Cancel Their
+Item 2.    Enter the enrollment code of the plan you are enrolling in or        Enrollment.
+           changing to. The enrollment code is on the front cover of the
+           brochure of the plan you want to be enrolled in, and shows
+           the plan and option you are electing and whether you are
+                                                                                Part F — Cancellation of FEHB
+           enrolling for Self Only, Self Plus One, or Self and Family.          Place an “X” in the box only if you wish to cancel your FEHB
+                                                                                enrollment. Also enter your current plan name and enrollment code in
+                                                                                Part B. Be sure to read the information titled Employees Who Elect Not
+To enroll in a Health Maintenance Organization (HMO), you must live             to Enroll or Who Cancel Their Enrollment.
+(or in some cases work) in a geographic area specified by the carrier.
+                                                                                Note For Parts E and F. If you are Electing Not to Enroll or
+To enroll in an employee organization plan, you must be or become a             Cancelling your enrollment because you are covered as a spouse or
+member of the plan’s sponsoring organization, as specified by the               child under another FEHB enrollment, your agency must enter the
+carrier.                                                                        enrollee’s name, Social Security number, and FEHB enrollment code
+                                                                                in REMARKS.
+Your signature in Part H authorizes deductions from your salary,
+annuity, or compensation to cover your cost of the enrollment you elect         Cancellation of Enrollment
+in this item, unless you are required to make direct payments to the            Employees participating in premium conversion may cancel their FEHB
+employing office.                                                               enrollment only during the open season or when they experience a
+                                                                                Qualifying Life Event. Employees who waived participation in premium
+Part D — Event That Permits You To Enroll, Change,                              conversion, annuitants, former spouses, and individuals enrolled under
+Or Cancel                                                                       TCC may cancel their enrollment at any time. However, if you cancel,
+                                                                                neither you nor any family member covered by your enrollment are
+Item 1.    Enter the event code that permits you to enroll, change, or          entitled to a 31-day temporary extension of coverage, or to convert to
+           cancel based on a Qualifying Life Event (QLE) from the               an individual, nongroup policy. Moreover, family members who lose
+           Table of Permissible Changes in Enrollment that applies to           coverage because of your cancellation are not eligible for TCC. Be sure
+           you.                                                                 to read the additional information below about cancelling your FEHB
+                                                                                enrollment.
+Explanation of Table of Permissible Changes in Enrollment
+                                                                                Employees Who Elect Not to Enroll (Part E) or Who Cancel
+The tables on pages 6 through 16 illustrate when: an employee who
+participates in premium conversion; annuitant; former spouse; person            Their Enrollment (Part F)
+eligible for TCC; or employee who waived participation in premium               To be eligible for an FEHB enrollment after you retire, you must retire:
+conversion may enroll or change enrollment. The tables show those                  Under a retirement system for Federal civilian employees, and
+permissible events that are found in the regulations at 5 CFR Parts 890
+and 892.                                                                           On an immediate annuity.
+
+The tables have been organized by enrollee category. Each category is           In addition, you must be currently enrolled in a plan under the FEHB
+designated by a number, which identifies the enrollee group, as follows:        Program and must have been enrolled (or covered as a family member)
+                                                                                in a plan under the Program for:
+1. Employees who participate in premium conversion
+                                                                                   The 5 years of service immediately before retirement (i.e.,
+2. Annuitants (other than CSRS/FERS annuitants), including                          commencing date of annuity entitlement), or
+   individuals receiving monthly compensation from the Office of
+   Workers’ Compensation Programs                                                  If fewer than 5 years, all service since your first opportunity to
+                                                                                    enroll. (Generally, your first opportunity to enroll is within 60 days
+3. Former spouses eligible for coverage under the Spouse Equity                     after your first appointment [in your Federal career] to a position
+   provision of FEHB law                                                            under which you are eligible to enroll under conditions that permit a
+                                                                                    Government contribution toward the enrollment.)
+4. TCC enrollees
+                                                                                If you do not enroll at your first opportunity or if you cancel your
+5. Employees who waived participation in premium conversion                     enrollment, you may later enroll or reenroll only under the circumstances
+                                                                            3
+                                                                                                                    Standard Form 2809 Revised November 2019
+explained in the table beginning on page 6. Some employees delay their             Note 1: If you become covered by a regular enrollment in the FEHB
+enrollment or reenrollment until they are nearing 5 years before                   Program, either in your own right or under the enrollment of someone
+retirement in order to qualify for FEHB coverage as a retiree; however,            else, your TCC enrollment is suspended. You will need to send
+there is always the risk that they will retire earlier than expected and not       documentation of the new enrollment to the employing office
+be able to meet the 5-year requirement for continuing FEHB coverage                maintaining your TCC enrollment so that they can stop the TCC
+into retirement. When you elect not to enroll or cancel your enrollment            enrollment. If your new FEHB coverage stops before the TCC
+you are voluntarily accepting this risk. An alternative would be to                enrollment would have expired, the TCC enrollment can be reinstated
+enroll in or change to a lower cost plan so that you meet the                      for the remainder of the original eligibility period (18 months for
+requirements for continuation of your FEHB enrollment after retirement.            separated employees or 36 months for eligible family members who lose
+                                                                                   coverage).
+Note for temporary [under 5 U.S.C. 8906a] employees eligible for
+FEHB without a Government contribution: Your decision not to enroll                Note 2: Former spouses (Spouse Equity) and TCC enrollees who fail to
+or to cancel your enrollment will not affect your future eligibility to            pay their premiums within specified timeframes are considered to have
+continue FEHB enrollment after retirement.                                         voluntarily cancelled their enrollment.
+
+Annuitants Who Cancel Their Enrollment                                             Part G — Suspension of FEHB
+CSRS and FERS annuitants and their eligible family members should                  CSRS and FERS annuitants and their eligible family members should
+not use this form but use form RI 79-9, Health Benefits                            not use this form but use form RI 79-9, Health Benefits
+Cancellation/Suspension Confirmation, which is available at                        Cancellation/Suspension Confirmation, which is available at
+www.opm.gov/forms/Retirement-and-Insurance-Forms, or call                          www.opm.gov/forms/Retirement-and-Insurance-Forms, or call
+1-888-767-6738.                                                                    1-888-767-6738.
+
+Generally, you cannot reenroll as an annuitant unless you are                      Place an “X” in the box only if you are an annuitant or former spouse
+continuously covered as a family member under another person’s                     and wish to suspend your FEHB enrollment. Also enter your current plan
+enrollment in the FEHB Program during the period between your                      name and enrollment code in Part B.
+cancellation and reenrollment. Your employing office or retirement
+system can advise you on events that allow eligible annuitants to                  You may suspend your FEHB enrollment because you are enrolling in
+reenroll. If you cancel your enrollment because you are covered under              one of the following programs:
+another FEHB enrollment, you can reenroll from 31 days before through
+                                                                                      A Medicare Advantage plan or Medicare HMO,
+60 days after you lose that coverage under the other enrollment.
+                                                                                      Medicaid or similar State-sponsored program of medical assistance
+If you cancel your enrollment for any other reason, you cannot later                   for the needy,
+reenroll, and you and any family members covered by your enrollment
+are not entitled to a 31-day temporary extension of coverage or to                    TRICARE (including Uniformed Services Family Health Plan or
+                                                                                       TRICARE for Life),
+convert to an individual policy.
+                                                                                      CHAMPVA, or
+Former Spouses (Spouse Equity) Who Cancel Their Enrollment
+                                                                                      Peace Corps.
+Generally, if you cancel your enrollment in the FEHB Program, you
+cannot reenroll as a former spouse. However, if you cancel the
+                                                                                   You can reenroll in the FEHB Program if your other coverage ends.
+enrollment because you become covered under FEHB as a new spouse
+                                                                                   If your coverage ends involuntarily, you can reenroll from 31 days
+or employee, your eligibility for FEHB coverage under the Spouse
+                                                                                   before your other coverage ends through 60 days after your other
+Equity provisions continues. You may reenroll as a former spouse from
+                                                                                   coverage ends. If your coverage ends voluntarily because you disenroll,
+31 days before through 60 days after you lose coverage under the other
+                                                                                   you can reenroll during the next open season.
+FEHB enrollment.
+
+                                                                                   You must submit documentation of eligibility for coverage under the
+If you cancel your enrollment for any other reason, you cannot later
+                                                                                   non-FEHB Program to the office that maintains your enrollment. That
+reenroll, and you and any family members covered by your enrollment
+                                                                                   office must enter in REMARKS the reason for your suspension.
+are not entitled to a 31-day temporary extension of coverage or to
+convert to an individual policy.
+                                                                                   Part H — Signature
+Temporary Continuation of Coverage (TCC) Enrollees Who                             Your agency, retirement system, or office maintaining your enrollment
+                                                                                   cannot process your request unless you complete this part.
+Cancel Their Enrollment
+If you cancel your TCC enrollment, you cannot reenroll. Your family
+members who lose coverage because of your cancellation cannot enroll               If you are registering for someone else under a written authorization
+for TCC in their own right nor can they convert to a nongroup policy.              from him or her to do so, sign your name in Part H and attach the written
+Family members who are Federal employees or annuitants may enroll in               authorization.
+the FEHB Program when you cancel your coverage if they are eligible
+for FEHB coverage in their own right.                                              If you are registering for a former spouse eligible for coverage under the
+                                                                                   Spouse Equity provisions or for an individual eligible for TCC as his
+                                                                                   or her court-appointed guardian, sign your name in Part H and attach
+                                                                                   evidence of your court-appointed guardianship.
+
+
+
+
+                                                                               4                                                             Standard Form 2809
+                                                                                                                                         Revised November 2019
+Part I - Agency or Retirement System Information                                                 For the eligible former spouse of an enrollee, the enrollee or the
+and Remarks                                                                                       former spouse must notify the employing office within 60 days after
+Leave this section blank as it is for agency or retirement system use only.                       the former spouse’s change in status; e.g., the date of the divorce.
+
+Electronic Enrollments                                                                       An individual eligible for TCC who wants to continue FEHB coverage
+Many agencies use automated systems that allow their employees to                            may choose any plan, option, and type of enrollment for which he or she
+make changes using a touch-tone telephone, or a computer instead of                          is eligible. The time limit for a former employee, child, or former spouse
+a form. This may be Employee Express or another automated system.                            to enroll with the employing office is within 60 days after the Qualifying
+If you are not sure whether the electronic enrollment option is available                    Life Event, or receiving notice of eligibility, whichever is later.
+to you, contact your employing office.
+                                                                                             Effective Dates
+Dual Enrollment                                                                              Except for open season, most enrollments and changes of enrollment are
+No person (enrollee or family member) is entitled to receive benefits                        effective on the first day of the pay period after the employing office
+under more than one enrollment in the FEHB Program. Normally, you                            receives this form and that follows a pay period during any part of which
+are not eligible to enroll if you are covered as a family member under                       the employee is in pay status. Your employing office can give you the
+someone else’s enrollment in the Program. However, such dual                                 specific date on which your enrollment or enrollment change will take
+enrollments may be permitted under certain circumstances in order to:                        effect.
+
+                                                                                             Note 1: If you are changing your FEHB enrollment from Self Plus One
+   Protect the interests of children who otherwise would lose coverage
+                                                                                             or Self and Family to Self Only so that your spouse can enroll for Self
+    as family members, or
+                                                                                             Only, you should coordinate the effective date of your spouse’s
+   Enable an employee who is under age 26 and covered under a                               enrollment with the effective date of your enrollment change to avoid a
+    parent’s enrollment and marries or becomes the parent of a child to                      gap in your spouse’s coverage.
+    enroll for Self Plus One or Self and Family coverage.
+                                                                                             Note 2: If you are cancelling your FEHB enrollment and intend to be
+Each enrollee must notify his or her plan of the names of the persons to                     covered under someone else’s enrollment at the time you cancel, you
+be covered under his or her enrollment who are not covered under the                         should coordinate the effective date of your cancellation with the
+other enrollment. See instructions for item 10 for more information.                         effective date of your new coverage to avoid a gap in your coverage.
+
+Temporary Continuation of Coverage (TCC)                                                     Agency Distribution of SF 2809
+The employing office must notify a former employee of his or her                             Agencies must distribute one copy of the completed SF 2809 to each of
+eligibility for TCC. The enrollee, child, former spouse, or their                            the following, as appropriate:
+representative must notify the employing office when a child or former
+                                                                                                 Official Personnel Folder
+spouse becomes eligible.
+                                                                                                 New Carrier
+   For the eligible child of an enrollee, the enrollee must notify the                          Old Carrier
+    employing office within 60 days after the qualifying event occurs;
+    e.g., child reaches age 26.                                                                  Payroll Office
+                                                                                                 Enrollee
+
+
+
+                                                                     Privacy Act Statement
+Pursuant to 5 U.S.C. § 552a (e)(3), this Privacy Act Statement explains why OPM is requesting the information on this form. Authority: OPM is authorized to collect the
+information requested on this form pursuant to Title 5, U.S.C. Chapter 89 and Title 5 of the Code of Federal Regulations, Part 890 pertaining to enrollment in the Federal
+Employees Health Benefits (FEHB) Program. OPM is authorized to collect your Social Security Number (SSN) by Executive Order 9397 (November 22, 1943), as amended by
+Executive Order 13478 (November 18, 2008). Purpose: The principal use of this information will be to share it with the health insurance carrier you select so that it may (1)
+identify your enrollment in the plan, (2) verify your and/or your family’s eligibility for payment of a claim for health benefits services or supplies, and (3) coordinate payment
+of claims with other insurance carriers with whom you might also make a claim for payment of benefits. Your SSN and the SSNs of your covered family members may be used
+as individual identifiers in the FEHB Program. Routine Uses: The information you provide on this form may also be disclosed externally to other Federal agencies or
+Congressional offices which may have a need to know it in connection with your application for a job, license, grant, or other benefit. It may also be shared and is subject to
+verification, via paper, electronic media, or through the use of computer matching programs, with national, state, local, or other charitable or Social Security administrative
+agencies to determine and issue benefits under their programs or to obtain information necessary for determination or continuation of benefits under the FEHB program. In
+addition, to the extent this information indicates a possible violation of civil or criminal law, it may be shared and verified with an appropriate Federal, state, or local law
+enforcement agency. A list of routine uses associated with this form can be found in the Privacy Act System of Records Notice (SORN), OPM/CENTRAL 1 Civil Service
+Retirement and Insurance, available at www.opm.gov/privacy. Consequences of Failure to Provide Information: Providing this information is voluntary, however failure to
+provide it may result in a delay in processing your enrollment. In addition, failure to furnish your SSN and/or Medicare Beneficiary Identifier may result in the OPM’s inability
+to ensure the prompt payment of your and/or your family members’ claims for health benefits services or supplies, proper coordination with Medicare, or proper health
+insurance status reporting to the IRS.
+
+
+
+                                                                    Public Burden Statement
+We estimate this form takes an average of 30 minutes to complete, including the time for reviewing instructions, getting the needed data, and reviewing the completed form.
+Send comments regarding our time estimate or any other aspect of this form, including suggestions for reducing completion time, to the Office of Personnel Management,
+Retirement Services Publications Team, (3206-0160), Washington, D.C. 20415-0001. The OMB number, 3206-0160 is currently valid. OPM may not collect this information,
+and you are not required to respond, unless this number is displayed.
+
+
+
+                                                                                         5
+                                                                                                                                                                 Standard Form 2809
+                                                                                                                                                             Revised November 2019
+                                      Federal Employees Receiving Premium Conversion Tax Benefits
+                            Table of Permissible Changes in FEHB Enrollment and Premium Conversion Election
+Premium Conversion allows employees who are eligible for FEHB the opportunity to pay for their share of FEHB premiums with pre-tax dollars. Premium conversion
+plans are governed by Section 125 of the Internal Revenue Code, and IRS rules govern when a participant may change his or her election outside of the annual open
+season. All employees who enroll in the FEHB Program automatically receive premium conversion tax benefits, unless they waive participation. When an
+employee experiences a Qualifying Life Event (QLE) as described below, certain changes to the employee’s FEHB coverage (including change to Self Only and
+cancellation) and premium conversion election may be permitted, so long as they are because of and consistent with the QLE’s. For more information about
+premium conversion, please visit www.opm.gov/healthcare-insurance/healthcare.
+
+
+   Qualifying Life Events (QLE’s) that                          Change that May Be Permitted                             Premium               Time Limits in
+     May Permit Change in FEHB                                                                                       Conversion Change         which Change
+    Enrollment, Designated Family                                                                                       that May Be               May Be
+    Member or Premium Conversion                                                                                         Permitted               Permitted
+                Election
+
+ Event                    Event                  From Not      From Self     From One     Cancel or       Switch     Participate   Waive       When You Must
+ Code                                           Enrolled To   Only to Self    Plan or     Change to     Designated                           File Health Benefits
+                                                 Enrolled     Plus One or    Option to     Self Plus      Family                             Election Form With
+                                                                Self and      Another     One or Self    Member                                Your Employing
+                                                                Family                       Only                                                   Office
+
+   1      Employee electing to receive or receiving premium conversion tax benefits
+  1A      Initial opportunity to enroll, for       Yes           N/A            N/A          N/A           N/A       Automatic       Yes      Within 60 days
+          example:                                                                                                    Unless                  after becoming
+                                                                                                                      Waived                  eligible
+           • New employee
+           • Change from excluded
+             position
+           • Temporary employee who
+             completes 1 year of service
+             and is eligible to enroll under
+             5 USC 8906a
+
+  1B      Open Season                              Yes            Yes           Yes          Yes           Yes          Yes          Yes     As announced by
+                                                                                                                                             OPM
+  1C       Change in family status that            Yes            Yes           Yes          Yes1          Yes          Yes          Yes     Within 60 days after
+           results in increase or decrease in   Employees     Employees      Employees                                                       change in family
+           number of eligible family            may enroll    may enroll     may enroll                                                      status
+           members, for example:                or change     or change      or change
+           • Marriage, divorce, annulment       beginning     beginning      beginning
+           • Birth, adoption, acquiring          31 days       31 days        31 days
+             foster child or stepchild,         before the    before the     before the
+             issuance of court order              event.        event.         event.
+             requiring employee to provide
+             coverage for child
+           • Last child loses coverage, for
+             example, child reaches age
+             26, disabled child becomes
+             capable of self-support, child
+             acquires other coverage by
+             court order
+           • Death of spouse or eligible
+             family member
+
+  1D       Any change in employee’s                Yes           N/A            N/A          N/A           No        Automatic       Yes      Within 60 days
+           employment status that could                                                                               Unless                  after employment
+           result in entitlement to coverage,                                                                         Waived                  status change
+           for example:
+           • Reemployment after a break
+             in service of more than 3 days
+           • Return to pay status from
+             nonpay status, or return to
+             receiving pay sufficient to
+             cover premium withholdings,
+             if coverage terminated (If
+             coverage did not terminate,
+             see 1G.)
+
+
+
+
+                                                                                  6
+ Qualifying Life Events (QLE’s) that                            Change that May Be Permitted                              Premium            Time Limits in
+   May Permit Change in FEHB                                                                                          Conversion Change      which Change
+  Enrollment, Designated Family                                                                                          that May Be            May Be
+  Member or Premium Conversion                                                                                            Permitted            Permitted
+              Election
+
+Event                  Event                    From Not       From Self     From One      Cancel or      Switch      Participate   Waive     When You Must
+Code                                           Enrolled To    Only to Self    Plan or      Change to     Designated                         File Health Benefits
+                                                Enrolled      Plus One or    Option to      Self Plus     Family                            Election Form With
+                                                                Self and      Another      One or Self    Member                              Your Employing
+                                                                Family                        Only                                                 Office
+
+ 1E     Any change in employee’s                   Yes            Yes           Yes           Yes           No           Yes         Yes    Within 60 days
+        employment status that could                                                                                                        after employment
+        affect cost of insurance, including:                                                                                                status change
+         • Change from temporary
+           appointment with eligibility
+           for coverage under 5 USC
+           8906a to appointment that
+           permits receipt of government
+           contribution
+         • Change from full time to part-
+           time career or the reverse
+ 1F     Employee restored to civilian              Yes            Yes           Yes           Yes           No           Yes         Yes    Within 60 days after
+        position after serving in uniformed                                                                                                 return to civilian
+        services2.                                                                                                                          position
+
+ 1G     Employee, spouse or eligible               No             No            No            Yes           No           Yes         Yes    Within 60 days
+        family member:                                                                                                                      after employment
+         • Begins nonpay status or                                                                                                          status change
+           insufficient pay3 or
+         • Ends nonpay status or
+           insufficient pay if coverage
+           continued
+         • (If employee’s coverage
+           terminated, see 1D.)
+         • (If spouse’s or eligible family
+           member’s coverage
+           terminated, see 1M.)
+
+ 1H     Salary of temporary employee              N/A             No            Yes           Yes           No           Yes         Yes    Within 60 days
+        insufficient to make withholdings                                                                                                   after receiving
+        for plan in which enrolled.                                                                                                         notice from
+                                                                                                                                            employing office
+
+ 1I     Employee (or covered family               N/A             Yes           Yes           N/A           Yes          No         No      Upon notifying
+        member) enrolled in FEHB health                                                                                                     employing office of
+        maintenance organization (HMO)                                                                                                      move
+                                                                                            (see 1M)                   (see 1M)     (see
+        moves or becomes employed
+                                                                                                                                    1M)
+        outside the geographic area from
+        which the FEHB carrier accepts
+        enrollments or, if already outside
+        the area, moves further from this
+        area.4
+ 1J     Transfer from post of duty within           Yes           Yes            Yes          Yes           Yes          Yes         Yes    Within 60 days after
+        a State of the United States or the    . Employees    Employees      Employees                                                      arriving at new post
+        District of Columbia to post of         may enroll    may enroll     may enroll
+        duty outside a State of the United       or change     or change      or change
+        States or District of Columbia, or       beginning     beginning      beginning
+        reverse.                                  31 days       31 days        31 days
+                                                   before        before         before
+                                                leaving the   leaving the    leaving the
+                                                old post of   old post of    old post of
+                                                    duty.         duty.          duty.
+ 1K     Separation from Federal                    Yes            Yes           Yes           N/A           No           N/A        N/A     During employee’s
+        employment when the employee or                                                                                                     final pay period
+        employee’s spouse is pregnant.
+
+
+
+
+                                                                                  7
+ Qualifying Life Events (QLE’s) that                          Change that May Be Permitted                             Premium            Time Limits in
+   May Permit Change in FEHB                                                                                       Conversion Change      which Change
+  Enrollment, Designated Family                                                                                       that May Be            May Be
+  Member or Premium Conversion                                                                                         Permitted            Permitted
+              Election
+
+Event                 Event                    From Not      From Self     From One     Cancel or      Switch      Participate   Waive     When You Must
+Code                                          Enrolled To   Only to Self    Plan or     Change to     Designated                         File Health Benefits
+                                               Enrolled     Plus One or    Option to     Self Plus     Family                            Election Form With
+                                                              Self and      Another     One or Self    Member                              Your Employing
+                                                              Family                       Only                                                 Office
+
+ 1L     Employee becomes entitled to              No            No            Yes          N/A           No           N/A        N/A     Any time beginning
+        Medicare and wants to change to                                                                                                  on the 30th day
+        another plan or option.5                                                                                                         before becoming
+                                                                           (Changes      (see 1P)                   (see 1P)     (see
+                                                                                                                                         eligible for
+                                                                            may be                                               1P)
+                                                                                                                                         Medicare
+                                                                             made
+                                                                              only
+                                                                             once.)
+ 1M     Employee or eligible family              Yes            Yes           Yes          Yes           Yes          Yes         Yes    Within 60 days after
+        member loses coverage under                                                                                                      loss of coverage
+                                              Employees     Employees      Employees
+        FEHB or another group insurance
+                                              may enroll    may enroll     may enroll
+        plan including the following:
+                                              or change     or change      or change
+         • Loss of coverage under             beginning     beginning      beginning
+           another FEHB enrollment due         31 days       31 days        31 days
+           to termination, cancellation, or   before the    before the     before the
+           change to Self Plus One or           event.        event.         event.
+           Self Only of the covering
+           enrollment
+         • Loss of coverage due to
+           termination of membership in
+           employee organization
+           sponsoring the FEHB plan6
+         • Loss of coverage under
+           another federally-sponsored
+           health benefits program,
+           including: TRICARE,
+           Medicare, Indian Health
+           Service
+         • Loss of coverage under
+           Medicaid or similar State-
+           sponsored program of medical
+           assistance for the needy
+         • Loss of coverage under a non-
+           Federal health plan, including
+           foreign, state or local
+           government, private sector
+         • Loss of coverage due to
+           change in worksite or
+           residence (Employees in an
+           FEHB HMO, also see 1I.)
+
+ 1N     Loss of coverage under a non             Yes            Yes           Yes          Yes           Yes          Yes         Yes    From 31 days
+        Federal group health plan because                                                                                                before the
+        an employee moves out of the                                                                                                     employee leaves
+        commuting area to accept another                                                                                                 the commuting
+        position and the employee’s non-                                                                                                 area to 180 days
+        Federally employed spouse                                                                                                        after arriving in the
+        terminates employment to                                                                                                         new commuting
+        accompany the employee.                                                                                                          area
+ 1O     Employee or eligible family              Yes            Yes           Yes          Yes           Yes          Yes         Yes    During open season,
+        member loses coverage due to                                                                                                     unless OPM sets a
+        discontinuance in whole or part of                                                                                               different time
+        FEHB plan.7
+
+
+
+
+                                                                                8
+ Qualifying Life Events (QLE’s) that                         Change that May Be Permitted                            Premium            Time Limits in
+   May Permit Change in FEHB                                                                                     Conversion Change      which Change
+  Enrollment, Designated Family                                                                                     that May Be            May Be
+  Member or Premium Conversion                                                                                       Permitted            Permitted
+              Election
+
+Event                 Event                   From Not      From Self     From One    Cancel or      Switch      Participate   Waive     When You Must
+Code                                         Enrolled To   Only to Self    Plan or    Change to     Designated                         File Health Benefits
+                                              Enrolled     Plus One or    Option to    Self Plus     Family                            Election Form With
+                                                             Self and      Another    One or Self    Member                              Your Employing
+                                                             Family                      Only                                                 Office
+
+ 1P     Enrolled employee or eligible            No            No            No          Yes9          Yes          Yes         Yes    Within 60 days after
+        family member gains coverage                                                                                                   QLE
+        under FEHB or another group
+        insurance plan, including the
+        following:
+         • Medicare (Employees who
+           become eligible for Medicare
+           and want to change plans or
+           options, see 1L.)
+         • TRICARE for Life, due to
+           enrollment in Medicare.
+         • TRICARE due to change in
+           employment status, including:
+           (1) entry into active military
+           service, (2) retirement from
+           reserve military service under
+           Chapter 67, title 10.
+         • Health insurance acquired due
+           to change of worksite or
+           residence that affects
+           eligibility for coverage
+         • Health insurance acquired due
+           to spouse’s or eligible family
+           member’s change in
+           employment status (includes
+           state, local, or foreign
+           government or private sector
+           employment).8
+
+ 1Q     Change in spouse’s or eligible           No            No            No          Yes9          Yes          Yes         Yes    Within 60 days after
+        family member’s coverage options                                                                                               QLE
+        under a health plan, for example:
+         • Employer starts or stops
+           offering a different type of
+           coverage (If no other
+           coverage is available, also see
+           1M.)
+         • Change in cost of coverage
+         • HMO adds a geographic
+           service area that now makes
+           spouse eligible to enroll in
+           that HMO
+         • HMO removes a geographic
+           area that makes spouse
+           ineligible for coverage under
+           that HMO, but other plans or
+           options are available (If no
+           other coverage is available,
+           see 1M)
+
+ 1R     Employee or eligible family             Yes            Yes          Yes          Yes9          Yes          Yes         Yes    Within 60 days
+        member becomes eligible for                                                                                                    after the date the
+        assistance under Medicaid or a                                                                                                 employee or
+        State Children’s Health Insurance                                                                                              family member
+        Program (CHIP).                                                                                                                becomes eligible
+                                                                                                                                       for assistance.
+
+
+
+
+                                                                              9
+(If you are a United States Postal Service employee, these rules may be different. Consult your employing office or information provided by your agency.)
+
+1. Employees may change to Self Only outside of open season only if the QLE caused the enrollee to be the last eligible family member under the FEHB enrollment.
+   Employees may change to Self Plus One outside ofOpen Season only if the QLE causes only one family member to be eligible under the FEHB enrollment.
+   Employees may cancel enrollment outside of open season only if the QLE caused the enrollee and all eligible family members to acquire other health insurance
+   coverage.
+
+2. Employees who enter active military service are given the opportunity to terminate coverage. Termination for this reason does not count against the employee for
+   purposes of meeting the requirements for continuing coverage after retirement. Additional information on the FEHB coverage of employees who return from
+   active military service is available in the Frequently Asked Questions section of the FEHB website at www.opm.gov/healthcare-insurance/healthcare.
+
+3. Employees who begin nonpay status or insufficient pay must be given an opportunity to elect to continue or terminate coverage. A termination differs from a
+   cancellation as it allows conversion to nongroup coverage and does not count against the employee for purposes of meeting the requirements for continuing
+   coverage after retirement.
+
+4. This code reflects the FEHB regulation that gives employees enrolled in an FEHB HMO who change from Self Only or Self Plus One to Self and Family or from
+   one plan or option to another a different timeframe than that allowed under 1M. For change to Self-Only or Self Plus One, cancellation, or change in premium
+   conversion status, see 1M.
+
+5. This code reflects the FEHB regulation that gives employees enrolled in FEHB a one-time opportunity to change plans or options under a different timeframe than
+   that allowed by 1P. For change to Self Only or Self Plus One, cancellation, or change in premium conversion status, see 1P.
+
+6. If employee’s membership terminates (e.g., for failure to pay membership dues), the employee organization will notify the agency to terminate the enrollment.
+
+7. Employee’s failure to select another FEHB plan is deemed a cancellation for purposes of meeting the requirements for continuing coverage after retirement.
+
+8. Under IRS rules, this includes start/stop of employment or nonpay status, strike or lockout, and change in worksite.
+
+9. Employees may change to Self Only outside of Open Season only if the QLE caused all eligible family members to acquire other health insurance coverage.
+   Employees may change to Self Plus One outside of Open Season only if the QLE caused all but one eligible family member to acquire other health insurance
+   coverage. Employees may cancel enrollment outside of Open Season only if the QLE caused the enrollee and all eligible family members to acquire other health
+   insurance coverage.
+
+
+
+
+                                                                                  10
+    Tables of Permissible Changes in FEHB Enrollment for Individuals Who Are Not Participating
+                                       in Premium Conversion
+Enrollment May Be Cancelled or Changed from Self and Family to Self Plus One or Self Only or from Self Plus
+                                     One to Self Only at Any Time
+
+                  QLE’s That Permit
+                                                                           Change that May Be Permitted                         Time Limits
+                 Enrollment or Change
+
+
+                                                                                     From Self      From
+                                                                                                             Switch
+                                                                      From Not      Only to Self    One               When You Must File Health
+Event                                                                                                      Designated
+                                 Event                               Enrolled to    Plus One or    Plan or            Benefits Election Form With
+Code                                                                                                         Family
+                                                                      Enrolled          Self       Option               Your Employing Office
+                                                                                                            Member
+                                                                                    and Family        to
+                                                                                                   Another
+
+2       Annuitant (Includes Compensationers)
+        Note for enrolled survivor annuitants: A change in family status based on additional family members can only occur if the additional
+        eligible family members are family members of the deceased employee or annuitant.
+2A      Open Season                                                      No             Yes          Yes       Yes      As announced by OPM.
+2B      Change in family status; for example: marriage, birth or         No             Yes          Yes       Yes      From 31 days before through 60
+        death of family member, adoption, or divorce.                                                                   days after the event.
+2C      Reenrollment of annuitant who suspended FEHB                 May Reenroll       N/A         N/A        No       From 31 days before through 60
+        enrollment to enroll in a Medicare Advantage plan,                                                              days after involuntary loss of
+        Medicaid or similar State-sponsored program, or to use                                                          coverage.
+        TRICARE (including Uniformed Services Family Health
+        Plan and TRICARE for Life), Peace Corps, or
+        CHAMPVA, and who later involuntarily loses this
+        coverage under one of these programs.
+2D      Reenrollment of annuitant who suspended FEHB enroll-         May Reenroll       N/A         N/A        No       During open season.
+        ment to enroll in a Medicare Advantage plan, Medicaid,
+        or similar State-sponsored program, or to use TRICARE
+        (including Uniformed Services Family Health Plan or
+        TRICARE for Life), Peace Corps, or CHAMPVA, and
+        who wants to reenroll in the FEHB Program for any
+        reason other than an involuntary loss of coverage.
+2E      Restoration of annuity or compensation (OWCP)                    Yes            N/A         N/A        No       Within 60 days after the retire-
+        payments, for example:                                                                                          ment system or OWCP mails a
+        •   Disability annuitant who was enrolled in FEHB, and                                                          notice of insurance eligibility.
+            whose annuity terminated due to restoration of earning
+            capacity or recovery from disability, and whose
+            annuity is restored;
+           Compensationer whose compensation terminated
+            because of recovery from injury or disease and whose
+            compensation is restored due to a recurrence of
+            medical condition;
+           Surviving spouse who was covered by FEHB
+            immediately before survivor annuity terminated
+            because of remarriage and whose annuity is restored;
+           Surviving child who was covered by FEHB
+            immediately before survivor annuity terminated
+            because student status ended and whose survivor
+            annuity is restored;
+           Surviving child who was covered by FEHB immedi-
+            ately before survivor annuity terminated because of
+            marriage and whose survivor annuity is restored.
+2F      Annuitant or eligible family member loses FEHB                   Yes            Yes          Yes       Yes      From 31 days before through 60
+        coverage due to termination, cancellation, or change to                                                         days after date of loss of cover-
+        Self Plus One or Self Only of the covering enrollment.                                                          age.
+
+
+
+
+                                                                               11
+                   QLE’s That Permit
+                                                                              Change that May Be Permitted                        Time Limits
+                  Enrollment or Change
+
+
+                                                                                        From Self      From
+                                                                                                                Switch
+                                                                         From Not      Only to Self    One               When You Must File Health
+Event                                                                                                         Designated
+                                   Event                                Enrolled to    Plus One or    Plan or            Benefits Election Form With
+Code                                                                                                            Family
+                                                                         Enrolled          Self       Option               Your Employing Office
+                                                                                                               Member
+                                                                                       and Family        to
+                                                                                                      Another
+
+2G      Annuitant or eligible family member loses coverage                  No             Yes          Yes       Yes      From 31 days before through 60
+        under another group insurance plan, for example:                                                                   days after loss of coverage.
+           Loss of coverage under another federally-sponsored
+            health benefits program;
+           Loss of coverage due to termination of membership in
+            the employee organization sponsoring the FEHB plan;
+           Loss of coverage under Medicaid or similar
+            State-sponsored program (but see events 2C and 2D);
+           Loss of coverage under a non-Federal health plan.
+2H      Annuitant or eligible family member loses coverage due              N/A            Yes          Yes       Yes      During open season, unless
+        to the discontinuance, in whole or part, of an FEHB plan.                                                          OPM sets a different time.
+2I      Annuitant or covered family member in a Health                      N/A            Yes          Yes       Yes      Upon notifying the employing
+        Maintenance Organization (HMO) moves or becomes                                                                    office of the move or change of
+        employed outside the geographic area from which the                                                                place of employment.
+        carrier accepts enrollments, or if already outside this area,
+        moves or becomes employed further from this area.
+2J      Employee in an overseas post of duty retires or dies.               No             Yes          Yes       Yes      Within 60 days after retirement
+                                                                                                                           or death.
+2K      An enrolled annuitant separates from duty after serving             N/A            Yes          Yes       No       Within 60 days after separation
+        31 days or more in a uniformed service.                                                                            from the uniformed service.
+2L      On becoming eligible for Medicare.                                  N/A            No           Yes       No       At any time beginning on the
+                                                                                                                           30th day before becoming eligi-
+        (This change may be made only once in a lifetime.)                                                                 ble for Medicare.
+2M      Annuitant’s annuity is insufficient to make withholdings            N/A            No           Yes       No       Employing office will advise
+        for plan in which enrolled.                                                                                        annuitant of the options.
+
+3       Former Spouse Under The Spouse Equity Provisions
+
+        Note: Former spouse may change to Self Plus One or Self and Family only if family members are also eligible family members of the
+        employee or annuitant.
+3A      Initial opportunity to enroll. Former spouse must be                Yes            N/A         N/A        N/A      Generally, must apply within
+        eligible to enroll under the authority of the Civil Service                                                        60 days after dissolution of
+        Retirement Spouse Equity Act of 1984 (P.L. 98-615), as                                                             marriage. However, if a retiring
+        amended, the Intelligence Authorization Act of 1986                                                                employee elects to provide a
+        (P.L. 99-569), or the Foreign Relations Authorization                                                              former spouse annuity or
+        Act, Fiscal Years 1988 and 1989 (P.L. 100-204).                                                                    insurable interest annuity for
+                                                                                                                           the former spouse, the former
+                                                                                                                           spouse must apply within 60
+                                                                                                                           days after OPM’s notice of
+                                                                                                                           eligibility for FEHB. May enroll
+                                                                                                                           any time after employing office
+                                                                                                                           establishes eligibility.
+3B      Open Season.                                                        No             Yes          Yes       Yes      As announced by OPM.
+3C      Change in family status based on addition of family                 No             Yes          Yes       Yes      From 31 days before through 60
+        members who are also eligible family members of the                                                                days after change in family
+        employee or annuitant.                                                                                             status.
+3D      Reenrollment of former spouse who suspended FEHB                May reenroll       N/A         N/A        No       From 31 days before through 60
+        enrollment to enroll in a Medicare Advantage plan,                                                                 days after involuntary loss of
+        Medicaid, or similar State-sponsored program, or to                                                                coverage.
+        use TRICARE (including Uniformed Services Family
+        Health Plan or TRICARE for Life), Peace Corps, or
+         CHAMPVA, and who later involuntarily loses this
+         coverage under one of these programs.
+
+
+
+
+                                                                                  12
+                  QLE’s That Permit
+                                                                         Change that May Be Permitted                         Time Limits
+                 Enrollment or Change
+
+                                                                                   From Self
+                                                                                                 From      Switch
+                                                                    From Not      Only to Self                        When You Must File Health
+Event                                                                                            One     Designated
+                                 Event                             Enrolled to    Plus One or                         Benefits Election Form With
+Code                                                                                            Plan or    Family
+                                                                    Enrolled          Self                              Your Employing Office
+                                                                                               Option to  Member
+                                                                                  and Family
+                                                                                               Another
+
+3E      Reenrollment of former spouse who suspended FEHB           May reenroll      N/A         N/A        No        During open season.
+        enrollment to enroll in a Medicare Advantage plan,
+        Medicaid, or similar State-sponsored program, or to use
+        TRICARE (including Uniformed Services Family Health
+        Plan or TRICARE for Life), Peace Corps, or
+        CHAMPVA, and who wants to reenroll in the FEHB
+        Program for any reason other than an involuntary loss of
+        coverage.
+3F      Former spouse or eligible child loses FEHB coverage            Yes           Yes         Yes        Yes       From 31 days before through 60
+        due to termination, cancellation, or change to Self Only                                                      days after date of loss of cover-
+        of the covering enrollment.                                                                                   age.
+3G      Enrolled former spouse or eligible child loses coverage        N/A           Yes         Yes        Yes       From 31 days before through 60
+        under another group insurance plan, for example:                                                              days after loss of coverage.
+           Loss of coverage under another federally-sponsored
+            health benefits program;
+           Loss of coverage due to termination of membership in
+            the employee organization sponsoring the FEHB plan;
+           Loss of coverage under Medicaid or similar
+            State-sponsored program (but see 3D and 3E);
+           Loss of coverage under a non-Federal health plan.
+3H      Former spouse or eligible family member loses coverage         N/A           Yes         Yes        Yes       During open season, unless
+        due to the discontinuance, in whole or part, of an FEHB                                                       OPM sets a different time.
+        plan.
+3I      Former spouse or covered family member in a Health             N/A           Yes         Yes        Yes       Upon notifying the employing
+        Maintenance Organization (HMO) moves or becomes                                                               office of the move or change of
+        employed outside the geographic area from which the                                                           place of employment.
+        carrier accepts enrollments, or if already outside this
+        area, moves or becomes employed further from this area.
+3J      On becoming eligible for Medicare                              N/A            No         Yes        No        At any time beginning the 30th
+                                                                                                                      day before becoming eligible for
+                                                                                                                      Medicare.
+        (This change may be made only once in a lifetime.)
+3K      Former spouse’s annuity is insufficient to make FEHB           No             No         Yes        No        Retirement system will advise
+        withholdings for plan in which enrolled.                                                                      former spouse of options.
+
+4       Temporary Continuation of Coverage (TCC) For Eligible Former Employees, Former Spouses, and Children.
+
+        Note: Former spouse may change to Self Plus One or Self and Family only if family members are also eligible family members of the
+        employee or annuitant.
+4A      Opportunity to enroll for continued coverage under TCC                                                        Within 60 days after the qualify-
+        provisions:                                                                                                   ing event, or receiving notice of
+           Former employee                                            Yes           Yes         Yes       N/A        eligibility, whichever is later.
+                                                                       Yes           N/A         N/A
+           Former spouse
+                                                                       Yes           N/A         N/A
+           Child who ceases to qualify as a family
+            member
+4B      Open Season:                                                                                                  As announced by OPM.
+           Former employee                                            No            Yes         Yes        Yes
+                                                                       No            Yes         Yes
+           Former spouse
+                                                                       No            Yes         Yes
+           Child who ceases to qualify as a family
+            member
+4C      Change in family status (except former spouse); for            No            Yes         Yes        Yes       From 31 days before through 60
+        example, marriage, birth or death of family member,                                                           days after event.
+        adoption, or divorce.
+
+
+
+
+                                                                             13
+                 QLE’s That Permit
+                                                                         Change that May Be Permitted                         Time Limits
+                Enrollment or Change
+
+
+                                                                                   From Self      From
+                                                                                                           Switch
+                                                                    From Not      Only to Self    One               When You Must File Health
+Event                                                                                                    Designated
+                                  Event                            Enrolled to    Plus One or    Plan or            Benefits Election Form With
+Code                                                                                                       Family
+                                                                    Enrolled        Self and     Option               Your Employing Office
+                                                                                                          Member
+                                                                                     Family         to
+                                                                                                 Another
+
+4D      Change in family status of former spouse, based on             No             Yes          Yes       Yes      From 31 days before through 60
+        addition of family members who are eligible family                                                            days after event.
+        members of the employee or annuitant.
+4E      Reenrollment of a former employee, former spouse, or       May reenroll       N/A         N/A        No       From 31 days before through 60
+        child whose TCC enrollment was terminated because of                                                          days after the event. Enrollment
+        other FEHB coverage and who loses the other FEHB                                                              is retroactive to the date of the
+        coverage before the TCC period of eligibility (18 or 36                                                       loss of the other FEHB cover-
+        months) expires.                                                                                              age.
+4F      Enrollee or eligible family member loses coverage              No             Yes          Yes       Yes      From 31 days before through 60
+        under FEHB or another group insurance plan, for                                                               days after loss of coverage.
+        example:
+           Loss of coverage under another FEHB enrollment
+            due to termination, cancellation, or change to Self
+            Plus One or Self Only of the covering enrollment
+            (but see event 4E);
+           Loss of coverage under another federally-sponsored
+            health benefits program;
+           Loss of coverage due to termination of membership
+            in the employee organization sponsoring the FEHB
+            plan;
+           Loss of coverage under Medicaid or similar
+            State-sponsored program;
+           Loss of coverage under a non-Federal health plan.
+4G      Enrollee or eligible family member loses coverage due          N/A            Yes          Yes       Yes      During open season, unless
+        to the discontinuance, in whole or part, of an FEHB                                                           OPM sets a different time.
+        plan.
+4H      Enrollee or covered family member in a Health                  N/A            Yes          Yes       No       Upon notifying the employing
+        Maintenance Organization (HMO) moves or becomes                                                               office of the move or change of
+        employed outside the geographic area from which the                                                           place of employment.
+        carrier accepts enrollments, or if already outside this
+        area, moves or becomes employed further from this
+        area.
+4I      On becoming eligible for Medicare.                             N/A            No           Yes       No       At any time beginning on the
+                                                                                                                      30th day before becoming eligi-
+                                                                                                                      ble for Medicare.
+        (This change may be made only once in a lifetime.)
+
+5       Employees Who Are Not Participating In Premium Conversion
+5A      Initial opportunity to enroll.                                 Yes            N/A         N/A        N/A      Within 60 days after becoming
+                                                                                                                      eligible.
+5B      Open Season.                                                   Yes            Yes          Yes       Yes      As announced by OPM.
+5C      Change in family status; for example: marriage, birth or       Yes            Yes          Yes       Yes      From 31 days before through 60
+        death of family member, adoption, or divorce                                                                  days after event.
+
+
+
+
+                                                                             14
+                 QLE’s That Permit
+                                                                           Change that May Be Permitted                        Time Limits
+                Enrollment or Change
+
+
+                                                                                    From Self      From
+                                                                                                            Switch
+                                                                      From Not     Only to Self    One                 When You Must File Health
+Event                                                                                                     Designated
+                                 Event                               Enrolled to   Plus One or    Plan or              Benefits Election Form With
+Code                                                                                                        Family
+                                                                      Enrolled       Self and     Option                 Your Employing Office
+                                                                                                           Member
+                                                                                      Family         to
+                                                                                                  Another
+
+5D      Change in employment status, for example:                       Yes            Yes         Yes        No       Within 60 days of employment
+           Reemployment after a break in service of more than 3                                                       status change.
+            days;
+           Return to pay status following loss of coverage due to
+            expiration of 365 days of LWOP status or termination
+            of coverage during LWOP;
+           Return to pay sufficient to make withholdings
+            after termination of coverage during a period of
+            insufficient pay;
+           Restoration to civilian position after serving in
+            uniformed services;
+           Change from temporary appointment to appointment
+            that entitles employee receipt of Government
+            contribution;
+           Change to or from part-time career employment.
+5E      Separation from Federal employment when the                     Yes            Yes         Yes        No       Enrollment or change must
+        employee or employee’s spouse is pregnant.                                                                     occur during final pay period of
+                                                                                                                       employment.
+5F      Transfer from a post of duty within the United States to        Yes            Yes         Yes       Yes       From 31 days before leaving old
+        a post of duty outside the United States, or reverse.                                                          post through 60 days after arriv-
+                                                                                                                       ing at new post.
+5G      Employee or eligible family member loses coverage               Yes            Yes         Yes       Yes       From 31 days before through 60
+        under FEHB or another group insurance plan, for                                                                days after loss of coverage.
+        example:
+           Loss of coverage under another FEHB enrollment
+            due to termination, cancellation, or change to Self
+            Plus One or Self Only of the covering enrollment;
+           Loss of coverage under another federally-sponsored
+            health benefits program;
+           Loss of coverage due to termination of membership
+            in the employee organization sponsoring the FEHB
+            plan;
+           Loss of coverage under Medicaid or similar
+            State-sponsored program;
+           Loss of coverage under a non-Federal health plan.
+5H      Enrollee or eligible family member loses coverage due           N/A            Yes         Yes       Yes       During open season, unless
+        to the discontinuance, in whole or part, of an FEHB                                                            OPM sets a different time.
+        plan.
+5I      Loss of coverage under a non-Federal group health plan          Yes            Yes         Yes       Yes       From 31 days before the
+        because an employee moves out of the commuting area                                                            employee leaves the commuting
+        to accept another position and the employee’s                                                                  area through 180 days after
+        non-federally employed spouse terminates employment                                                            arriving in the new commuting
+        to accompany the employee.                                                                                     area.
+5J      Employee or covered family member in a Health                   N/A            Yes         Yes       Yes       Upon notifying the employing
+        Maintenance Organization (HMO) moves or becomes                                                                office of the move or change of
+        employed outside the geographic area from which the                                                            place of employment.
+        carrier accepts enrollments, or if already outside the
+        area, moves or becomes employed further from this
+        area.
+
+
+
+
+                                                                              15
+                  QLE’s That Permit
+                                                                        Change that May Be Permitted                        Time Limits
+                 Enrollment or Change
+
+
+                                                                                 From Self      From
+                                                                                                         Switch
+                                                                   From Not     Only to Self    One               When You Must File Health
+Event                                                                                                  Designated
+                                Event                             Enrolled to   Plus One or    Plan or            Benefits Election Form With
+Code                                                                                                     Family
+                                                                   Enrolled         Self       Option               Your Employing Office
+                                                                                                        Member
+                                                                                and Family        to
+                                                                                               Another
+
+5K      On becoming eligible for Medicare                            N/A            No          N/A        No       At any time beginning on the
+                                                                                                                    30th day before becoming
+        (This change may be made only once in a lifetime.)                                                          eligible for Medicare.
+5L      Temporary employee completes one year of continuous          Yes            N/A         N/A        No       Within 60 days after becoming
+        service in accordance with 5 U.S.C. Section 8906a.                                                          eligible.
+5M      Salary of temporary employee insufficient to make            N/A            No           Yes       No       Within 60 days after receiving
+        withholdings for plan in which enrolled.                                                                    notice from employing office.
+5N      Employee or eligible family member becomes eligible for      Yes            Yes          Yes       Yes      Within 60 days after the date the
+        assistance under Medicaid or a State Children’s Health                                                      employee or family member
+        Insurance Program (CHIP).                                                                                   becomes eligible for assistance.
+
+
+
+
+                                                                           16
+                                                                                                                                                                            Form Approved:
+                                                                                                                                                                          OMB No. 3206-0160
+
+Federal Employees
+Health Benefits Program
+                                                            Health Benefits Election Form
+Part A - Enrollee and Family Member Information (for additional family members use a separate sheet and attach)
+ 1. Enrollee name (last, first, middle initial)                     2. Social Security Number 3. Date of birth (mm/dd/yyyy)                        4. Sex            5. Are you married?
+
+                                                                                                            M       F         Yes         No
+ 6. Home mailing address (including ZIP Code)                       7. If you are covered by Medicare, 8. Medicare Beneficiary Identifier
+                                                                       check all that apply.
+                                                                        A           B         D
+-------------------------------------------------------------------
+                                                                    9. Are you covered by insurance other than Medicare?
+
+                                                                                                                 Yes, indicate in item 10 below.               No
+10. Indicate the type(s) of other insurance:
+      TRICARE              Other       Name of other insurance: ______________________________________________                                     Policy Number: _____________________
+      FEHB       An FEHB Self Plus One enrollment covers the enrollee and one eligible family member designated by the enrollee. An FEHB Self and Family enrollment covers the
+                 enrollee and all eligible family members. No person may be covered under more than one FEHB enrollment. See instructions for item 10 on page 1.
+11. Email address                                                                                         12. Preferred telephone number
+
+
+13. Name of family member (last, first, middle initial)            14. Social Security Number 15. Date of birth (mm/dd/yyyy)                        16. Sex         17. Relationship code
+
+                                                                                                                                                   M       F
+18. Address (if different from enrollee)                                                                  19. If this family member is covered 20. Medicare Beneficiary Identifier
+                                                                                                              by Medicare, check all that apply.
+                                                                                                              A           B         D
+-------------------------------------------------------------------
+                                                                                                          21. Is this family member covered by insurance other than Medicare?
+
+                                                                                                                 Yes, indicate in item 22 below.               No
+22. Indicate the type(s) of other insurance:
+      TRICARE              Other       Name of other insurance: ______________________________________________                                     Policy Number: _____________________
+      FEHB       An FEHB Self Plus One enrollment covers the enrollee and one eligible family member designated by the enrollee. An FEHB Self and Family enrollment covers the
+                 enrollee and all eligible family members. No person may be covered under more than one FEHB enrollment. See instructions for item 10 on page 1.
+23. Email address (if applicable, enter email address of your spouse or adult child)                      24. Preferred telephone number (if applicable, enter preferred phone number of
+                                                                                                              your spouse or adult child)
+
+25. Name of family member (last, first, middle initial)            26. Social Security Number 27. Date of birth (mm/dd/yyyy)                        28. Sex         29. Relationship code
+
+                                                                                                                                                   M       F
+30. Address (if different from enrollee)                                                                  31. If this family member is covered 32. Medicare Beneficiary Identifier
+                                                                                                              by Medicare, check all that apply.
+                                                                                                              A           B         D
+-------------------------------------------------------------------
+                                                                                                          33. Is this family member covered by insurance other than Medicare?
+
+                                                                                                                 Yes, indicate in item 34 below.               No
+34. Indicate the type(s) of other insurance:
+      TRICARE              Other       Name of other insurance: ______________________________________________                                     Policy Number: _____________________
+      FEHB       An FEHB Self Plus One enrollment covers the enrollee and one eligible family member designated by the enrollee. An FEHB Self and Family enrollment covers the
+                 enrollee and all eligible family members. No person may be covered under more than one FEHB enrollment. See instructions for item 10 on page 1.
+35. Email address (if applicable, enter email address of your spouse or adult child)                      36. Preferred telephone number (if applicable, enter preferred phone number of
+                                                                                                              your spouse or adult child)
+
+37. Name of family member (last, first, middle initial)            38. Social Security Number 39. Date of birth (mm/dd/yyyy)                        40. Sex         41. Relationship code
+
+                                                                                                                                                   M       F
+42. Address (if different from enrollee)                                                                  43. If this family member is covered 44. Medicare Beneficiary Identifier
+                                                                                                              by Medicare, check all that apply.
+                                                                                                              A           B         D
+-------------------------------------------------------------------
+                                                                                                          45. Is this family member covered by insurance other than Medicare?
+
+                                                                                                                 Yes, indicate in item 46 below.               No
+46. Indicate the type(s) of other insurance
+
+    TRICARE              Other       Name of other insurance: ______________________________________________                    Policy Number: _____________________
+    FEHB An FEHB Self Plus One enrollment covers the enrollee and one eligible family member designated by the enrollee. An FEHB Self and Family enrollment covers the
+             enrollee and all eligible family members. No person may be covered under more than one FEHB enrollment. See instructions for item 10 on page 1.
+47. Email address (if applicable, enter email address of your spouse or adult child)        48. Preferred telephone number (if applicable, enter preferred phone number of
+                                                                                                your spouse or adult child)
+
+
+                                                                                     (Continued on the reverse)                                                          Standard Form 2809
+U.S. Office of Personnel Management                                                                                                                                   Revised November 2019
+                                                                         For agency distribution of copies, see page 5 of the instructions.
+Enrollee name: _________________________________________________________                 Date of birth: ____________________________
+
+
+
+Part B - FEHB Plan You Are Currently Enrolled In (if applicable)                         Part C - FEHB Plan You Are Enrolling In or Changing To
+1. Plan name                                                    2. Enrollment code      1. Plan name                                                   2. Enrollment code
+
+
+Part D - Event That Permits You To Enroll, Change, or Cancel (see page 6) Part E - Election NOT to Enroll (Employees Only)
+1. Event code                               2. Date of event                                 I do NOT want to enroll in the FEHB Program.
+                                                                                             My signature in Part H certifies that I have read and understand the
+                                                                                             information on page 3 regarding this election.
+
+Part F - Cancellation of FEHB                                                            Part G - Suspension of FEHB (Annuitants/Former Spouses Only)
+    I CANCEL my enrollment.                                                                  I SUSPEND my enrollment.
+     My signature in Part H certifies that I have read and understand the                    My signature in Part H certifies that I have read and understand the
+     information on page 3 regarding cancellation of enrollment.                             information on page 4 regarding suspension of enrollment.
+Part H - Signature
+ WARNING: Any intentionally false statement in this application or willful misrepresentation relative thereto is a violation of the law punishable by a fine of not more than
+ $10,000 or imprisonment of not more than 5 years, or both. (18 U.S.C. 1001.)
+1. Your signature (do not print)                                                                                              2. Date (mm/dd/yyyy)
+
+
+
+Part I -To be completed by agency or retirement system
+REMARKS
+
+
+
+
+1. Date received (mm/dd/yyyy)                             2. Effective date of action (mm/dd/yyyy)            3. Personnel telephone number
+
+                                                                                                               (         )
+4. Name and address of agency or retirement system                                                            5. Authorizing official (please print)
+
+
+                                                                                                              6. Signature of authorized agency official
+
+
+7. Payroll office number                                  8. Payroll office contact (please print)            9. Payroll telephone number
+
+                                                                                                               (         )
+
+
+
+
+                                                           PRINT                  SAVE                 CLEAR
+
+
+
+
+                                                                                                                                                               Standard Form 2809
+                                                                                                                                                 Reverse of revised November 2019
+                                                                                                                                                      Previous edition is not usable

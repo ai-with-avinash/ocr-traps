@@ -1,0 +1,195 @@
+Form   941 for 2026: Employer’s QUARTERLY Federal Tax Return
+(Rev. March 2026)                           Department of the Treasury — Internal Revenue Service
+                                                                                                                                                                                    950126
+                                                                                                                                                                               OMB No. 1545-0029
+
+                                                        —                                                                                        Report for this Quarter of 2026
+  Employer identification number (EIN)
+                                                                                                                                                 (Check one.)
+
+  Name (not your trade name)                                                                                                                         1: January, February, March
+                                                                                                                                                     2: April, May, June
+  Trade name (if any)
+                                                                                                                                                     3: July, August, September
+
+  Address                                                                                                                                            4: October, November, December
+               Number                    Street                                                      Suite or room number
+
+
+                                                                                                                                                 Aggregate Return Filers Only
+               City                                                                  State                      ZIP code                         Type of filer (check one):
+                                                                                                                                                     Section 3504 Agent
+                                                                                                                                                     Certified Professional Employer
+               Foreign country name                               Foreign province/county                Foreign postal code
+                                                                                                                                                     Organization (CPEO)
+                                                                                                                                                     Other Third Party
+Read the separate instructions before you complete Form 941. Type or print within the boxes.
+Part 1:       Answer these questions for this quarter. Employers in American Samoa, Guam, the Commonwealth of the Northern
+              Mariana Islands, the U.S. Virgin Islands, and Puerto Rico must skip lines 2 and 3, unless you have employees who
+              are subject to U.S. income tax withholding.
+  1      Number of employees who received wages, tips, or other compensation for the pay period
+         including: Mar. 12 (Quarter 1), June 12 (Quarter 2), Sept. 12 (Quarter 3), or Dec. 12 (Quarter 4)                                          1
+
+  2      Wages, tips, and other compensation                  .     .    .   .   .       .   .   .   .      .     .   .    .   .    .    .   .      2                                    .
+  3      Federal income tax withheld from wages, tips, and other compensation .                                            .   .    .    .   .      3                                    .
+  4      If no wages, tips, and other compensation are subject to social security or Medicare tax                                                          Check here and go to line 6.
+                                                                        Column 1                                               Column 2
+  5a     Taxable social security wages .                .                            .           × 0.124 =                                   .
+  5b     Taxable social security tips .             .   .                            .           × 0.124 =                                   .
+  5c     Taxable Medicare wages & tips .                .                            .           × 0.029 =                                   .
+  5d     Taxable wages & tips subject to
+         Additional Medicare Tax withholding                                         .           × 0.009 =                                   .
+  5e     Total social security and Medicare taxes. Add Column 2 from lines 5a, 5b, 5c, and 5d .                                     .    .   .     5e                                    .
+  5f     Section 3121(q) Notice and Demand—Tax due on unreported tips (see instructions)                                                 .   .      5f                                   .
+  6      Total taxes before adjustments. Add lines 3, 5e, and 5f .                           .   .   .      .     .   .    .   .    .    .   .      6                                    .
+  7      Current quarter’s adjustment for fractions of cents .                           .   .   .   .      .     .   .    .   .    .    .   .      7                                    .
+  8      Current quarter’s adjustment for sick pay .                     .   .   .       .   .   .   .      .     .   .    .   .    .    .   .      8                                    .
+  9      Current quarter’s adjustments for tips and group-term life insurance .                                       .    .   .    .    .   .      9                                    .
+ 10      Total taxes after adjustments. Combine lines 6 through 9                            .   .   .      .     .   .    .   .    .    .   .     10                                    .
+ 11      Qualified small business payroll tax credit for increasing research activities. Attach Form 8974                                           11                                   .
+ 12      Total taxes after adjustments and nonrefundable credits. Subtract line 11 from line 10 .                                            .     12                                    .
+ 13      Total deposits for this quarter, including overpayment applied from a prior quarter and
+         overpayments applied from Form 941-X, 941-X (PR), or 944-X filed in the current quarter                                                    13                                   .
+ 14      Balance due. If line 12 is more than line 13, enter the difference and see instructions                                    .    .   .     14                                    .
+ 15a     Overpayment. If line 13 is more than line 12, enter the difference                                            .           15b Check one:          Apply to next return.    Send a refund.
+
+ 15c     Routing number                                                              15d Type:                   Checking               Savings
+ 15e     Account number
+    You MUST complete both pages of Form 941 and SIGN it.
+For Privacy Act and Paperwork Reduction Act Notice, see separate instructions.                   www.irs.gov/Form941               Cat. No. 17001Z Form 941 (Rev. 3-2026) Created 4/1/25
+                                                                                                                                                                    950224
+Name (not your trade name)                                                                                              Employer identification number (EIN)
+
+                                                                                                                                   –
+Part 2:      Tell us about your deposit schedule and tax liability for this quarter.
+If you’re unsure about whether you’re a monthly schedule depositor or a semiweekly schedule depositor, see section 11 of Pub. 15.
+
+ 16 Check one:               Line 12 on this return is less than $2,500 or line 12 on the return for the prior quarter was less than $2,500,
+                             and you didn’t incur a $100,000 next-day deposit obligation during the current quarter. If line 12 for the prior
+                             quarter was less than $2,500 but line 12 on this return is $100,000 or more, you must provide a record of your
+                             federal tax liability. If you’re a monthly schedule depositor, complete the deposit schedule below; if you’re a
+                             semiweekly schedule depositor, attach Schedule B (Form 941). Go to Part 3.
+                             You were a monthly schedule depositor for the entire quarter. Enter your tax liability for each month and total
+                             liability for the quarter, then go to Part 3.
+
+                             Tax liability:   Month 1                                       .
+                                              Month 2                                       .
+                                              Month 3                                       .
+                          Total liability for quarter                                       .             Total must equal line 12.
+                             You were a semiweekly schedule depositor for any part of this quarter. Complete Schedule B (Form 941),
+                             Report of Tax Liability for Semiweekly Schedule Depositors, and attach it to Form 941. Go to Part 3.
+Part 3:      Tell us about your business. If a question does NOT apply to your business, leave it blank.
+
+ 17      If your business has closed or you stopped paying wages .                 .    .   .     .   .    .   .    .     .    .   .   .   .   .       Check here and
+
+         enter the final date you paid wages             /     /            ; also attach a statement to your return. See instructions.
+
+ 18      If you’re a seasonal employer and you don’t have to file a return for every quarter of the year .                                 .   .       Check here.
+
+Part 4:      May we speak with your third-party designee?
+         Do you want to allow an employee, a paid tax preparer, or another person to discuss this return with the IRS? See the
+         instructions for details.
+
+            Yes. Designee’s name and phone number
+
+                   Select a 5-digit personal identification number (PIN) to use when talking to the IRS.
+
+            No.
+Part 5:      Sign here. You MUST complete both pages of Form 941 and SIGN it.
+  Under penalties of perjury, I declare that I have examined this return, including accompanying schedules and statements, and to the best of my knowledge
+  and belief, it is true, correct, and complete. Declaration of preparer (other than taxpayer) is based on all information of which preparer has any knowledge.
+
+                                                                                                Print your
+  Sign your                                                                                     name here
+  name here                                                                                     Print your
+                                                                                                title here
+
+
+            Date             /     /                                                            Best daytime phone
+
+
+  Paid Preparer Use Only                                                                                           Check if you’re self-employed            .   .    .   .
+
+  Preparer’s name                                                                                                       PTIN
+
+
+  Preparer’s signature                                                                                                  Date                       /   /
+  Firm’s name (or yours
+  if self-employed)                                                                                                     EIN
+
+  Address                                                                                                               Phone
+
+  City                                                                                 State                            ZIP code
+
+
+
+
+Page 2                                                                                                                                                 Form 941 (Rev. 3-2026)
+Form 941-V,
+Payment Voucher
+
+Purpose of Form                                                                                Use Form 941-V if you’re paying your balance due
+Complete Form 941-V if you’re paying your balance due
+                                                                                             ▲
+                                                                                             ! on Form 941 by check or money order. However, if
+                                                                                             CAUTION
+                                                                                                  you pay an amount with Form 941 that should’ve
+on Form 941 by check or money order. We will use the                                        been deposited, you may be subject to a penalty. See
+completed voucher to credit your payment more promptly                                      Deposit Penalties in section 11 of Pub. 15.
+and accurately, and to improve our service to you.
+                                                                                            Specific Instructions
+Making Payments With Form 941
+                                                                                            Box 1—Employer identification number (EIN). If you
+To avoid a penalty, make your payment with Form 941                                         don’t have an EIN, you may apply for one online by going
+only if:                                                                                    to www.irs.gov/EIN. You may also apply for an EIN by
+• Your total taxes after adjustments and nonrefundable                                      faxing or mailing Form SS-4 to the IRS. If you haven’t
+credits (Form 941, line 12) for either the current quarter or                               received your EIN by the due date of Form 941, write
+the preceding quarter are less than $2,500, you didn’t                                      “Applied For” and the date you applied in this entry space.
+incur a $100,000 next-day deposit obligation during the                                     Box 2—Amount paid. Enter the amount paid with
+current quarter, and you’re paying in full with a timely filed                              Form 941.
+return; or
+                                                                                            Box 3—Tax period. Darken the circle identifying the
+• You’re a monthly schedule depositor making a                                              quarter for which the payment is made. Darken only
+payment in accordance with the accuracy of deposits                                         one circle.
+rule. See section 11 of Pub. 15 for details. In this case,
+the amount of your payment may be $2,500 or more.                                           Box 4—Name and address. Enter your name and
+                                                                                            address as shown on Form 941.
+   Otherwise, you must make deposits by electronic funds
+transfer (EFT). An EFT can be made using the Electronic                                     • Enclose your check or money order made payable to
+Federal Tax Payment System (EFTPS), IRS Direct Pay, or                                      “United States Treasury.” Be sure to enter your
+your IRS business tax account. Don’t use Form 941-V to                                      EIN, “Form 941,” and the tax period (“1st Quarter 2026,”
+make federal tax deposits. You can also pay your balance                                    “2nd Quarter 2026,” “3rd Quarter 2026,” or “4th Quarter
+due by EFT instead of sending Form 941-V. If you pay                                        2026”) on your check or money order. Don’t send cash.
+your balance due by EFT, file your return using the                                         Don’t staple Form 941-V or your payment to Form 941 (or
+Without a payment address under Where Should You File?                                      to each other).
+in the Instructions for Form 941; don’t file Form 941-V. For                                • Detach Form 941-V and send it with your payment
+more information about EFTPS or to enroll in EFTPS, go                                      and Form 941 to the address in the Instructions for
+to www.eftps.gov. For more information about IRS Direct                                     Form 941.
+Pay, go to www.irs.gov/DirectPay. For more information
+about making an EFT through your IRS business tax                                           Note: You must also complete the entity information
+account, go to www.irs.gov/BusinessAccount. See                                             above Part 1 on Form 941.
+section 11 of Pub. 15 for deposit instructions. Don’t use
+Form 941-V to make federal tax deposits.
+
+
+
+
+                                     Detach Here and Mail With Your Payment and Form 941.
+
+Form   941-V                                                          Payment Voucher                                                                          OMB No. 1545-0029
+
+Department of the Treasury
+Internal Revenue Service
+                                                      Don’t staple this voucher or your payment to Form 941.                                                     2026
+  1    Enter your employer identification                 2                                                                                          Dollars                   Cents
+       number (EIN).
+                                                              Enter the amount of your payment.
+                –                                             Make your check or money order payable to “United States Treasury.”
+  3 Tax Period                                            4 Enter your business name (individual name if sole proprietor).
+
+                1st                          3rd
+               Quarter                      Quarter           Enter your address.
+
+
+                2nd                          4th              Enter your city, state, and ZIP code; or your city, foreign country name, foreign province/county, and foreign postal code.
+               Quarter                      Quarter

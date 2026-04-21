@@ -1,0 +1,1153 @@
+General Electronic Form Notes/Notices (all Sections)
+
+This document is for reference only and is not a form for completion. Individuals will be invited
+into the applicable eApplication system to complete the form. The questions/content captured in
+this document are intended to display what data will be captured from the individual and the
+additional questions (Branch questions) to be presented based on the individual responses to
+previous questions during data capture.
+
+Question numbering and “electronic form navigation notes” have been made throughout this
+form to help facilitate review and navigation. These items are subject to change based on the data
+collection or processing systems this form may be implemented in.
+
+Additionally numbering and electronic form notes are not to be considered part of the content of
+the form. Only the section numbers are applicable as the official numbering for this form.
+
+Screens may vary based on html style formatting, java scripting, data capture formatting, system
+functionality, validation, and navigation.
+
+Systems that are used for the collection of the “Questionnaire for Non-Sensitive Positions (SF
+85)” data for investigative purposes are subject to OMB review and approval.
+Standard Form 85
+                                                                                                                                                             Form approved:
+Revised November 2021
+                                                                                                                                                             OMB No. 3206-0261
+U.S. Office of Personnel Management
+5 CFR parts 731 and 736
+
+
+                                                                         Office of Personnel Management
+                                                             Questionnaire for Non-Sensitive Positions, SF 85
+
+
+
+    Questionnaire for Non-Sensitive Positions
+    Follow instructions completely or your form will be unable to be processed. If you have any questions, contact the office that provided you the form.
+
+   All questions on this form must be answered completely and truthfully in order that the Government may make the determinations described below on a complete record. Penalties for
+   inaccurate or false statements are discussed below. If you are a current civilian employee of the federal government: failure to answer any questions completely and truthfully could
+   result in an adverse personnel action against you, including loss of employment; with respect to Sections 17 and 20, however, neither your truthful responses nor information derived
+   from those responses will be used as evidence against you in a subsequent criminal proceeding.
+   Purpose of this Form
+   This form will be used by the United States (U.S.) Government in conducting background investigations and reinvestigations of persons under consideration for, or retention of, non-
+   sensitive low risk positions as defined in 5 CFR 731. It is also used for determining fitness of individuals under consideration for, or retention in positions in the excepted service when
+   the duties to be performed are equivalent to a low risk position. This form may also be used by agencies in determining whether a subject should be issued a Federal credential for access
+   to federally controlled facilities and information systems . For applicants, this form is to be used only after a conditional offer of employment has been made, unless OPM has provided
+   for an exception. This form is not to be used for National Security sensitive positions.
+
+   Providing this information is voluntary. If you do not provide each item of requested information, however, we will not be able to complete your investigation, which will adversely
+   affect your eligibility for a position or your ability to obtain or retain Federal or contract employment, or logical or physical access. It is imperative that the information provided be true
+   and accurate, to the best of your knowledge. Any information that you provide is evaluated on the basis of its currency, seriousness, relevance to the position and duties, and consistency
+   with all other information about you. Withholding, misrepresenting, or falsifying information may affect your eligibility for positions, physical and /or logical access required to perform
+   duties, or your ability to obtain or retain Federal or contract employment. In addition, withholding, misrepresenting, or falsifying information may affect your eligibility for physical and
+   logical access to federally controlled facilities or information systems. Withholding, misrepresenting, or falsifying information may also negatively affect your employment prospects
+   and job status, and the potential consequences include, but are not limited to, removal, debarment from Federal service, or prosecution.
+
+   This form may become a permanent document that may be used as the basis for future investigations, determinations of suitability or fitness for Federal employment, fitness for contract
+   employment, or eligibility for physical and logical access to federally controlled facilities or information systems. Your responses to this form may be compared with your responses to
+   previous questionnaires.
+
+   The investigation conducted on the basis of information provided on this form may be selected for studies and analyses in support of evaluating and improving the effectiveness and
+   efficiency of the investigative and adjudicative methodologies. All study results released to the general public will delete personal identifiers such as name, Social Security Number, and
+   date and place of birth.
+   Authority to Request this Information
+   Depending upon the purpose of your investigation, the U.S. Government is authorized to ask for this information under Executive Orders13764, 13741, 10577, 13467, and 13488, as
+   amended; sections 3301, 3302, 7301, and 9101 of title 5, United States Code (U.S.C.); parts 2, 5, 6, 731, and 736 of title 5, Code of Federal Regulations (CFR), Homeland Security
+   Presidential Directive (HSPD) 12, and Federal information processing standards.
+
+   Your Social Security Number (SSN) is needed to identify records unique to you. Although disclosure of your SSN is not mandatory, failure to disclose your SSN may prevent or
+   delay the processing of your background investigation. The authority for soliciting and verifying your SSN is Executive Order 9397, as amended by EO 13478.
+   The Investigative Process
+   Background investigations for non-sensitive positions are conducted to gather information to determine whether you are reliable, trustworthy, of good conduct and character, and will
+   not present an unacceptable risk,. The information that you provide on this form and your Declaration for Federal Employment (OF 306) may be confirmed during the investigation.
+   The investigation may extend beyond the time covered by this form, when necessary to resolve issues. Your current employer may be contacted as part of the investigation, although
+   you may have previously indicated on applications or other forms that you do not want your current employer to be contacted. If you have a security freeze on your consumer or
+   credit report file and a credit report is required by the agency requesting your investigation, then we may not be able to complete your investigation, which can adversely affect your
+   eligibility for positions, physical and /or logical access required to perform duties, or your ability to obtain Federal or contract employment. To avoid such delays, you must request
+   that the consumer reporting agencies lift the freeze in these instances.
+
+   In addition to the questions on this form, inquiry also is made about your adherence to security requirements, your honesty and integrity, falsification, misrepresentation, and any other
+   behavior, activities, or associations that tend to demonstrate a person is not reliable or trustworthy, or poses an unacceptable risk to the life, safety, or health of employees, contractors,
+   vendors or visitors to a Federal facility; the Government’s physical assets or information systems; personal property; records, or, the privacy of the individuals whose data the
+   Government holds in its systems. After an eligibility determination is made, you may also be subject to reinvestigations to ensure your continuing suitability for employment.
+
+   The information you provide on this form may be confirmed during the investigation, and may be used for identification purposes throughout the investigation process.
+
+   Your Personal Interview
+   Some investigations may include an interview with you as needed as part of the investigative process. The investigator may ask you to explain your answers to any question on this
+   form. This provides you the opportunity to update, clarify, and explain information on your form more completely, which often assists in completing your investigation. If contacted, it
+   is imperative that the interview be conducted as soon as possible after contact is made by the investigator. Postponements will delay the processing of your investigation, and declining
+   to be interviewed may result in your investigation being delayed or canceled.
+
+   For the interview, you will be required to provide photo identification, such as a valid state driver's license. You may be required to provide other documents to verify your identity, as
+   instructed by your investigator. These documents may include certification of any legal name change, Social Security card, passport, and/or your birth certificate. You may also be
+   asked to provide documents regarding information that you provide on this form, or about other matters requiring specific attention.
+   Instructions for Completing this Form
+   1. Follow the instructions provided to you, by the office that gave you this form and any other clarifying instructions, provided by that office, to assist you with completion of this form.
+   You must sign and date, in ink, the original and each copy you submit. You should retain a copy of the completed form for your records.
+   2. All questions on this form must be answered. If no response is necessary or applicable, indicate this on the form by checking the associated "Not Applicable" box, unless otherwise
+   noted.
+   3. Do not abbreviate the names of cities or foreign countries. Whenever you are asked to supply a country name, you may select the country name by using the country dropdown
+   feature.
+   4. When entering a U.S. address or location, select the state or territory from the "States" dropdown list that will be provided. For locations outside of the U.S. and its territories, select
+   the country in the "Country" dropdown list and leave the "State" field blank.
+   5. The 5-digit postal Zip Codes are required to process your investigation more rapidly. Refer to an automated system approved by the U.S. Postal Service to assist you with Zip Codes.
+   6. For telephone numbers in the U.S., ensure that the area code is included.
+   7. All dates provided in this form must be in Month/Day/Year or Month/Year format. The month and day should be entered as a two character numbers (i.e., 01 for January and 29 for
+   29th day of the month). The year should be entered as a four character number (i.e., 1978 or 2001). If you are unable to report an exact date, approximate or estimate the date to the
+   best of your ability, and indicate this by checking the "Estimated." box.
+   Final Determination on Your Eligibility
+   Final determination on your eligibility for a position and/or physical or logical access to federal facilities and information is the responsibility of the Office of Personnel Management or
+   the Federal agency that requested your investigation. You may be provided the opportunity to explain, refute, or clarify any information before a final decision is made, if an
+   unfavorable decision is considered. The United States Government does not discriminate on the basis of prohibited categories, including but not limited to race, color, religion, sex
+   (including pregnancy and gender identity), national origin, disability, and sexual orientation, when making determinations of eligibility for non-sensitive positions, physical and/or
+   logical access required to perform duties.
+   Penalties for Inaccurate or False Statements
+   The U.S. Criminal Code (title 18, section 1001) provides that knowingly falsifying or concealing a material fact is a felony which may result in fines and/or up to five (5) years
+   imprisonment. In addition, Federal agencies generally fire, or disqualify individuals who have materially and deliberately falsified these forms, and this remains a part of the permanent
+   record for future placements. Your prospects of placement are better if you answer all questions truthfully and completely. You will have adequate opportunity to explain any
+   information you provide on this form and to make your comments part of the record.
+     Disclosure Information
+
+     The information you provide is for the purpose of investigating you for a position, and the information will be protected from unauthorized disclosure. The collection, maintenance,
+     and disclosure of background investigative information are governed by the Privacy Act. The agency that requested the investigation and the agency that conducted the investigation
+     have published notices in the Federal Register describing the systems of records in which your records will be maintained. The information you provide on this form, and information
+     collected during an investigation, may be disclosed without your consent by an agency maintaining the information in a system of records as permitted by the Privacy Act [5 U.S.C.
+     552a(b)], and by routine uses, a list of which are published by the agency in the Federal Register. You will not receive prior notice of such disclosures under a routine use. The
+     Defense Counterintelligence and Security Agency, the Government's primary investigative service provider, has established its routine uses in the Federal Register at the following
+     address: Federal Register. If another agency is conducting your investigation, it will inform you of its routine uses.
+
+
+     Public Burden Information
+     Public burden reporting for this collection of information is estimated to average 120 minutes per response, including time for reviewing instructions, searching existing data sources,
+     gathering and maintaining the data needed, and completing and reviewing the collection of information. Send comments regarding the burden estimate or any other aspect of this
+     collection of information, including suggestions for reducing this burden, to U.S. Office of Personnel Management, Attn: Forms
+     Manager, OMB Number 3206-0261 1900 E Street, NW, Washington, DC 20415. The OMB clearance number, 3206-0261, is currently valid. OPM may not collect this information,
+     and you are not required to respond, unless this number is displayed.
+
+                                                               --------------------End of Instructions Pages -------------------
+
+
+
+
+f.
+Persons Completing This Form Should Begin After Carefully Reading The Preceding Instructions.
+I have read the instructions and I understand that if I withhold, misrepresent, or falsify information on this form, I am subject to the
+penalties for inaccurate or false statement (per U. S. Criminal Code, Title 18, section 1001), or removal and debarment from Federal       YES   NO
+Service.
+
+                                                         Agency Use Block “AUB”
+Investigating agency user only                  Codes:           (FIPC CODES)                  Case Number:
+For Competitive Service initial appointments only: As a reminder, agencies are responsible for reviewing information provided on the
+OF 306, resume, and other documentation provided as part of the hiring process to identify possible discrepancies with information
+provided on the standard form questionnaire. Agencies must notify their Investigative Service Provider of any discrepancies that may
+exist between the forms, and request resolution of the conflict through the investigation process.
+In this situation the discrepant documents must be forwarded with the questionnaire to OPM for Action.
+
+A – Type of Investigation     B – Extra coverage / advanced results    C –Risk level
+D – Nature of action code     E – Date of action                       F – Geographic location                 G – Position code
+H – Position title            I – SON (Submitting Office Number )
+J – Location of Official Personnel Folder _ None _ NPRC _ At SON _e-OPF _ Other           Other address / web address of e-OPF      Zip Code
+K – SOI (Security Office Identifier)
+L – Location of Security Folder _ None _ NPI _ At SOI __ Other                            Other address                             Zip Code
+M – IPAC         N – TAS      O – Obligating document number           P - BETC           Q – Accounting data and /or Agency case number
+R – Investigative requirement _Initial _Reinvestigation      S – Requesting Official: Name, Title, Signature, Email Address, Telephone, Date
+T – Secondary Requesting Official: Name, Title, Email Address, Telephone Number
+U – Applicant Affiliation _ FED CIV _ CON _ MIL _ Other
+V – Deployment/PCS (if Imminent):
+From Est.-To Dates, Est., Permanent Relocation, Reason(s) for temporary duty assignment or PCS, point of contact at location, Telephone number
+(Include Ext.), Address/Unit/Duty location (Include City or Post Name)
+Agency Special Instructions for the Investigative Service Provider:                                            Cage Code       Contracting Number
+                                                             For Reference Only
+Section 1 – Full Name
+Provide your full name. If you have only initials in your name, provide them and indicate “Initial only”. If you    Last     First    Middle     Suffix
+do not have a middle name, indicate “No Middle Name”. If you are a "Jr.," "Sr.," etc. enter this under Suffix.
+Section 2 – Date of Birth
+Provide your date of birth.         Date _ _-_ _-_ _ _ _ Est. □
+Section 3 – Place of Birth
+Provide your Place of birth.        City                            County                       State                        Country
+Section 4 – SSN
+Provide your U.S. Social Security Number.           □ Not applicable _ _ _-_ _-_ _ _ _
+Section 5 – Other Names Used
+Provide your other names used and the period of time you used them (for example: your maiden name, name(s) by a former marriage (s), former name(s),
+alias (es), or nickname(s)).
+Have you used any other names?                                                                                                              YES         NO
+Branch              Provide your other name used and the period of time you used it [for example: your maiden name, name by a former marriage, former
+If Yes to           name, alias, or nickname]. If you have only initials in your name, provide them and indicate “Initial only.” If you do not have a middle
+“Other              name, indicate “No Middle Name” (NMN). If you are a "Jr.," "Sr.," etc. enter this under Suffix.
+Names”              Provide other name used.       Last           First          Middle         Suffix        Maiden name?                  Yes     No
+                    Provide dates used.                                          From Date (Estimated)                  To Date (Estimated/Present)
+(Multiple           Provide the reason(s) why the name changed.                  Reason: (Free Text)
+Entries             Do you have additional names to enter?                       Yes (Yes adds another entry)          No (Required to pass validation)
+Allowed)
+Section 6 – Your Identifying Information
+Provide your Identifying Information       Height       (feet)     (inches)      Weight (in pounds)            Hair Color       Eye Color      Sex (M/F)
+Section 7 – Your Contact Information
+Provide three contact numbers. At least one telephone number is required. Additional numbers provided may assist in the completion of your background
+investigation.
+Provide your contact information.       Home email address         Email (Free Text)            Work email address        Email (Free Text)
+Email addresses may be used as a
+contact method, and identify subject
+in records.
+Home telephone number                   Work telephone number                                   Mobile/Cell telephone number
+Extension Time Day Night Both           Extension Time Day Night Both                           Extension Time Day Night Both
+__Check box if International or DSN __Check box if International or DSN                         __Check box if International or DSN
+phone number                            phone number                                            phone number
+Section 8 – U.S. Passport Information
+Do you possess a U.S. passport (current or expired)?                                                                                 YES        NO
+                 Provide the following information for the most recent U.S. passport you currently possess:
+Branch           Provide your U.S. passport number                                  Passport (Free Text)
+                 Click here for U.S. State Department passport help.
+If Yes to        Provide the issue date of passport.         Date (Estimated)       Provide the expiration date of passport.   Date (Estimated)
+“passport”       Provide the name in which passport was first issued.               Last          First name:       Middle name:   Suffix
+                                                                                    name:
+Section 9 – Citizenship
+Select the box that reflects your current citizenship status and click Save.
+Provide your current citizenship status:        □ I am a U.S. citizen or national by birth in the U.S. or U.S. territory/commonwealth.
+□ I am a U.S. citizen or national by birth, born to U.S. parent(s), in a foreign country. □ I am a naturalized U.S. citizen. □ I am a derived U.S. citizen. □ I
+am not a U.S. citizen.
+Provide your Mother’s Maiden Name Last Name/First Name/ Middle Name/Suffix
+                   You answered that you are a U.S. citizen or national by birth, born to U.S. parent(s) in a foreign country.
+Branch             Provide type of documentation of U.S. citizen born abroad.                                                              Explanation
+                   FS 240, DS 1350, FS 545, Other (Provide explanation)
+Foreign Born       Provide document number for U.S. citizen born abroad:                              Document Number (Free Text)
+to U.S. Parents Provide the date the document was issued.                                             Date __-__-____ Estimated □
+in a Foreign       Provide the place of issuance.                                                     City              State              Country
+Country            Provide the name in which document was issued.                                     Last name:       First   Middle      Suffix
+                                                                                                                       name:   name:
+                   Provide your Certificate of Citizenship number.                                    Certificate Number (Free Text)
+                   Provide the date the certificate was issued.                                       Date __-__-____ Estimated □
+                   Provide the name in which the certificate was issued.                              Last name:       First   Middle      Suffix
+                                                                                                                       name:   name:
+                   Were you born on a U.S. military installation?                                                                          YES      NO
+
+                                                     You answered that you were born on a U.S. military installation.
+
+                   Branch If Yes
+
+                                                     Provide the name of the base.                                              Name (Free Text)
+                  You answered that you are a naturalized U.S. citizen.
+                  Provide the date of entry into the U.S.                                               Date __-__-____ Estimated □
+                  Provide the location of entry into the U.S.                                           City                State
+                  Provide country(ies) of prior citizenship.                                            Country (Allows for Multiples)
+Branch            Do/did you have a U.S. alien registration number?                                                                  YES          NO
+                  Branch If Yes                   Provide your U.S. alien registration number on    Alien Registration Number (Free Text)
+Citizenship                                       Certificate of Naturalization-utilize USCIS,
+Naturalization                                    CIS, or INS registration number, I-551, I-766.
+U.S Citizen       Provide your Certificate of Naturalization number (N550 or N570).                 Certificate of Naturalization Number (Free Text)
+                  Provide the name of the court that issued the Certificate of Naturalization       Court (Free Text)
+                  Provide the address of the court that issued the
+                  Certificate of Naturalization
+                  Street                                                       City                 State                  Zip
+                  Provide the date the Certificate of Naturalization was issued.                    Date __ -__-____ Estimated □
+                  Provide the name in which the Certificate of Naturalization was issued.           Last         First    Middle        Suffix
+                                                                                                    name:        name: name:
+
+                  Provide the basis of naturalization. - Based on my own individual naturalization application,                        Explanation
+                   - Other (Provide explanation)
+                  You answered that you are a derived U.S. citizen.
+                  Provide your alien registration number (on Certificate of Citizenship — utilize USCIS, CIS or INS registration number)         Alien
+                  Registration Number (Free Text)
+                  Provide your Permanent Resident Card number (I-551)
+Branch            Permanent Resident Card number (I-551) (Free Text)
+Citizenship
+                  Provide your Certificate of Citizenship number (N560 or N561)
+Derived
+                  Certificate of Citizenship number (N560 or N561) (Free Text)
+                  Provide the name in which the document was issued.           Last name:          First name:         Middle name:      Suffix:
+                  Provide the date document was issued Date __-__-___ Estimated __
+                  Provide the basis of derived citizenship. -By operation of law through my U.S. citizen parent .-Other (Provide explanation)
+                  Explanation
+                  Not a U.S. Citizen
+                  Provide your residence status.               Status (Free       Provide your date of entry into the    Date __ -__-____ Estimated □
+                                                               Text)              U.S.
+                  Provide your country (ies) of citizenship. Allow            Provide your place of entry in the U.S.      City (Free Text) State
+                  multiple
+Branch            Provide your alien registration number. (I-1551, I-766)     Registration Number (Free Text)
+                  Provide document expiration date (I-766 ONLY).              Date__-__-____ Estimated □
+Citizenship
+                  Provide type of document issued. (I-94, U.S. Visa-red       I-94, U.S. Visa (red foil number), I-20, DS-2019,        Explanation
+Not a U.S.
+                  foil number, I-20, DS-2019, etc.)                           Other (Provide explanation)
+citizen
+                  Provide document number:                                    Document Number (Free Text)
+                  Provide the name in which the document was issued.                Last name:                    First      Middle    Suffix
+                                                                                                                  name:      name:
+                  Provide the date document was issued.            Date_-__-____          Provide document expiration        Date_-__-____
+                                                                   Estimated □            date.                              Estimated □
+Section 10 – Dual/Multiple Citizenship
+Do you now or have you EVER held dual/multiple citizenships?                                                                           YES NO
+                You answered “Yes” to having EVER held dual/multiple citizenship
+                Provide country of citizenship                         During what period of time did you hold citizenship with this country?
+Branch          Provide the date range that you held this citizenship; beginning with the date it was     From Date           To Date (Estimated/Present)
+                acquired through its termination or “Present,” whichever is appropriate.                  (Estimated)
+Dual/Multiple   How did you acquire this non-U.S. citizenship you now have or previously had?                                 How (Free Text)
+Citizenship
+
+(Multiple         Branch                         Do you currently hold citizenship with this country?                                    YES      NO
+Entries           If Present/Current             Provide explanation:
+Allowed)          Summary of dual/multiple citizenships you have listed: Allow multiple
+                  Select Country Value                                                  Dates of Citizenship               Actions
+                  Do you have an additional citizenship to provide?                     YES (Yes adds another entry)       NO (Required to validate)
+
+
+Section 11 – Where You Have Lived
+List the places where you have lived beginning with your present residence and working back 5 years. Residences for the entire period must be accounted
+for without breaks. Indicate the actual physical location of your residence, not a Post Office box or a permanent residence when you
+were not physically located there. If you split your time between one or more residences during a time period, you must list all residences. Do not list
+residence before your 18th birthday unless to provide a minimum of 2 years residence history. You are not required to list temporary locations of less than
+90 days that did not serve as your permanent or mailing address.
+For any address in the last 3 years, provide a person who knew you at that address, and who preferably still lives in that area. Do not list people who knew
+you for residences completely outside this 3-year period, and do not list your spouse, cohabitant or other relatives as the verifier for periods of residence.
+Enter residence information. (Multiple Entries Allowed)
+Provide dates of residence.                                             From Date (Estimated )              To Date
+                                                                                                            (Estimated /Present)
+Is/was this residence: □ Owned by you □ Rented or leased by you □ Military housing □ Other (Provide explanation)    Explanation (Free Text)
+Provide the street address.                                                Street address and City
+Provide the country if outside the United States; otherwise provide        State                 Zip Code            Country
+State and Zip Code
+Branch             You have indicated an APO/FPO address; provide physical location data with street address, base, post, embassy, unit, and country
+Physical           location or home port/fleet headquarter. Provide physical location data:
+Location           Street Address/Unit/Duty Location:                                                                City or Post Name
+                   Provide State for ports in United States, or Country location.                                    State and Zip Code or Country
+Branch             You have indicated an address outside of the United States.
+APO/FPO            Do/did you have an APO/FPO address while at this location?                                                              Yes      No
+Address            Branch You have indicated that you have or had and APO/FPO while at this location.
+                   Provide APO/FPO address:                                            Address     APO or FPO        APO/FPO State Code Zip Code
+                   Provide the name of a neighbor, landlord (if rental), or other person who knows you at this address.
+                                               Last      First     Middle      Suffix Provide date of last contact:               Date MM-YYYY_ Estimated
+                   Provide the full name:
+                                               name: name: name:                                                                  □
+                   Provide your relationship to this person (select all that apply)      □ Neighbor □ Friend □ Landlord □ Business associate
+                                                                                         □ Other (Provide explanation) Explanation (Free Text)
+                   Provide the following contact information for this person :
+                   Provide evening phone number for this          Number/Extension Provide daytime phone number for this person: Number/Extension
+                   person:                                           __Check box                                                           __Check box if
+                                                                   if International or                                                     International or
+                                                                   DSN phone                                                               DSN phone number
+Branch                                                             number                                                                  _I don’t
+                                                                   _I don’t                                                                know
+Person Who                                                         know
+Knew you           Provide cell/mobile phone number for this person:                     Number/Extension Time __Day __Night__Both
+                                                                                         __Check box if International or DSN phone
+(if address                                                                              number _I don’t know
+dates within       Provide e-mail address for this person:                               Email (Free Text) _I don’t know
+last 3 years)      Provide street address for this person (including apartment           Street address              City
+                   number).
+                   Provide Country if outside the United States; otherwise,              State          Zip Code     Country
+                   provide State and Zip Code
+                                 You have indicated an APO/FPO address; provide physical location data with street address, base, post, embassy, unit, and
+                   Branch        country location or home port/fleet headquarter. Provide physical location data:
+                   Physical
+                                 Street Address/Unit/Duty Location:                                                  City or Post Name
+                   Location
+                                 Provide State for ports in United States, or Country location.                      State and Zip Code or Country
+                   Branch        You have indicated an address outside of the U.S.
+                   APO/FPO       Does the person who knew you have an APO/FPO address?                                                     YES NO
+                   Address       Branch If Yes Provide APO/FPO address:                Address     APO or FPO      APO/FPO State Code         Zip Code
+Do you have an additional residence to report?                                         YES (Yes adds another entry)           NO (Required to validate)
+Section 12 – Where You Went to School
+Do not list education before your 18th birthday, unless to provide a minimum of two years education history. (Multiple Entries Allowed)
+Have you attended any schools in the last 5 years?                                                                                          YES NO
+                Have you received a degree or diploma more than 5 years ago?                                                                YES NO
+                              Provide the dates of attendance.                      From Date (Estimated)          To Date (Estimated/Present)
+                              Select the most appropriate box to describe your school. □ High School □ College/University/Military College
+                              □ Vocational/Technical/Trade School □ Correspondence/Distance/Extension/Online School
+                              Provide the name of the school:                                                      Name (Free Text)
+                              Provide the street address of the school. For correspondence/distance/               Street address       City
+                              extension/online schools, provide the address where the records are
+                              maintained. For assistance determining the school address, refer to
+                              Accreditation Records
+                              Provide Country if outside the United States; otherwise,        State                Zip Code            Country
+                              provide State and Zip Code
+                              For schools you attended in the last 3 years, list a person who knew you at the school (instructor, student, etc.). Do not list
+                              people for education periods completed more than 3 years ago. For correspondence/distance/extension/ online schools, list
+Branch                        someone who knew you while you received this education
+                Branch        Provide the name of person who knows/knew you at school: □ I don’t know              Last        First           Initial Only □
+If Yes to                                                                                                          name:       name:           No First Name □
+                If Yes to
+Attending                     Provide current address for this person (including apartment number).                Street                   City
+                Receiving
+Schools                       Provide Country if outside the United States; otherwise, provide State and Zip       State          Zip Code Country
+                Degree
+                              Code
+                              Provide telephone number for this person.                                            Number/Extension Time Day Night
+                                                                                                                   Both
+                                                                                                                   __Check box if International or DSN
+                                                                                                                   phone number
+                                                                                                                   ___ I don’t know
+                              Provide email address for this person: □ I don’t know                                Email (Free Text)
+                              Did you receive a degree/diploma?                                                                             YES NO
+                                                     Provide type of degrees(s)/diploma(s) received and date(s) awarded:
+                              Branch                  Degree/diploma                  • High School Diploma        Other degree/diploma
+                              If Yes to                • Associate’s • Bachelor’s • Master’s • Doctorate           Other Degree (Free Text)
+                              Receiving Degree         • Professional Degree (e.g. MD, DVM, JD) • Other            Month / Year        Date __-__-____
+                                                                                                                                       Estimated □
+                             Do you have additional education to enter (include education within the last 5       YES (Yes adds        NO (Required to
+                             years, as well as degrees or diplomas more than 5 years ago)?                        another entry)       validate)
+Section 13a – Employment Activities – Employment & Unemployment Record
+List all of your employment activities, including unemployment and self-employment, beginning with the present and working back 5 years. The entire
+period must be accounted for without breaks. If the employment activity was military duty, list separate employment activity periods to show each change of
+military duty station. Provide separate entries for employment activities with the same employer but having different physical
+addresses. Do not list employment before your 18th birthday unless to provide a minimum of 2 years employment history.
+(Multiple Entries Allowed)
+Select your employment activity: □ Active military duty station □ National Guard/Reserve □ USPHS Commissioned Corps
+□ Other Federal employment           □ State Government (Non-Federal employment)                   □ Self-employment □ Unemployment
+□ Federal Contractor                 □ Non-government employment (excluding self-employment)                            □ Other (Provide explanation)
+Other Type Explanation (Free Text)                  Provide dates of employment.       From Date (Estimated)             To Date (Estimated/Present)
+                      Active Duty, National Guard/Reserve, or USPHS Commissioned Corps
+                      Select the employment status for this position: □ Full-time □ Part-time
+                      Provide your assigned duty          Duty station (Free Text)     Provide your most recent          Rank/position (Free Text)
+                      station during this period.                                      rank/position title.
+                      Provide address of duty station.                                 Street address                    City
+                      Provide Country if outside the United States; otherwise,         State                   Zip Code                Country
+                      provide State and Zip Code.
+                      Telephone number                                                 Number/Extension Time Day Night Both
+                                                                                       __Check box if International or DSN phone number
+                                     You have indicated an APO/FPO address; provide physical location data with either street address, base, post, embassy,
+                      Branch         unit, and country location or home port/fleet headquarter.             Provide physical location data:
+                      Physical       Street Address/Unit/Duty Location:                                                  City or Post Name:
+Branch                Location       Provide state for ports in the United States, or country location.                  State        Zip         Country
+                                                                                                                                      Code
+If Employment         Branch         You have indicated an address outside of the United States. Do you or did you have an APO/FPO YES NO
+Type is Active        APO/FPO        address while at this location?
+Duty, National        Address        Branch If Yes           Provide APO/FPO address: Address               APO/FPO      APO/FPO State       Zip Code
+Guard/Reserve,        Provide the name of your supervisor.                                   Supervisor name (Free Text)
+or USPHS              Provide the rank/position title of your supervisor.                    Supervisor rank/position (Free Text)
+Commissioned          Provide the email address of your supervisor. □ I don’t know           Supervisor email (Free Text)
+Corps                 Provide the physical work location of your supervisor.                 Street address              City
+                      Provide Country if outside the United States; otherwise,               State                       Zip Code           Country
+                      provide State and Zip Code
+                      Provide supervisor telephone number                                    Number/Extension Time Day Night Both
+                                                                                             __Check box if International or DSN phone number
+                                     You have indicated an APO/FPO address for your supervisor; provide physical location data with either street address,
+                      Branch         base, post, embassy, unit, and country location or home port/fleet headquarter. Provide physical location data of your
+                      Physical       supervisor:
+                      Location       Street Address/Unit/Duty Location:                                                  City or Post Name:
+                                     Provide state for ports in the United States, or country location.                  State and Zip Code or Country
+                      Branch         You have indicated an address outside of the United States. Did/does your supervisor have an            YES NO
+                      APO/FPO        APO/FPO address while at this location?
+                      Address        Branch if Yes           Provide APO/FPO address: Address               APO/FPO      APO/FPO State       Zip Code
+                      Other Federal employment, State Government, Federal Contractor, Non-government employment, or Other
+                      Provide most recent position title.                                                                Position (Free Text)
+                      Select the employment status for this position: □ Full-time □ Part-time
+                      Provide the name of your employer                                                                  Employer name (Free Text)
+                      Provide the address of employer                                        Street address              City
+                      Provide Country if outside the United States; otherwise,               State                       Zip Code           Country
+                      provide State and Zip Code
+                      Provide telephone number                                                                           Number/Extension Time Day Night
+Branch                                                                                                                   Both
+                                                                                                                         __Check box if International or DSN
+If Employment                                                                                                            phone number
+Type is Other         Additional Periods of Activity with this Employer - Provide additional periods of activity if you worked for this employer on more than
+Federal               one occasion at the same physical location (for example, if you worked at XY Plumbing in Denver, CO, during 3 separate periods of
+employment,           time, you would enter information concerning the most recent period of employment above, and provide dates, position titles, and
+State                 supervisors for the two previous periods of employment as entries below). Not Applicable □ (Multiple Entries Allowed)
+Government,           Dates of employment                    From Date (Estimated)                    To Date (Estimated/Present)
+Federal               Position title                         Position (Free Text)                     Supervisor              Supervisor (Free Text)
+Contractor, Non-      Is/was your physical work address different than your employer’s address?                                              YES NO
+government                           Provide the work address where you are/were physically located.                     Street Address       City
+employment, or        Branch         Provide Country if outside the United States; otherwise          State             Zip Code            Country
+Other                 Physical       provide State and Zip Code
+                      Location       Provide the telephone number                                     Number/Extension Time Day Night Both
+                                                                                                      __Check box if International or DSN phone number
+                                     You have indicated an APO/FPO address; provide physical location data with either street address, base, post, embassy,
+                      Branch         unit, and country location or home port/fleet headquarter. Provide physical location data:
+                      Physical
+                                     Street Address/Unit/Duty Location:                                                  City or Post Name:
+                      Location
+                                     Provide state for ports in the United States, or country location.                  State     Zip Code      Country
+                      Branch         You have indicated an address outside of the United States. Do you or did you have an APO/FPO YES NO
+                      APO/FPO        address while at this location?
+                Address       Branch if Yes           Provide APO/FPO address:     Address          APO/FPO     APO/FPO State      Zip Code
+                Provide the name of your supervisor.                                                            Supervisor name (Free Text)
+                Provide the position title of your supervisor.                                                  Supervisor position (Free Text)
+                Provide the email address of your supervisor. □ I don’t know                                    Supervisor email (Free Text)
+                Provide the physical work location of your supervisor.             Street address               City
+                Provide Country if outside the United States; otherwise,           State                        Zip Code          Country
+                provide State and Zip Code
+                Provide the telephone number for this supervisor.                                                 Number/Extension Time Day Night
+                                                                                                                  Both
+                                                                                                                  __Check box if International or DSN
+                                                                                                                  phone number
+                              You have indicated an APO/FPO address for your supervisor; provide physical location data with either street address,
+                Branch        base, post, embassy, unit, and country location or home port/fleet headquarter. Provide physical location data of your
+                Physical      supervisor:
+                Location      Street Address/Unit/Duty Location:                                                  City or Post Name:
+                              Provide state for ports in the United States, or country location.                  State and Zip Code or Country
+                Branch        You have indicated an address outside of the United States. Did/does your supervisor have an            YES NO
+                APO/FPO       APO/FPO address while at this location?
+                Address       Branch if Yes           Provide APO/FPO address: Address               APO/FPO      APO/FPO State       Zip Code
+                Self-Employment
+                Provide most recent position title.                                                               Position (Free Text)
+                Select the employment status for this position:     □ Full-time □ Part-time
+                Provide the name of your employment                                                               Employment name (Free Text)
+                Provide the address of employment                                     Street address              City
+                Provide Country if outside the United States; otherwise,              State                       Zip Code          Country
+                provide State and Zip Code
+                Provide telephone number                                                                          Number/Extension Time Day Night
+                                                                                                                  Both
+                                                                                                                  __Check box if International or DSN
+                                                                                                                  phone number
+                Is your physical work address different than your employment address?                                                 YES NO
+                              Provide the work address where you are/were physically               Street address            City
+                              located.
+                              Provide Country if outside the United States; otherwise, provide State and Zip State            Zip           Country
+                Branch
+                              Code                                                                                            Code
+                Physical
+                              Provide telephone number                                                            Number/Extension Time Day Night
+                Location
+                                                                                                                  Both
+                                                                                                                  __Check box if International or DSN
+                                                                                                                  phone number
+                              You have indicated an APO/FPO address; provide physical location data with either street address, base, post, embassy,
+                Branch        unit, and country location or home port/fleet headquarter. Provide physical location data:
+                Physical
+                              Street Address/Unit/Duty Location:                                                  City or Post Name:
+Branch          Location
+                              Provide state for ports in the United States, or country location.                  State      Zip Code Country
+If Employment   Branch        You have indicated an address outside of the United States. Do you or did you have an APO/FPO YES NO
+Type is Self-   APO/FPO       address while at this location?
+Employment      Address       Branch if Yes           Provide APO/FPO address: Address               APO/FPO      APO/FPO State       Zip Code
+                Provide the name of someone that can verify your self-employment.                    Last                             First
+                Provide the address of this verifier.                                 Street address              City
+                Provide Country if outside the United States; otherwise,              State                       Zip Code          Country
+                provide State and Zip Code
+                Provide the telephone number for this person                          Number/Extension Time Day Night Both
+                                                                                      __Check box if International or DSN phone number
+                              You have indicated an APO/FPO address for your self-employment verifier; provide physical location data with either
+                Branch        street address, base, post, embassy, unit, and country location or home port/fleet headquarter. Provide physical location
+                Verifier
+                              data for this person
+                Physical
+                              Street Address/Unit/Duty Location:                                                  City or Post Name:
+                Location
+                              Provide state for ports in the United States, or country location.                  State      Zip Code Country
+                Branch        You have indicated an address outside of the United States. Does your self-employment verifier          YES NO
+                Verifier      have an APO/FPO address?
+                APO/FPO                               Provide APO/FPO address for this person:                    Address             APO/FPO
+                              Branch if Yes
+                Address                               APO/FPO State                                               Zip Code
+                Unemployment
+                Provide the name of someone who can verify your unemployment activities and means of support                    Last         First name:
+                                                                                                                                name:
+                Provide the address of this verifier.                              Street address                 City
+                Provide Country if outside the United States; otherwise,           State                          Zip Code          Country
+Branch          provide State and Zip Code
+If Employment   Provide the telephone number for this person                       Number/Extension Time Day Night Both _Check box if
+Type is                                                                            International or DSN phone number
+Unemployment                  You have indicated an APO/FPO address for your unemployment verifier; provide physical location data with either
+                Branch        street address, base, post, embassy, unit, and country location or home port/fleet headquarter. Provide physical location
+                Verifier
+                              data for this person:
+                Physical
+                              Street Address/Unit/Duty Location:                                                  City or Post Name:
+                Location
+                              Provide state for ports in the United States, or country location.                  State      Zip Code Country
+                Branch        You have indicated an address outside of the United States. Does your unemployment verifier             YES NO
+                     Verifier       have an APO/FPO address?
+                     APO/FPO                              Provide APO/FPO address for this person:                 Address            APO/FPO
+                     Address        Branch if Yes
+                                                          APO/FPO State                                            Zip Code
+                     Provide the reason for leaving the employment activity.                                       Reason (Free Text)
+                     For this employment have any of the following happened to you in the last five (5) years?                        YES NO
+                     • Fired • Quit after being told you would be fired • Left by mutual agreement following charges or
+                     allegations of misconduct • Left by mutual agreement following notice of unsatisfactory performance
+
+Branch                                Select the type of incident: • Fired • Quit after being told you would be fired
+                                      • Left by mutual agreement following charges or allegations of misconduct
+If Employment       Branch            • Left by mutual agreement following notice of unsatisfactory performance
+Type is Active                        Branch                     Provide the reason for being fired.                            Reason (Free Text)
+Duty, National      If Fired, Quit,   If Fired                   Provide the date you were fired.                               Date (Estimated)
+Guard/Reserve,      Left by Mutual
+                                                                 Provide the reason for quitting.                               Reason (Free Text)
+USPHS               Agreement, or     Branch
+                                                                 Provide the date you quit after being told you would           Date (Estimated)
+Commissioned        Left After        If Quit
+                                                                 be fired.
+Corps, Other        Unsatisfactory
+                                                                 Provide the charges or allegations of misconduct.              Charges (Free Text)
+Federal             Performance       Branch
+employment,                                                      Provide   the date you left following charges or               Date (Estimated)
+                                      If Left after Charges
+State               (Multiple                                    allegations of misconduct.
+Government,         Entries           Branch                     Provide the reason(s) for unsatisfactory performance.          Reason (Free Text)
+Federal             Allowed)          If Left Unsatisfactory Provide the date you left by mutual agreement following            Date (Estimated)
+Contractor, Non-                      performance                a notice of unsatisfactory performance.
+government                            In the last five (5) years do you have another reason for leaving           YES (Yes adds      NO (Required to
+employment,                           to report for this employment?                                              another entry)     validate)
+Self-               For this employment, in the last five (5) years have you received a written warning, been officially                YES NO
+Employment,         reprimanded, suspended, or disciplined for misconduct in the workplace, such as a violation of security policy?
+Unemployment,       Branch                Officially reprimanded, suspended, or disciplined for misconduct.
+or Other            If Disciplined,       Provide the month and year you were warned, reprimanded, suspended or                 Date/ Estimated □
+                    Warned,               disciplined.
+                    Reprimanded, or       Provide the reason(s) for being warned, reprimanded, suspended or disciplined         Reason (Free Text)
+                    Suspended             Do you have another instance of discipline or a warning                 YES (Yes adds      NO (Required to
+                    (Multiple Entries     to provide?                                                             another entry)     validate)
+                    Allowed)
+Do you have an additional employment activity to enter?                                  YES (Yes adds another entry) NO (Required to validate)
+Section 13b – Employment Record
+Have any of the following happened to you in the last five (5) years at employment activities that you have not previously listed? (If Yes, you will be
+required to add an additional employment in Section 13a)        • Fired from a job?        • Quit a job after being told you would be fired?
+• Have you left a job by mutual agreement following charges or allegations of misconduct?
+• Left a job by mutual agreement following notice of unsatisfactory performance?
+• Received a written warning, been officially reprimanded, suspended, or disciplined for misconduct in the workplace, such as violation of a security policy?
+                                                                                                                                          YES NO
+Section 14 – Selective Service Record
+Were you born a male after December 31, 1959?                                                                                    YES     NO
+                 Selective Service Registration
+                 Have you registered with the Selective Service System (SSS)?                                 I don’t know       YES     NO
+                                       The Selective Service website can help provide the registration number for persons who have
+Branch           Branch
+                                       registered. Note: Selective Service Number is not your Social Security Number
+                 If Yes
+                                       Provide registration number:                                           Registration number (Free Text)
+If Yes to Born
+                 Branch                You responded 'No' to having registered with the Selective Service System (SSS)
+Male After
+                 If No                 Provide explanation                                                    Explanation (Free Text)
+12/31/1959
+                 Branch                You responded 'I don't know' to having registered with the Selective Service System (SSS)
+                 If I Don’t Know       Provide explanation                                                    Explanation (Free Text)
+Section 15 – Military History
+Have you EVER served in the U.S. Military?                                                                                           YES NO
+            You responded ‘Yes’ to having served in the U.S. Military:
+            Provide the branch of service you served in:         State of service, if               Officer or enlisted: Provide your service number
+            □ Army □ Army National Guard                         National Guard                     □ Not Applicable      (Free Text)
+               □ Navy □ Air Force □ Air National                 Provide your status                □ Officer
+               Guard □ Marine Corps □ Coast Guard              □ Active Duty □ Active               □ Enlisted            Number (Free Text)
+Branch                                                            Reserve □ Inactive Reserve
+            Provide your dates of service                        From Date (Estimated)              To Date (Estimated/Present)
+If Yes to   Were you discharged from this instance of U.S. military service, to include Reserves, or National Guard?                 YES NO
+Serving in
+                             You responded ‘Yes’ to being discharged from U.S. military service, to include Reserves
+the U.S.
+            Branch           or National Guard.
+Military
+                             Provide the type of discharge you received: □ Honorable □ Dishonorable □ Under Other than Honorable Conditions
+            If Yes to        □ General □ Bad Conduct □ Other (provide type)
+(Multiple
+            Discharged       Provide other discharge type:                                                  Discharge explanation (Free Text)
+Entries
+Allowed)                     Provide  the date of discharge listed above                                    Date  (Estimated)
+            Branch If Discharge Not Honorable          Provide the reason(s) for the discharge.             Reason(s) (Free Text)
+            Do you have additional military service to report?                                             YES (Yes adds         NO (Required to
+                                                                                                           another entry)        validate)
+            In the last 5 years, have you been subject to court martial or other disciplinary procedure    YES                   NO
+            under the Uniform Code of Military Justice (UCMJ), such as Article 15, Captain’s mast,
+                 Article 135 Court of Inquiry, etc?
+                                   You responded ‘Yes’ to having been subject to court martial or other disciplinary procedure under the Uniform Code of
+                                   Military Justice (UCMJ), such as Article 15, Captain’s mast, Article 135 Court of Inquiry, etc in the last 5 years.
+                                   Provide the date of the court martial or other disciplinary procedure.                       Date (Estimated)
+                                   Provide a description of the Uniform Code of Military Justice (UCMJ) offense(s) for which you              Description (Free
+                 Branch            were charged.                                                                                              Text)
+                                   Provide the name of the disciplinary procedure, such as Court Martial, Article 15, Captain’s mast,         Name
+                 If Yes to         Article 135 Court of Inquiry, etc.                                                                         (Free Text)
+                 Military          Provide the description of the military court or other authority in which you were charged (title of       Description
+                 Discipline        court or convening authority, address, to include city and state or country if overseas).                  (Free Text)
+                                   Provide the description of the final outcome of the disciplinary procedure, such as found guilty,          Description
+                                   found not guilty, fine, reduction in rank, imprisonment, etc.                                              (Free Text)
+                                   In the last 5 years do you have an additional             YES (Yes adds another entry) NO (Required to validate)
+                                   instance of military discipline to report?
+Have you EVER served as a civilian or military member in a foreign country’s military, intelligence, diplomatic, security forces,             YES NO
+militia, other defense force, or government agency?
+                 You responded ‘Yes’ to having EVER served as a civilian or military member in a foreign country’s military, intelligence, diplomatic,
+                 security forces, militia, other defense force, or government agency.
+Branch           During your foreign service, which organization were you serving under: □ Military (Army, Navy, Air Force, Marines, etc.), Specify
+                 □ Intelligence Service □ Diplomatic Service □ Security Forces □ Militia □Other Defense Forces, Specify □ Other Government Agency,
+If Yes to        Specify
+Serving in a Provide the name of the foreign organization.                                                        Name (Free Text)
+Foreign
+                 Provide your period of service                           From Date (Estimated)                   To Date (Estimated/Present)
+Military
+                 Provide the name of the country                          Provide your highest position/rank      Position held (Free Text)
+                                                                          held
+(Multiple
+                  Provide the division/department/office in which you served.                                     Division (Free Text)
+Entries
+Allowed)          Provide a description of the circumstances of your association with this organization.          Description (Free Text)
+                  Provide a description of the reason for leaving this service.                                   Description (Free Text)
+                 Do you have an additional foreign military service to report?                                    YES (Yes adds         NO (Required to
+                                                                                                                  another entry)        validate)
+
+Section 16 – Police Record
+For this section report information regardless of whether the record in your case has been sealed, expunged, or otherwise stricken from the court record, or
+the charge was dismissed. You need not report convictions under the Federal Controlled Substances Act for which the court issued an
+expungement order under the authority of 21 U.S.C. 844 or 18 U.S.C. 3607. Be sure to include all incidents whether occurring in the U.S. or abroad.
+Have any of the following happened? (If yes, you will be asked to provide details for each offense that pertains to the actions that are identified below.)
+• In the last five (5) years have you been issued a summons, citation, or ticket to appear in court in a criminal proceeding against you? (Do not check if all
+the citations involved traffic infractions where the fine was less than $300 and did not include alcohol or drugs.)
+• In the last five (5) years have you been arrested by any police officer, sheriff, marshal or any other type of law enforcement official?
+• In the last five (5) years have you been charged with, convicted of, or sentenced for a crime in any court? (Include all qualifying charges, convictions or
+sentences in any Federal, state, local, military, or non-U.S. court, even if previously listed on this form).
+• In the last five (5) years have you been or are you currently on probation or parole?
+• Are you currently on trial or awaiting a trial on criminal charges?
+                                                                                                                                           YES NO
+
+                   Provide the date of offense.    Date (Estimated)          Provide a description of the             Description (Free Text)
+                                                                             specific nature of the offense.
+
+                   Provide the location where the offense occurred.            Street address and city                State and Zip Code or Country
+                   Were you arrested, summoned, cited, or did you receive a ticket to appear as a result of this offense by any police       YES NO
+                   officer, sheriff, marshal or any other type of law enforcement official?
+                   Branch               Arresting/citing/summoning agency
+                   If Yes to Being      Provide the name of the law enforcement agency that arrested/cited/summoned you.            Name (free Text)
+                   Arrested/Cited/      Provide the location of the law        Street address and city, County        State and Zip Code or Country
+                   Summoned             enforcement agency.
+Branch             As a result of this offense were you charged, convicted, currently awaiting trial, and/or ordered to appear in court      YES NO
+                   in a criminal proceeding against you?
+If Yes to the      Branch - If No       You responded ‘No’ to “As a result of this offense were you charged, convicted, currently awaiting trial, and/or
+Above              to Charged or        ordered to appear in court in a criminal proceeding against you?”
+Happening          Convicted            Provide Explanation                                                           Explanation (Free Text)
+                                        Court information
+(Multiple                               Provide the name of the court.                                                Name of court (Free Text)
+Entries                                 Provide the location of the court.        Street address and city             State and Zip Code or Country
+Allowed)                                Provide all the charges brought against you for this offense, and the outcome of each charged offense (such as found
+                                        guilty, found not-guilty, charge dropped or “nolle pros,” etc). If you were found guilty of or pleaded guilty to a lesser
+                   Branch               offense, list separately both the original charge and the lesser offense.
+                                        Felony/Misdemeanor         Felony, Misdemeanor, Other         Charge                     Charge (Free Text)
+                   If Yes to            Outcome                    Outcome (Free Text)                Date (Month/Year)          Date
+                   Charged or                                                                                                    (Est.)
+                   Convicted            Were you sentenced as a result of this offense?                                                      YES NO
+                                                          Conviction detail
+                                        Branch
+                                                          Provide a description of the sentence.
+                                        If Yes to
+                                                          If the conviction resulted in imprisonment, provide the dates     From Date (Estimated)
+                                        Being
+                                                          that you actually were incarcerated. (Not Applicable □ )          To Date (Estimated/Present)
+                                        Sentenced
+                                                          If conviction resulted in probation or parole, provide the        From Date (Estimated)
+                                                          dates of probation or parole. (Not Applicable □ )                   To Date (Estimated/Present)
+                                         Branch           Trial detail
+                                         If No to         Are you currently on trial, awaiting a trial, or awaiting sentencing on criminal    YES NO
+                                         Being            charges for this offense?
+                                         Sentenced        Provide Explanation                                  Explanation (Free Text)
+                    Do you have any other offenses where any of the following has happened to you?                         YES              NO
+                    • In the last five (5) years have you been issued a summons, citation, or ticket to appear in          (Yes adds        (Required
+                    court in a criminal proceeding against you? (Do not include citations involving traffic                another entry)   to validate)
+                    infractions where the fine was less than $300 and did not include alcohol or drugs)
+                    • In the last five (5) years have you been arrested by any police officer, sheriff, marshal or
+                    any other type of law enforcement official?
+                    • In the last five (5) years have you been charged with, convicted of, or sentenced for a crime
+                    in any court? (Include all qualifying charges, convictions, or sentences in a Federal, state,
+                    local, military, or non-U.S. court even if previously listed on this form.)
+                    • In the last five (5) years have you been or are you currently on probation or parole?
+                    • Are you currently on trial or awaiting a trial on criminal charges?
+Is there currently a domestic violence protective order or restraining order issued against you?                                              YES NO
+                    You responded ‘Yes’ to currently having a domestic violence protective order or restraining order issued against you.
+Branch
+If Yes to           Provide explanation:                                                     Explanation (Free Text)
+Domestic
+                    Provide the date the order was issued.                                   Date (Estimated)
+Violence
+                    Provide the name of the court or agency that issued the order.           Name of court (Free Text)
+(Multiple
+Entries             Provide the location of the court or agency that issued the order.       Street address and city       State and Zip Code or Country
+Allowed)            Do you have another domestic violence protective order or                YES                                   NO
+                    restraining order currently issued against you to report?                (Yes adds another entry)              (Required to validate)
+Section 17 – Illegal Use of Drugs and Drug Activity
+We note, with reference to this section, that neither your truthful responses nor information derived from your responses to this section will be used as
+evidence against you in a subsequent criminal proceeding. This particular section applies whether or not you are currently employed by the Federal
+government. The following questions pertain to the illegal use of drugs or controlled substances or drug or controlled substance activity not in accordance
+with Federal laws, even if permissible under state laws.
+In the last year have you illegally used any drugs or controlled substances? Use of a drug or controlled substance includes injecting, YES NO
+snorting, inhaling, swallowing, experimenting with or otherwise consuming any drug or controlled substance.
+                   You answered ‘Yes’ to in the last year having illegally used a drug or controlled substance.
+Branch             Provide the type of drug or controlled substance.                     Explanation if other (Free Text)
+                   □ Cocaine or crack cocaine (Such as rock, freebase, etc.) □ Stimulants (Such as amphetamines, speed, crystal meth, ecstasy, etc.)
+If Yes to
+                   □ THC (Such as marijuana, weed, pot, hashish, etc.)           □ Depressants (Such as barbiturates, methaqualone, tranquilizers, etc.)
+Illegally Using
+                   □ Ketamine (Such as special K, jet, etc.)                     □ Narcotics (Such as opium, morphine, codeine, heroin, etc.)
+Drugs or
+                   □ Hallucinogenic (Such as LSD, PCP, mushrooms, etc.) □ Steroids (Such as the clear, juice, etc.)
+Controlled
+                   □ Inhalants (Such as toluene, amyl nitrate, etc.)             □ Other (Provide explanation):
+Substances
+                   Provide an estimate of the            Date (Estimated)                Provide an estimate of the month Date (Estimated)
+                   month and year of first use.                                          and year of most recent use.
+(Multiple
+Entries            Provide  nature of  use, frequency, and number   of times used.       Nature of use (Free Text)
+Allowed)           Do you have an additional instance(s) of illegal use of a drug or controlled      YES                            NO
+                   substance to enter?                                                               (Yes adds another entry)       (Required to validate)
+In the last year, have you been involved in the illegal purchase, manufacture, cultivation, trafficking, production, transfer, shipping,    YES NO
+receiving, handling or sale of any drug or controlled substance?
+                   You answered ‘Yes’ to in the last year having been involved in the illegal purchase, manufacture, cultivation, trafficking, production,
+                   transfer, shipping, receiving, handling or sale of a drug or controlled substance.
+                   Provide the type of drug or controlled substance.
+                   □ Cocaine or crack cocaine (Such as rock, freebase, etc.) □ Stimulants (Such as amphetamines, speed, crystal meth, ecstasy, etc.)
+                   □ THC (Such as marijuana, weed, pot, hashish, etc.)           □ Depressants (Such as barbiturates, methaqualone, tranquilizers, etc.)
+                   □ Ketamine (Such as special K, jet, etc.)                     □ Narcotics (Such as opium, morphine, codeine, heroin, etc.)
+                   □ Hallucinogenic (Such as LSD, PCP, mushrooms, etc.) □ Steroids (Such as the clear, juice, etc.)
+Branch             □ Inhalants (Such as toluene, amyl nitrate, etc.)             □ Other (Provide explanation free text):
+If Yes to          Provide an estimate of the month Date                           Provide an estimate of the month and       Date (Estimated)
+Illegal Drug       and year of first involvement.         (Estimated)              year of most recent involvement.
+Activity           Provide nature of and frequency of activity.                    Nature of activity (Free Text)
+                   Provide the reason(s) why you engaged in the activity.          Reason(s) (Free Text)
+(Multiple          Do you have an additional instance(s) of having been involved in the illegal purchase,                YES                NO
+Entries            manufacture, cultivation, trafficking, production, transfer, shipping, receiving, handling or sale (Yes adds             (Required to
+Allowed)           of a drug or controlled substance to enter?                                                           another entry)     validate)
+In the last year have you intentionally engaged in the misuse of prescription drugs, regardless of whether or not the drugs were        YES NO
+prescribed for you or someone else?
+Branch             You responded ‘Yes’ to in the last year having intentionally engaged in the misuse of prescription drugs, regardless of whether the drugs
+If Yes to          were prescribed for you or someone else.
+Misuse of          Provide the name of the prescription drug that you misused.                                   Drug names (Free Text)
+Prescription       Provide the dates of involvement in the above.        From Date (Estimated)                   To Date (Estimated/Present)
+Drugs              Provide the reason(s) for and circumstances of the misuse of the prescription drug.           Reasons (Free Text)
+                   Do you have an additional instance(s) of intentionally engaging in the misuse     YES                           NO
+(Multiple          of prescription drugs in the last year to enter?                                  (Yes adds another entry) (Required to validate)
+Entries
+Allowed)
+In the last year have you been ordered, advised, or asked to seek counseling or treatment as a result of your illegal use of drugs or   YES NO
+controlled substances?
+Branch             You responded ‘Yes’ to having in the last year, been ordered, advised, or asked to seek counseling or treatment as a result of your illegal
+                   use of drugs or controlled substances
+If Yes to          Have any of the following ordered, advised, or asked you to seek counseling or treatment as a result of your illegal use of drugs or
+Being Ordered controlled substances? (Select all that apply)
+Treatment for      □ An employer, military commander, or employee assistance program              □ A medical professional
+the Misuse of      □ A mental health professional                                                 □ A court official / judge
+Drugs              □ I have not been ordered, advised, or asked to seek counseling or treatment by any of the above.
+                   Provide explanation          Explanation (Free Text)       Did you take action to receive counseling or treatment?        YES NO
+(Multiple          Branch If No        You have indicated that you did not receive treatment. Provide explanation.              Explanation (Free Text)
+Entries            to Action Taken
+Allowed)                               Provide the type of drug or controlled substance for which you were treated.
+                                        □ Cocaine or crack cocaine (Such as rock, freebase, etc.)
+                                        □ Stimulants (Such as amphetamines, speed, crystal meth, ecstasy, etc.)
+                                        □ THC (Such as marijuana, weed, pot, hashish, etc.)
+                                        □ Depressants (Such as barbiturates, methaqualone, tranquilizers, etc.)
+                                        □ Ketamine (Such as special K, jet, etc.)
+                                        □ Narcotics (Such as opium, morphine, codeine, heroin, etc.)
+                                        □ Hallucinogenic (Such as LSD, PCP, mushrooms, etc.)
+                   Branch               □ Steroids (Such as the clear, juice, etc.)
+                   If Yes to Action □ Inhalants (Such as toluene, amyl nitrate, etc.)
+                   Taken                □ Other (Provide explanation):
+                                       Explanation (Free Text)             Provide the name of the treatment              Name (Last name, First name)
+                                                                           provider. (Last name, First name)
+                                       Provide the address for this treatment provider. Street address and city           State and Zip Code or Country
+                                       Provide a telephone number for the treatment provider.                             Number/Ext. Extension Time Day
+                                                                                                                          Night Both _Check box if
+                                                                                                                          International
+                                       Provide the dates of treatment.                      Date From (Estimated)         Date To (Estimated/Present)
+                                       Did you successfully complete the treatment?                                                           YES NO
+                                       Branch If No        You have indicated that you did not successfully               Explanation (Free Text)
+                                       to Successful       complete the treatment. Provide explanation.
+                                       Treatment
+                   Do you have another instance of having been ordered, advised, or asked               YES                          NO
+                   to seek drug or controlled substance counseling or treatment to enter?               (Yes adds another entry) (Required to validate)
+In the last year have you voluntarily sought counseling or treatment as a result of your use of a drug or controlled substance?               YES NO
+                   Voluntary treatment detail
+                   Provide the type of drug or controlled substance for which you were treated.
+                   □ Cocaine or crack cocaine (Such as rock, freebase, etc.) □ Stimulants (Such as amphetamines, speed, crystal meth, ecstasy, etc.)
+                   □ THC (Such as marijuana, weed, pot, hashish, etc.)            □ Depressants (Such as barbiturates, methaqualone, tranquilizers, etc.)
+Branch             □ Ketamine (Such as special K, jet, etc.)                      □ Narcotics (Such as opium, morphine, codeine, heroin, etc.)
+If Yes to          □ Hallucinogenic (Such as LSD, PCP, mushrooms, etc.) □ Steroids (Such as the clear, juice, etc.)
+Voluntarily        □ Inhalants (Such as toluene, amyl nitrate, etc.)              □ Other (Provide explanation free text)
+Seeking            Provide the name of the treatment provider. (Last name, First name)                                    Name (Free Text)
+Treatment for
+                   Provide the address for this treatment provider.        Street address and city                        State and Zip Code or Country
+the Misuse of
+                   Provide a telephone number for the treatment provider.                                                 Number/Extension Time Day Night
+Drugs
+                                                                                                                          Both _Check box if International
+                   Provide the dates of treatment.                         Date From (Estimated)                          Date To (Estimated/Present)
+(Multiple
+Entries            Did you successfully complete the treatment?                                                                              YES NO
+Allowed)           Branch If No to            You have indicated that you did not successfully complete the               Explanation (Free Text)
+                   Successful Treatment treatment. Provide explanation.
+                   Do you have another instance of voluntarily seeking counseling or              YES                              NO
+                   treatment as a result of your use of a drug or controlled substance in the     (Yes adds another entry)         (Required to validate)
+                   last year?
+
+Section 18 – Investigations and Clearance Record
+Has the U.S. Government (or a foreign government) EVER investigated your background and/or granted you a security clearance       YES NO
+eligibility/access?
+                    You responded ‘Yes’ to the U.S. Government (or a foreign government) having investigated your background and/or having granted
+                    you a security clearance eligibility/access.
+                    Provide the investigating agency:            □ U.S. Department of Defense                       □ U.S. Department of State
+                                                                 □ U.S. Office of Personnel Management              □ Federal Bureau of Investigation
+                                                                 □ U.S. Department of Treasury (Provide name of bureau)
+                    Explanation or name of government or         □ U.S. Department of Homeland Security
+Branch              bureau. (Free Text)                          □ Foreign government (Provide name of government) □ I don’t know
+If Yes to Having                                                 □ Other (Provide explanation)
+Ever Been           Date the investigation was completed.                   □ I don’t know                           Date (Estimated)
+Investigated        Was a clearance eligibility/access granted? Yes       No
+                     If yes, to having         Provide the name of agency that issued the clearance eligibility/access if   Name (Free Text)
+(Multiple Entries    clearance                 different from the investigating agency.
+Allowed)             eligibility/access
+                     granted
+                     (Multiple Entries
+                     Allowed)
+                                               Provide the date clearance eligibility/access was granted. □ I don’t         Date (Estimated)
+                                               know
+                                                   Provide the level     □ None       □ Confidential       □ Secret       □ Top Secret
+                                                   of clearance          □ Sensitive Compartmented Information (SCI) □ Q                   □L         □ I don’t
+                                                   eligibility/access    know
+                                                   granted.              □ Issued by foreign country                      □ Other (Provide explanation)
+                                                   Explanation
+                                                   (Free Text)
+                       Do you have another investigation to enter?                  YES (Yes adds another entry)              NO (Required to validate)
+In the last five (5) years have you had a security clearance eligibility/access authorization denied, suspended, or revoked? (Note: An     YES NO
+administrative downgrade or administrative termination of a security clearance is not a revocation.)
+                       You responded ‘Yes’ to having a security clearance eligibility/access authorization denied, suspended, or revoked within the last five
+Branch                 (5) years.
+If Yes to Denied       Provide the date security clearance eligibility/access authorization was denied, suspended or revoked.      Date (Estimated)
+                       Provide the name of the agency that took the action.                                                   Name (Free Text)
+(Multiple Entries      Provide an explanation of the circumstances of the denial, suspension or revocation action.            Explanation (Free Text)
+Allowed)               Do you have another denied, revoked or suspended security                  YES                         NO
+                       clearance eligibility/access authorization to enter?                       (Yes adds another entry) (Required to validate)
+In the last five (5) years have you been debarred from government employment?                                                              YES     NO
+Branch                 You responded ‘Yes’ to in the last 5 years having been debarred from government employment.
+If Yes to              Provide the name of the government agency taking debarment action.                                     Agency name
+Debarment              Provide the date the debarment occurred.                                                               Date (Estimated)
+(Multiple Entries      Provide an explanation of the circumstances of the debarment                                           Circumstances (Free text)
+Allowed)               Do you have another Government debarment to enter?                 YES (Yes adds another entry)        NO (Required to validate)
+Section 19 – Financial Record
+In the last five (5) years have you failed to file or pay Federal, state, or other taxes when required by law or ordinance?                YES      NO
+                   You responded ‘Yes’ to having failed to file or pay Federal, state, or other taxes when required by law or ordinance.
+                   Did you fail to file, pay as required, or both? □ File □ Pay □ Both
+Branch             Provide the year you failed to file or pay your Federal, state or other taxes.                Est.
+                   Provide the reason(s) for your failure to file or pay required taxes.                                      Reasons (Free Text)
+If Yes to
+                   Provide the Federal, state or other agency to which you failed to file or pay taxes.                       Agency (Free Text)
+Failing to
+                   Provide the type of taxes you failed to file or pay (such as property, income, sales, etc.).               Tax Type (Free Text)
+File/Pay Taxes
+                   Provide the amount (in U.S. dollars) of the taxes. □ Estimated                                             Amount (Free Text)
+(Multiple          Provide date satisfied. □ Not applicable                                                                   Date (Estimated)
+Entries            Provide a description of any action(s) you have taken to satisfy this debt (such as withholdings,          Description (Free Text)
+Allowed)           frequency and amount of payments, etc.). If you have not taken any action(s) provide explanation.
+                   Are there any other instances in the last five (5) years where you failed to         YES                        NO
+                   file or pay Federal, state or other taxes when required by law or ordinance?         (Yes adds another entry) (Required to validate)
+Other than previously listed, has the following happened to you? (You will be asked to provide details about each financial obligation that pertains to the
+items identified below).
+• You are currently delinquent on any Federal debt. (Include financial obligations for which you are the sole debtor, as well as those for which you are a
+cosigner or guarantor).
+
+
+                                                                                                                                                YES      NO
+
+
+                  Provide the associated loan / account number(s) involved                                          Loan / account number (Free Text)
+                  Identify/describe the type of property involved (if any).                                         Property type (Free Text)
+                  Provide the amount (in U.S. dollars) of the financial issue. □ Estimated                          Amount (Free Text)
+                  Provide the reason(s) for the financial issue.                                                    Reasons (Free Text)
+                  Provide the current status of the financial issue.                                                Status (Free Text)
+                  Provide the date the financial issue began.                                                       Date (Estimated)
+                  Provide date the financial issue was resolved. □ Not resolved                                     Date (Estimated)
+                  Provide the name of the court involved.                                                           Court name (Free Text)
+                  Provide the address of the court involved.                Street address and City                 State and Zip Code or Country
+                  Provide a description of any action(s) you have taken to satisfy this debt (such as withholdings,             Description (Free Text)
+                  frequency and amount of payments, etc.). If you have not taken any action(s) provide explanation.
+                  Other than previously listed, are there any other instances of the following occurrence?
+                  • You are currently delinquent on any Federal debt. (Include financial obligations for which you are the sole debtor, as well as those for
+                  which you are a cosigner or guarantor).
+
+                                                                               □ YES (Yes adds another entry)          □ NO (Required to validate)
+
+1E a
+
+
+
+
+Section 20 – Association Record
+The following pertain to your associations. You are required to answer the questions fully and truthfully, and your failure to do so could be grounds for an
+adverse employment or credentialing decision. For the purpose of this question, terrorism is defined as any criminal acts that involve violence or are
+dangerous to human life and appear to be intended to intimidate or coerce a civilian population to influence the policy of a government by intimidation or
+coercion or to affect the conduct of a government by mass destruction, assassination or kidnapping.
+Are you now or have you EVER been a member of an organization dedicated to terrorism, either with an awareness of the                      YES NO
+organization’s dedication to that end, or with the specific intent to further such activities?
+Branch                 You responded ‘Yes’ to being or EVER having been a member of an organization dedicated to terrorism, either with an awareness of
+                       the organization’s dedication to that end, or with the specific intent to further such activities.
+If Yes to Being a      Provide the full name of the organization.                                                         Organization name (Free Text)
+Member of a             Provide the address/location of the organization.                   Street address and City        State and Zip Code or Country
+Terrorist               Provide the dates of your involvement with the organization.        From Date (Estimated)             To Date (Estimated/Present)
+Organization            Provide all positions held in the organization, if any.       □ No positions held                     Positions (Free Text)
+                        Provide all contributions made to the organization, if any. □ No contributions made                   Contributions (Free Text)
+(Multiple Entries       Provide a description of the nature of and reasons for your involvement with the organization.        Involvement (Free Text)
+Allowed)                Do you have any other instances of being a member of an organization dedicated to                  YES                   NO
+                        terrorism, either with an awareness of the organization’s dedication to that end, or with the      (Yes adds             (Required to
+                        specific intent to further such activities to report?                                              another entry)        validate)
+Have you EVER knowingly engaged in any acts of terrorism?                                                                                        YES      NO
+Branch If Yes           You responded ‘Yes’ to EVER having knowingly engaged in any acts of terrorism.
+Engaging in             Describe the nature and reasons for the activity.                  Nature and reasons (Free Text)
+Terrorism               Provide the dates for any such activities                          From Date (Estimated)             To Date (Estimated/Present)
+(Multiple Entries       Do you have any other instances of knowingly engaging in acts of               YES                              NO
+Allowed)                terrorism to report?                                                           (Yes adds another entry)         (Required to validate
+Have you EVER advocated any acts of terrorism or activities designed to overthrow the U.S. Government by force?                      YES                 NO
+Branch                  You responded ‘Yes’ to having EVER advocated any acts of terrorism or activities designed to overthrow the U.S. Government by
+If Yes to               force.
+Advocating              Provide the reason(s) for advocating acts of terrorism.          Reasons (Free Text)
+                        Provide the dates of advocating acts of terrorism                From Date (Estimated)               To Date (Estimated/Present)
+(Multiple Entries       Do you have any other instances of advocating acts of terrorism or activities              YES (Yes adds          NO (Required to
+Allowed)                designed to overthrow the U.S. Government by force to report?                              another entry)         validate)
+Have you EVER been a member of an organization dedicated to the use of violence or force to overthrow the United States                          YES      NO
+Government, and which engaged in activities to that end with an awareness of the organization’s dedication to that end or with the
+specific intent to further such activities?
+                        You responded ‘Yes’ to having EVER been a member of an organization dedicated to the use of violence or force to overthrow the
+Branch                  United States Government, and which engaged in activities to that end with an awareness of the organization’s dedication to that end or
+                        with the specific intent to further such activities.
+If Yes to being         Provide the full name of the organization.                         Organization name (Free Text)
+Member of               Provide the address/location of the organization.                   Street address and City        State and Zip Code or Country
+Organization            Provide the dates of your involvement with the organization        From Date (Estimated)           To Date (Estimated/Present)
+Using Violence          Provide all positions held in the organization, if any.       □ No positions held                     Positions (Free Text)
+to Overthrow the        Provide all contributions made to the organization, if any. □ No contributions made                   Contributions (Free Text)
+U.S. Govt.              Provide a description of the nature of and reasons for your involvement with the organization.        Description (Free Text)
+                        Do you have any other instances of being a member of an organization dedicated to the use          YES                   NO
+(Multiple Entries       of violence or force to overthrow the United States Government, which engaged in                   (Yes adds             (Required to
+Allowed)                activities to that end with an awareness of the organization’s dedication to that end or with      another entry)        validate)
+                        the specific intent to further such activities to report?
+Have you EVER been a member of an organization that advocates or practices commission of acts of force or violence to                            YES      NO
+discourage others from exercising their rights under the U.S. Constitution or any state of the United States with the specific intent to
+further such action?
+                        You responded ‘Yes’ to being or EVER having been a member of an organization that advocates or practices commission of acts of
+                        force or violence to discourage others from exercising their rights under the U.S. Constitution or that of any state of the U.S. with the
+                        specific intent to further such action.
+Branch                  Provide the full name of the organization.                          Organization Name (Free Text)
+If Yes to Being a       Provide the address/location of the organization.                   Street address and City        State and Zip Code or Country
+Member of               Provide the dates of your involvement with the organization         From Date (Estimated)          To Date (Estimated/Present)
+Organization            Provide all positions held in the organization, if any.       □ No positions held                         Positions (Free Text)
+Using Violence          Provide all contributions (in U.S. dollars) made to the organization, if any. □ No contributions          Contributions (Free Text)
+                        made
+(Multiple Entries       Provide a description of the nature of and reasons for your involvement with the organization.            Involvement (Free Text)
+Allowed)                Do you have any other instances of being a member of an organization that advocates or          YES                   NO
+                        practices commission of acts of force or violence to discourage others from exercising          (Yes adds             (Required to
+                        their rights under the U.S. Constitution or any state of the United States with the specific    another entry)        validate)
+                        intent to further such action to report?
+Have you EVER knowingly engaged in activities designed to overthrow the U.S. Government by force?                                             YES        NO
+Branch If Yes to        You responded ‘Yes’ to having EVER knowingly engaged in activities designed to overthrow the U.S. Government by force.
+Activities to           Describe the nature and reasons for the activity.                                                     Reasons (Free Text)
+Overthrow               Provide the dates of such activities.                                     From Date (Estimated)       To Date Estimated/Present)
+(Multiple Entries       Do you have any other instances of having knowingly engaged in activities          YES                            NO
+Allowed)                designed to overthrow the U.S. Government by force to report?                      (Yes adds another entry)       (Required to validate)
+Have you EVER associated with anyone involved in activities to further terrorism?                                                             YES        NO
+Branch If Yes to        Terrorism Association Detail
+Having                  Provide Explanation                                                  Explanation (Free Text)
+Terrorism
+Association
+Additional Comments
+After completing this form and any attachments, you should review your answers to all questions to make sure the form is complete and accurate,
+and then sign and date the following certification and the attached release(s).
+Certification
+My statements on this form, and on any attachments to it, are true, complete, and correct to the best of my knowledge and belief and are made in
+good faith. I have carefully read the foregoing instructions to complete this form. I understand that a knowing and willful false statement on this
+form can be punished by fine or imprisonment or both (18 U.S.C. 1001). I understand that intentionally withholding, misrepresenting, or
+falsifying information may have a negative effect on my employment prospects, or job status, or my removal and debarment from Federal
+service
+
+
+  Signature (Sign in ink)                                                                                      Date (mm/dd/yyyy)
+Standard Form 85 Revised
+U.S. Office of Personnel Management
+5 CFR Parts 731 and 736
+OMB No. 3206-0261
+                                                  Questionnaire For Non-Sensitive Positions
+                                                         United States of America
+                                                 Authorization For Release of Information
+                           Carefully read this authorization to release information about you, then sign and date.
+
+        I Authorize any investigator, special agent, or other duly accredited representative of the authorized Federal agency
+        conducting my background investigation or reinvestigation to obtain any information relating to my activities, conduct, and
+        character from individuals, schools, residential management agents, employers, criminal justice agencies, credit bureaus,
+        consumer reporting agencies, collection agencies, retail business establishments, or other sources of information. This
+        information may include, but is not limited to current and historic academic, residential, achievement, performance,
+        attendance, disciplinary, employment, criminal, financial, and credit information, and publicly available social media
+        information. I authorize the Federal agency conducting my investigation to disclose the record of investigation or ongoing
+        evaluation to the requesting agency for the purpose of making a determination of suitability or eligibility for a non-sensitive
+        position and/or for physical or logical access to federal facilities and information systems.
+
+        I Understand that, for these purposes, publicly available social media information includes any electronic social media
+        information that has been published or broadcast for public consumption, is available on request to the public, is accessible
+        on-line to the public, is available to the public by subscription or purchase, or is otherwise lawfully accessible to the
+        public. I further understand that this authorization does not require me to provide passwords; log into a private account; or
+        take any action that would disclose non-publicly available social media information.
+
+        I Authorize the Social Security Administration (SSA) to verify my Social Security Number (to match my name, Social
+        Security Number, and date of birth with information in SSA records and provide the results of the match) to the United
+        States Office of Personnel Management (OPM) or other Federal agency requesting or conducting my investigation for the
+        purposes outlined above. I authorize SSA to provide explanatory information to OPM, or to the other Federal agency
+        requesting or conducting my investigation, in the event of a discrepancy.
+
+        I Understand that, for financial or lending institutions, medical institutions, hospitals, health care professionals, and other
+        sources of information, separate specific release may be needed, and I may be contacted for such releases at a later date.
+
+        I Authorize any investigator, special agent, or other duly accredited representative of the OPM, the Federal Bureau of
+        Investigation, the Department of Defense, the Department of Homeland Security, the Office of the Director of National
+        Intelligence, Department of State, and any other authorized Federal agency, to request criminal record information about
+        me from criminal justice agencies for the purpose of determining my suitability or eligibility for appointment to, or
+        retention in, a non-sensitive position, in accordance with 5 U.S.C. 9101 or my eligibility for logical or physical access. I
+        understand that I may request a copy of such records as may be available to me under the law.
+
+        I Authorize custodians of records and other sources of information pertaining to me to release such information upon
+        request of the investigator, special agent, or other duly accredited representative of any Federal agency authorized above
+        regardless of any previous agreement to the contrary.
+
+        I Understand that the information released by records custodians and sources of information is for official use by the
+        Federal Government only for the purposes provided in this Standard Form 85, and that it may be disclosed by the
+        Government only as authorized by law.
+
+        I Authorize the information to be used to conduct officially sanctioned and approved suitability-related studies and
+        analyses, which will be maintained in accordance with the Privacy Act.
+
+        Photocopies of this authorization with my signature are valid. This authorization is valid for five (5) years from the
+        date signed or upon the termination of my affiliation with the Federal Government, whichever is sooner.
+
+        Signature (Sign in ink)                  Full name (Type or print legibly)             Date signed (mm/dd/yyyy)
+        Other names used                                                  Date of birth        Social Security Number
+        Current street address Apt. #         City (Country)     State    ZIP Code             Telephone number
+Standard Form 85
+Revised
+U.S. Office of Personnel Management
+5 CFR Parts 731 and 736
+OMB No. 3206-0261
+
+
+
+                             SF 85 Questionnaire For Non-Sensitive Positions
+                                         United States of America
+                            Fair Credit Reporting Disclosure and Authorization
+
+Disclosure
+One or more reports from consumer reporting agencies may be obtained for employment
+purposes pursuant to the Fair Credit Reporting Act, codified at 15 U.S.C. § 1681 et seq.
+
+Purpose
+Depending on circumstances within your background, the Federal government may require
+information from one or more consumer reporting agencies in order to obtain information in
+connection with a background investigation, reinvestigation, or ongoing evaluation (i.e.
+continuous evaluation) for positions designated as low risk, non-sensitive, and for physical and
+logical access. The information obtained may be disclosed to other Federal agencies for the
+above purposes in fulfillment of official responsibilities to the extent that such disclosure is
+permitted by law. Information from the consumer report will not be used in violation of any
+applicable Federal or state equal employment opportunity law or regulation.
+
+Authorization
+I hereby authorize any investigator, special agent, or other duly accredited representative of the
+authorized Federal agency conducting my initial background investigation, reinvestigation, or
+ongoing evaluation (i.e. continuous evaluation) for positions designated as low risk, non-
+sensitive, and for physical and logical access to request, and any consumer reporting agency to
+provide, such reports for the purposes described above.
+
+Note: If you have a security freeze on your consumer or credit report file, we will not be able to
+access the information necessary to complete your investigation, which can adversely affect your
+eligibility for a non-sensitive position. To avoid such delays, you should expeditiously respond
+to any request made to release the credit freeze for the purposes as described above.
+
+Photocopies of this authorization with my signature are valid. This authorization shall remain in
+effect so long as I occupy a non-sensitive position.
+
+Print name                                                             Social Security Number
+
+
+Signature (Sign in ink)                                                Date (mm/dd/yyyy)

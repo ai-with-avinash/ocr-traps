@@ -1,8 +1,8 @@
 {
-  "generated": "2026-04-20T22:48:40.136604",
+  "generated": "2026-04-21T09:58:02.939016",
   "semantics": "Visible OCR input documents only; excludes hidden files, ground-truth/support artifacts, manifests, and logs.",
-  "total_visible_documents": 90,
-  "total_files": 90,
+  "total_visible_documents": 107,
+  "total_files": 107,
   "folders": {
     "01_printed_english/invoices": [],
     "01_printed_english/contracts": [],
@@ -40,7 +40,9 @@
       "omnidoc_newspaper_5e8bcc55b922fd521a667c6ef01027d5_1.jpg",
       "omnidoc_newspaper_The Guardian UK_0801@magazinesclubnew_page_048.png",
       "omnidoc_yanbaopptmerge_yanbaoPPT_1475.jpg",
-      "omnidoc_yanbaor2_ey-how-can-all-benefit-from-green-leadership-by-the-few.pdf_21.jpg"
+      "omnidoc_yanbaor2_ey-how-can-all-benefit-from-green-leadership-by-the-few.pdf_21.jpg",
+      "tulu__B01_P12.tif",
+      "tulu__B01_P13.tif"
     ],
     "02_complex_tables/nested_merged": [],
     "02_complex_tables/forms": [
@@ -48,7 +50,22 @@
       "0012199830.png",
       "0060077689.png",
       "81186212.png",
-      "83635935.png"
+      "83635935.png",
+      "usgov__IRS-1040.pdf",
+      "usgov__IRS-W-4.pdf",
+      "usgov__IRS-W-9.pdf",
+      "usgov__SF-181-ethnicity.pdf",
+      "usgov__SF-85-questionnaire.pdf",
+      "usgov__f1040es.pdf",
+      "usgov__f4506t.pdf",
+      "usgov__f941.pdf",
+      "usgov__f9465.pdf",
+      "usgov__fss4.pdf",
+      "usgov__fw2.pdf",
+      "usgov__sf1152.pdf",
+      "usgov__sf144.pdf",
+      "usgov__sf2809.pdf",
+      "usgov__sf3104.pdf"
     ],
     "03_handwritten/english": [],
     "03_handwritten/hindi_devanagari": [
