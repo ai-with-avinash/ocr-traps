@@ -4,6 +4,7 @@
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 [![uv](https://img.shields.io/badge/built%20with-uv-000000.svg)](https://docs.astral.sh/uv/)
 [![arXiv](https://img.shields.io/badge/arXiv-pending-b31b1b.svg)](#citation)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19741774.svg)](https://doi.org/10.5281/zenodo.19741774)
 
 Reproducible benchmark of six OCR systems on 107 enterprise documents, with a focus on the structural traps that invalidate most practitioner OCR bake-offs.
 
@@ -161,11 +162,12 @@ ocr-traps/
   title   = {ocr-traps: A Practitioner's OCR Benchmark},
   year    = {2026},
   url     = {https://github.com/ai-with-avinash/ocr-traps},
+  doi     = {10.5281/zenodo.19741774},
   orcid   = {0009-0007-1068-6156}
 }
 ```
 
-Preprint (arXiv) and Zenodo DOI links are added here once published. See `CITATION.cff` for structured metadata.
+Zenodo DOI: [10.5281/zenodo.19741774](https://doi.org/10.5281/zenodo.19741774). arXiv preprint link added once published. See `CITATION.cff` for structured metadata.
 
 ## License
 
