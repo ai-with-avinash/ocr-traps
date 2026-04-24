@@ -6,12 +6,12 @@ This file mirrors the main-paper package in
 Authoritative numeric sources:
 
 - `results/expanded_gt_metrics/corpus_summary.json`
-- `results/expanded_gt_metrics/model_summaries.json` (needs regeneration for n=20 forms)
-- `results/expanded_gt_metrics/per_doc_metrics.csv` (needs regeneration)
-- `results/expanded_gt_metrics/statistical_tests.json` (needs regeneration)
+- `results/expanded_gt_metrics/model_summaries.json`
+- `results/expanded_gt_metrics/per_doc_metrics.csv`
+- `results/expanded_gt_metrics/statistical_tests.json`
 - `test-dataset/manifest.json`
 
-**NOTE:** With the expansion from 5 to 20 human-verified forms, the metrics need to be regenerated to get accurate per-model statistics and significance p-values.
+Metrics regenerated against the expanded $n=20$ human-verified forms tier; pairwise forms-only Wilcoxon rows are now populated.
 
 ## Table 1: Dataset and GT Coverage
 
@@ -19,12 +19,12 @@ Authoritative numeric sources:
 |:---|---:|---:|---:|---:|
 | Financial tables | 15 | 0 | 9 | 6 |
 | Forms | 20 | 20 | 0 | 0 |
-| Multi-column | 15 | 0 | 11 | 4 |
+| Multi-column | 17 | 0 | 11 | 6 |
 | Handwritten Devanagari | 30 | 0 | 0 | 30 |
 | Hindi document | 1 | 0 | 0 | 1 |
 | Equations | 14 | 0 | 10 | 4 |
 | Receipts | 10 | 0 | 10 | 0 |
-| **Total** | **105** | **20** | **40** | **45** |
+| **Total** | **107** | **20** | **40** | **47** |
 
 Caption rule:
 
@@ -36,35 +36,35 @@ Caption rule:
 
 | Model | Deployment | Success on visible corpus | Mean latency (ms) | GT coverage | Interpretation in paper |
 |:---|:---|---:|---:|---:|:---|
-| Mistral OCR | Cloud API | 90+/105 (100.0%) | 17,415 | 60/60 (40 circular) | Reliability result; excluded from consensus-GT ranking |
-| Surya | Open source, local | 70+/105 (~77.8%) | 49,708 | 60/60 | Strongest forms accuracy; full GT coverage |
-| Docling | Open source, local | 67+/105 (~74.4%) | 7,460 | 42/60 | Structure-preserving, deletion-dominant profile |
-| Sarvam OCR | Cloud API | 62+/105 (~68.9%) | 4,688 | 27/60 | Fastest model; unreliable on receipts and equations |
-| Tesseract | Open source, local CPU | 59+/105 (~65.6%) | 9,852 | 60/60 | Baseline reference |
-| PaddleOCR | Open source, local | ~10/105 (10.0%) | — | 7/60 | Partial financial-only run; not ranked overall |
+| Mistral OCR | Cloud API | 92/107 (86.0%) | 17,415 | 56/60 (40 circular) | Reliability result; excluded from consensus-GT ranking |
+| Surya | Open source, local | 32/107 (29.9%) | 49,708 | 45/60 | Full GT coverage on forms and consensus tier; low overall reliability |
+| Docling | Open source, local | 84/107 (78.5%) | 7,460 | 57/60 | Structure-preserving, deletion-dominant profile |
+| Sarvam OCR | Cloud API | 0/107 (0.0%)\* | 4,688 | 22/60 | Fast but unreliable; current re-execution produced no visible-corpus output |
+| Tesseract | Open source, local CPU | 76/107 (71.0%) | 9,852 | 60/60 | Baseline reference |
+| PaddleOCR | Open source, local | 4/107 (3.7%) | — | 3/60 | Partial financial-only run; not ranked overall |
 
 Caption rule:
 
-- Success denominator is the full visible corpus (`n=105`).
+- Success denominator is the full visible corpus (`n=107`).
 - Mean latency is computed over successful visible-corpus runs.
 - PaddleOCR is shown for coverage transparency, not as a full-run peer.
+- `*` Sarvam rate reflects the current checked-in re-execution batch only.
 
 ## Table 3: Human-Verified Forms Results
 
-Unbiased cross-model comparison (`n=20` human-verified forms).
+Unbiased cross-model comparison (`n=20` human-verified forms; `n` reflects each model's successful forms subset).
 
-| Model | CER | WER | F1 | Precision | Recall |
+| Model | n | CER | WER | F1 | Precision |
 |:---|---:|---:|---:|---:|---:|
-| Surya | 0.3028 | 0.4483 | 0.7710 | 0.7943 | 0.7508 |
-| Sarvam OCR | 0.5124 | 0.5183 | 0.7592 | 0.7479 | 0.7788 |
-| Mistral OCR | 0.3933 | 0.5033 | 0.7549 | 0.7582 | 0.7584 |
-| Docling | 0.4302 | 0.5593 | 0.5889 | 0.8255 | 0.5586 |
-| Tesseract | 0.4651 | 0.6489 | 0.4980 | 0.5469 | 0.4637 |
+| Docling | 20 | 0.4125 | 0.4980 | 0.8220 | 0.9147 |
+| Tesseract | 20 | 0.3607 | 0.4845 | 0.8122 | 0.8353 |
+| Surya | 5 | 0.3028 | 0.4483 | 0.7710 | 0.7943 |
+| Mistral OCR | 16 | 0.6791 | 0.7310 | 0.4615 | 0.8918 |
 
 Caption rule:
 
-- Forms-only pairwise comparison with `n=20` may be statistically significant.
-- Need to regenerate metrics to get updated p-values.
+- Wilcoxon tests at `α=0.05`: Tesseract significantly better than Mistral on forms (`p=0.0092`, `d=0.729`); Docling significantly better than Mistral (`p=0.0076`, `d=0.848`); Tesseract vs Docling not significant at `n=20` (`p=0.498`, `d=0.059`).
+- Surya-inclusive forms pairs remain underpowered at `n=5`.
 
 ## Table 4: Consensus-GT Aggregate Results
 
@@ -87,13 +87,13 @@ Caption rule:
 
 Token-level F1 by category.
 
-| Model | Forms (`n=5`, human) | Financial (`n=9`, consensus) | Multi-column (`n=11`, consensus) | Equations (`n=10`, consensus) | Receipts (`n=10`, consensus) |
+| Model | Forms (`n=20`, human) | Financial (`n=9`, consensus) | Multi-column (`n=11`, consensus) | Equations (`n=10`, consensus) | Receipts (`n=10`, consensus) |
 |:---|---:|---:|---:|---:|---:|
-| Surya | 0.7710 | 0.8081 | 0.8425 | 0.7624 | 0.6704 |
-| Sarvam OCR | 0.7592 | 0.7667 | 0.7295 | 0.5566 (`n=2`) | — |
-| Mistral OCR | 0.7549 | — | — | — | — |
-| Docling | 0.5889 | 0.7003 | 0.7827 (`n=9`) | 0.7587 | 0.6729 (`n=9`) |
-| Tesseract | 0.4980 | 0.6086 | 0.7352 | 0.5957 | 0.5362 |
+| Docling | 0.8220 | 0.7003 | 0.7827 (`n=9`) | 0.7587 | 0.6729 (`n=9`) |
+| Tesseract | 0.8122 | 0.6086 | 0.7352 | 0.5957 | 0.5362 |
+| Surya | 0.7710 (`n=5`) | 0.8081 | 0.8425 | 0.7624 | 0.6704 |
+| Sarvam OCR | 0.7592 (`n=5`) | 0.7667 | 0.7295 | 0.5566 (`n=2`) | — |
+| Mistral OCR | 0.4615 (`n=16`) | — | — | — | — |
 | PaddleOCR | — | 0.6846 (`n=7`) | — | — | — |
 
 Caption rule:
@@ -107,9 +107,11 @@ Wilcoxon signed-rank tests on per-document F1 for the main non-circular Phase 1 
 
 | Comparison | n | p-value | Winner | Effect size |
 |:---|---:|---:|:---|:---|
-| **Forms-only (n=20)** | | | |
-| Tesseract vs Surya (forms) | 20 | TBD | Surya | TBD |
-| **Consensus-GT aggregate** | | | |
+| **Forms-only (human GT)** | | | | |
+| Tesseract vs Mistral OCR | 16 | 0.0092 | Tesseract | medium (`d=0.729`) |
+| Docling vs Mistral OCR | 16 | 0.0076 | Docling | large (`d=0.848`) |
+| Tesseract vs Docling | 20 | 0.4980 | Tesseract | negligible (`d=0.059`) |
+| **Consensus-GT aggregate** (Mistral excluded) | | | | |
 | Tesseract vs Surya | 45 | <0.001 | Surya | large (`d=0.850`) |
 | Tesseract vs Docling | 42 | <0.001 | Docling | medium (`d=0.576`) |
 | Tesseract vs Sarvam OCR | 27 | 0.1482 | Sarvam OCR | small (`d=0.366`) |
@@ -119,9 +121,9 @@ Wilcoxon signed-rank tests on per-document F1 for the main non-circular Phase 1 
 
 Caption rule:
 
-- Mistral excluded because of consensus-GT circularity.
-- Forms-only comparisons (`n=20`) should be regenerated to determine significance.
-- Note: Statistical tests need to be regenerated with the updated 20-form human-verified GT.
+- Mistral excluded from consensus-inclusive rows because of consensus-GT circularity.
+- Forms-only rows use the `n=20` human-verified subset; Tesseract and Docling each significantly outperform Mistral, while Tesseract vs Docling is not significant.
+- Surya-inclusive forms pairs are not shown because Surya forms coverage is only `n=5`.
 
 ## Main Figures
 

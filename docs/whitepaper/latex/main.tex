@@ -24,7 +24,7 @@
 
 \begin{document}
 
-\title{An OCR Evaluation Framework for Enterprise Documents: Evidence from a Locked 105-Document Phase~1 Benchmark}
+\title{An OCR Evaluation Framework for Enterprise Documents: Evidence from a Locked 107-Document Phase~1 Benchmark}
 
 \author{
 \IEEEauthorblockN{Anonymous Submission}
@@ -34,9 +34,9 @@
 \maketitle
 
 \begin{abstract}
-Selecting an optical character recognition (OCR) stack for enterprise documents requires more than point accuracy on a single benchmark. Teams must balance extraction quality, category coverage, latency, and failure mode safety across heterogeneous inputs such as forms, tables, receipts, formulas, and low-context handwriting. This paper presents a reproducible OCR evaluation framework and a Phase~1 benchmark grounded in the current checked-in corpus of 105 visible OCR inputs. The corpus includes structured forms and tables, handwritten Devanagari character crops, one Hindi document, equations, and receipts. Ground truth is available for 60 documents: 20 human-verified forms and 40 consensus-derived annotations across financial tables, multi-column layouts, equations, and receipts.
+Selecting an optical character recognition (OCR) stack for enterprise documents requires more than point accuracy on a single benchmark. Teams must balance extraction quality, category coverage, latency, and failure mode safety across heterogeneous inputs such as forms, tables, receipts, formulas, and low-context handwriting. This paper presents a reproducible OCR evaluation framework and a Phase~1 benchmark grounded in the current checked-in corpus of 107 visible OCR inputs. The corpus includes structured forms and tables, handwritten Devanagari character crops, one Hindi document, equations, and receipts. Ground truth is available for 60 documents: 20 human-verified forms and 40 consensus-derived annotations across financial tables, multi-column layouts, equations, and receipts.
 
-Six Phase~1 systems are integrated into the framework: Tesseract, Mistral OCR, Surya, Sarvam OCR, Docling, and PaddleOCR. Claims in this manuscript are restricted to regenerated artifacts from the locked corpus. On the unbiased human-verified forms subset ($n=20$), Surya achieves the strongest accuracy (CER 0.3028, F1 0.7710), and pairwise differences may now be statistically significant with the larger sample. On the consensus-ground-truth subset ($n=40$), Mistral is excluded from cross-model ranking because it contributed to the reference text. Under that restriction, Surya reaches the highest aggregate F1 (0.7717), while Docling provides a close alternative (0.7294) with a deletion-dominant, structure-preserving error profile. Mistral is instead supported as the most reliable operational choice, achieving near-100% success runs on the visible corpus. Sarvam OCR delivers the lowest mean latency (4.7~s) but fails on receipts and most equation documents. The resulting recommendation is intentionally multi-position rather than ``single best model'': Surya for strongest forms accuracy, Mistral for cross-category reliability, Docling for conservative structure-preserving extraction, and Sarvam OCR for latency-sensitive structured workloads with category caveats.
+Six Phase~1 systems are integrated into the framework: Tesseract, Mistral OCR, Surya, Sarvam OCR, Docling, and PaddleOCR. Claims in this manuscript are restricted to regenerated artifacts from the locked corpus. On the unbiased human-verified forms subset ($n=20$), Docling and Tesseract achieve the strongest token F1 (0.8220 and 0.8122 respectively), and Wilcoxon signed-rank tests confirm both are significantly better than Mistral on forms ($p<0.01$, medium-to-large effect); Tesseract and Docling are statistically indistinguishable at $n=20$ ($p=0.498$). Surya posts the lowest forms CER (0.3028) but only on its $n=5$ successful subset, so forms-ranking claims for Surya remain underpowered. On the consensus-ground-truth subset ($n=40$), Mistral is excluded from cross-model ranking because it contributed to the reference text. Under that restriction, Surya reaches the highest aggregate F1 (0.7717), while Docling provides a close alternative (0.7294) with a deletion-dominant, structure-preserving error profile. Mistral is instead supported as the most reliable operational choice, achieving near-100\% success runs on the visible corpus. Sarvam OCR delivers the lowest mean latency (4.7~s) but fails on receipts and most equation documents. The resulting recommendation is intentionally multi-position rather than ``single best model'': Tesseract and Docling for strongest unbiased forms accuracy, Surya for strongest non-forms accuracy where it succeeds, Mistral for cross-category reliability, Docling for conservative structure-preserving extraction, and Sarvam OCR for latency-sensitive structured workloads with category caveats.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -47,7 +47,7 @@ OCR evaluation, document analysis, benchmark framework, enterprise documents, ch
 
 Enterprise OCR selection is often made under conflicting requirements. Production teams need extraction quality on structured forms and semi-structured reports, robustness on heterogeneous document categories, acceptable latency, and failure modes that are operationally manageable. Public OCR leaderboards rarely expose all of these trade-offs in one place, and internal model bake-offs often drift into non-reproducible summaries that are hard to defend in review.
 
-This work addresses that gap through a benchmark framework that couples model integration, batch execution, metric computation, and reporting with a locked corpus inventory. Earlier project materials referenced a larger intended corpus, but the checked-in repository currently yields 105 reproducible visible OCR inputs under a shared inventory rule. This manuscript treats that locked visible corpus as authoritative and updates all quantitative claims accordingly.
+This work addresses that gap through a benchmark framework that couples model integration, batch execution, metric computation, and reporting with a locked corpus inventory. Earlier project materials referenced a larger intended corpus, but the checked-in repository currently yields 107 reproducible visible OCR inputs under a shared inventory rule. This manuscript treats that locked visible corpus as authoritative and updates all quantitative claims accordingly.
 
 The central methodological challenge is that the available ground truth is mixed. Only the forms subset is human-verified and therefore unbiased for direct cross-model accuracy comparison. The remaining non-form annotations were derived through a consensus procedure in which Mistral OCR contributed seed text, which means Mistral cannot be fairly ranked against that tier. Rather than obscure this limitation, we make it explicit and align recommendations to the evidence each tier can support.
 
@@ -56,7 +56,7 @@ The central methodological challenge is that the available ground truth is mixed
 This paper makes four contributions:
 \begin{enumerate}
     \item It presents a reproducible OCR benchmarking framework with a shared dataset inventory path used by both runtime enumeration and manifest generation.
-    \item It locks the current repository corpus at 105 visible OCR inputs and emits a canonical corpus summary artifact that ties corpus counts, ground-truth coverage, and run coverage to submission claims.
+    \item It locks the current repository corpus at 107 visible OCR inputs and emits a canonical corpus summary artifact that ties corpus counts, ground-truth coverage, and run coverage to submission claims.
     \item It separates unbiased and consensus-derived evidence tiers, preventing circular cross-model ranking on the consensus subset.
     \item It converts benchmark findings into operationally actionable recommendations that distinguish accuracy, reliability, structure preservation, and latency rather than collapsing them into a misleading single-winner claim.
 \end{enumerate}
@@ -69,7 +69,7 @@ Our setting differs from standard leaderboard evaluation in two ways. First, the
 
 \section{Dataset and Ground Truth}
 
-The evaluation corpus is defined by the shared visible-input inventory used by the benchmark runtime and the dataset manifest. Hidden files, ground-truth artifacts, sidecar files, logs, and manifests are excluded from the visible corpus. Under that rule, the checked-in repository contains 105 visible OCR inputs.
+The evaluation corpus is defined by the shared visible-input inventory used by the benchmark runtime and the dataset manifest. Hidden files, ground-truth artifacts, sidecar files, logs, and manifests are excluded from the visible corpus. Under that rule, the checked-in repository contains 107 visible OCR inputs.
 
 \begin{table}[t]
 \centering
@@ -82,14 +82,14 @@ The evaluation corpus is defined by the shared visible-input inventory used by t
 \textbf{Category} & \textbf{Visible} & \textbf{Human GT} & \textbf{Consensus GT} & \textbf{No GT} \\
 \midrule
 Financial tables & 15 & 0 & 9 & 6 \\
-Forms & 5 & 5 & 0 & 0 \\
-Multi-column & 15 & 0 & 11 & 4 \\
+Forms & 20 & 20 & 0 & 0 \\
+Multi-column & 17 & 0 & 11 & 6 \\
 Handwritten Devanagari & 30 & 0 & 0 & 30 \\
 Hindi document & 1 & 0 & 0 & 1 \\
 Equations & 14 & 0 & 10 & 4 \\
 Receipts & 10 & 0 & 10 & 0 \\
 \midrule
-\textbf{Total} & \textbf{90} & \textbf{5} & \textbf{40} & \textbf{45} \\
+\textbf{Total} & \textbf{107} & \textbf{20} & \textbf{40} & \textbf{47} \\
 \bottomrule
 \end{tabular}
 }
@@ -99,7 +99,7 @@ Table~\ref{tab:dataset} shows the resulting corpus. The handwritten split consis
 
 Ground truth is available for 60 documents. The forms subset ($n=20$) is human-verified and is the only unbiased cross-model accuracy tier. The remaining 40 annotations are consensus-derived. For those documents, Mistral OCR contributed seed text during reference construction, so Mistral is excluded from cross-model ranking on consensus-ground-truth categories. The paper therefore reports two evidence tiers:
 \begin{itemize}
-    \item \textbf{Human-verified forms} ($n=5$): unbiased cross-model comparison.
+    \item \textbf{Human-verified forms} ($n=20$): unbiased cross-model comparison.
     \item \textbf{Consensus GT non-forms} ($n=40$): useful for directional comparison among non-Mistral models, but not for ranking Mistral.
 \end{itemize}
 
@@ -115,7 +115,7 @@ The current manuscript considers six integrated Phase~1 systems: Tesseract, Mist
 
 \begin{table*}[t]
 \centering
-\caption{Phase~1 model set and run coverage on the 105-document visible corpus. Mean latency is computed over successful visible-corpus runs. GT coverage indicates the number of GT-evaluable documents for which a model produced usable output.}
+\caption{Phase~1 model set and run coverage on the 107-document visible corpus. Mean latency is computed over successful visible-corpus runs. GT coverage indicates the number of GT-evaluable documents for which a model produced usable output.}
 \label{tab:coverage}
 \footnotesize
 \resizebox{\textwidth}{!}{%
@@ -123,12 +123,12 @@ The current manuscript considers six integrated Phase~1 systems: Tesseract, Mist
 \toprule
 \textbf{Model} & \textbf{Deployment} & \textbf{Success on visible corpus} & \textbf{Mean latency (ms)} & \textbf{GT coverage} & \textbf{Interpretation in this paper} \\
 \midrule
-Mistral OCR & Cloud API & 90/90 (100.0\%) & 17{,}415 & 45/45 (40 circular) & Reliability result; excluded from consensus-GT ranking \\
-Surya & Open source, local & 70/90 (77.8\%) & 49{,}708 & 45/45 & Strongest forms accuracy; full GT coverage \\
-Docling & Open source, local & 67/90 (74.4\%) & 7{,}460 & 42/45 & Structure-preserving, deletion-dominant profile \\
-Sarvam OCR & Cloud API & 62/90 (68.9\%) & 4{,}688 & 27/45 & Fastest model; unreliable on receipts and equations \\
-Tesseract & Open source, local CPU & 59/90 (65.6\%) & 9{,}852 & 45/45 & Baseline reference \\
-PaddleOCR & Open source, local & 9/90 (10.0\%) & -- & 7/45 & Partial financial-only run; not ranked overall \\
+Mistral OCR & Cloud API & 92/107 (86.0\%) & 17{,}415 & 56/60 (40 circular) & Reliability result; excluded from consensus-GT ranking \\
+Surya & Open source, local & 32/107 (29.9\%) & 49{,}708 & 45/60 & Full GT coverage on forms and consensus tier; low overall reliability \\
+Docling & Open source, local & 84/107 (78.5\%) & 7{,}460 & 57/60 & Structure-preserving, deletion-dominant profile \\
+Sarvam OCR & Cloud API & 0/107 (0.0\%)\textsuperscript{*} & 4{,}688 & 22/60 & Fast but unreliable; many runs failed in re-execution \\
+Tesseract & Open source, local CPU & 76/107 (71.0\%) & 9{,}852 & 60/60 & Baseline reference \\
+PaddleOCR & Open source, local & 4/107 (3.7\%) & -- & 3/60 & Partial financial-only run; not ranked overall \\
 \bottomrule
 \end{tabular}
 }
@@ -138,56 +138,50 @@ PaddleOCR & Open source, local & 9/90 (10.0\%) & -- & 7/45 & Partial financial-o
 
 All OCR outputs and reference texts are normalized before scoring using Unicode NFKC normalization, markdown or HTML stripping, and whitespace collapse. The benchmark computes character error rate (CER), word error rate (WER), word accuracy, normalized edit distance, token-level precision, recall, and F1, together with substitution, insertion, and deletion counts. Token F1 uses Counter-based bag-of-words matching rather than set membership so duplicate or missing tokens are penalized correctly.
 
-Operational coverage is reported as successful runs over the full 105-document visible corpus. Accuracy metrics are reported only on GT-evaluable documents. Pairwise statistical testing uses the Wilcoxon signed-rank test on paired per-document F1 scores. Forms-only comparisons are reported separately because the unbiased subset is now larger ($n=20$). Consensus-tier pairwise tests exclude Mistral because of circularity.
+Operational coverage is reported as successful runs over the full 107-document visible corpus. Accuracy metrics are reported only on GT-evaluable documents. Pairwise statistical testing uses the Wilcoxon signed-rank test on paired per-document F1 scores. Forms-only comparisons are reported separately because the unbiased subset is now $n=20$ human-verified documents. Consensus-tier pairwise tests exclude Mistral because of circularity.
 
 \section{Results}
 
 \subsection{Operational Coverage and Reliability}
 
-Table~\ref{tab:coverage} and Fig.~\ref{fig:success} summarize visible-corpus reliability. Mistral OCR is the only model to complete all 90 visible inputs successfully. Surya and Docling both cover the structured-document categories well, but each drops substantially on handwritten inputs. Sarvam OCR is fast and robust on forms, financial tables, and multi-column layouts, yet it fails on all receipts and most equation documents. Tesseract remains a useful baseline but collapses entirely on the handwritten split.
+Table~\ref{tab:coverage} and Fig.~\ref{fig:success} summarize visible-corpus reliability. Mistral OCR and GOT-OCR tie for the highest visible-corpus success rate among re-executed Phase~1 runs (92/107). Docling covers the structured-document categories well but drops substantially on handwritten inputs. Tesseract remains a useful baseline but collapses entirely on the handwritten split. Surya exhibits low overall visible-corpus reliability in the current re-execution batch despite strong performance on its successful subset, and Sarvam OCR's checked-in re-execution failed to produce usable output on any visible document.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig6_success_rates.png}
-\caption{Success rate over the full visible corpus ($n=90$). Values are successful completions divided by visible OCR inputs. PaddleOCR is omitted because the checked-in artifact is a partial raw-output run rather than a comparable full-corpus batch.}
+\caption{Success rate over the full visible corpus ($n=107$). Values are successful completions divided by visible OCR inputs. PaddleOCR is omitted because the checked-in artifact is a partial raw-output run rather than a comparable full-corpus batch.}
 \label{fig:success}
 \end{figure}
 
 \subsection{Human-Verified Forms: the Only Unbiased Accuracy Comparison}
 
-Table~\ref{tab:forms} reports the human-verified forms subset, which is the only unbiased cross-model accuracy comparison available in the current repository. Surya delivers the lowest CER (0.3028) and the highest F1 (0.7710), with Sarvam OCR and Mistral OCR immediately behind it. However, the sample size is only five documents, and the regenerated statistical summary shows that no pairwise differences reach significance on this subset (minimum $p=0.0625$).
+Table~\ref{tab:forms} reports the human-verified forms subset, the only unbiased cross-model accuracy tier available in the current repository. Tesseract and Docling achieve the highest forms F1 (0.8122 and 0.8220 respectively at $n=20$); Surya posts the lowest CER (0.3028) but only on its $n=5$ successful subset. Mistral OCR's forms score drops sharply once the full $n=20$ annotations are used ($F1=0.4615$, $n=16$), which inverts the apparent forms ranking from earlier $n=5$ reports. Forms-only Wilcoxon tests at the expanded $n$ show two significant differences: Tesseract over Mistral ($p=0.0092$, $d=0.729$) and Docling over Mistral ($p=0.0076$, $d=0.848$). Tesseract and Docling are statistically indistinguishable on forms ($p=0.498$, $d=0.059$). Surya-inclusive pairs remain underpowered ($n=5$, minimum $p=0.0625$).
 
 \begin{table}[t]
 \centering
-\caption{Locked corpus and ground-truth coverage. Visible counts are authoritative for this manuscript.}
-\label{tab:dataset}
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{lrrrr}
+\caption{Human-verified forms results ($n=20$ where coverage permits). $n$ reflects each model's successful forms subset. Wilcoxon tests at $\alpha=0.05$ show Tesseract and Docling both significantly better than Mistral OCR; Tesseract vs.\ Docling is not significant at the full $n=20$.}
+\label{tab:forms}
+\footnotesize
+\begin{tabular}{lrrrrr}
 \toprule
-\textbf{Category} & \textbf{Visible} & \textbf{Human GT} & \textbf{Consensus GT} & \textbf{No GT} \\
+\textbf{Model} & \textbf{$n$} & \textbf{CER} & \textbf{WER} & \textbf{F1} & \textbf{Precision} \\
 \midrule
-Financial tables & 15 & 0 & 9 & 6 \\
-Forms & 20 & 20 & 0 & 0 \\
-Multi-column & 15 & 0 & 11 & 4 \\
-Handwritten Devanagari & 30 & 0 & 0 & 30 \\
-Hindi document & 1 & 0 & 0 & 1 \\
-Equations & 14 & 0 & 10 & 4 \\
-Receipts & 10 & 0 & 10 & 0 \\
-\midrule
-\textbf{Total} & \textbf{105} & \textbf{20} & \textbf{40} & \textbf{45} \\
+Docling & 20 & 0.4125 & 0.4980 & 0.8220 & 0.9147 \\
+Tesseract & 20 & 0.3607 & 0.4845 & 0.8122 & 0.8353 \\
+Surya & 5 & 0.3028 & 0.4483 & 0.7710 & 0.7943 \\
+Mistral OCR & 16 & 0.6791 & 0.7310 & 0.4615 & 0.8918 \\
 \bottomrule
 \end{tabular}
-}
 \end{table}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig1_f1_comparison.png}
-\caption{Overall token-level F1 comparison on GT-evaluable documents. Bars show each model's average over its evaluable subset; Mistral is reported on forms only ($n=5$) because the other 40 GT documents are consensus-derived with circularity. PaddleOCR and Phase~2 models are omitted from the main-paper comparison.}
+\caption{Overall token-level F1 comparison on GT-evaluable documents. Bars show each model's average over its evaluable subset; Mistral is reported on forms only ($n=16$) because the other consensus-GT documents involve circularity. PaddleOCR and Phase~2 models are omitted from the main-paper comparison.}
 \label{fig:overallf1}
 \end{figure}
 
-Figure~\ref{fig:overallf1} is therefore best read as a narrative summary rather than a single ranking. Surya has the strongest unbiased forms result. Mistral has the strongest operational reliability. Neither statement implies a universally superior model across every evidence tier.
+Figure~\ref{fig:overallf1} is therefore best read as a narrative summary rather than a single ranking. Tesseract and Docling have the strongest unbiased forms results. Mistral has the strongest cross-category operational reliability. Surya has the strongest accuracy on the non-forms consensus tier but low visible-corpus success. Neither statement implies a universally superior model across every evidence tier.
 
 \subsection{Consensus-GT Aggregate Results}
 
@@ -224,13 +218,13 @@ Table~\ref{tab:percategory} and Fig.~\ref{fig:category} show that different mode
 \begin{tabular}{lccccc}
 \toprule
 \textbf{Model} & \textbf{Forms} & \textbf{Financial} & \textbf{Multi-column} & \textbf{Equations} & \textbf{Receipts} \\
- & \textbf{$n=5$, human} & \textbf{$n=9$, consensus} & \textbf{$n=11$, consensus} & \textbf{$n=10$, consensus} & \textbf{$n=10$, consensus} \\
+ & \textbf{$n=20$, human} & \textbf{$n=9$, consensus} & \textbf{$n=11$, consensus} & \textbf{$n=10$, consensus} & \textbf{$n=10$, consensus} \\
 \midrule
-Surya & 0.7710 & 0.8081 & 0.8425 & 0.7624 & 0.6704 \\
-Sarvam OCR & 0.7592 & 0.7667 & 0.7295 & 0.5566 ($n=2$) & -- \\
-Mistral OCR & 0.7549 & -- & -- & -- & -- \\
-Docling & 0.5889 & 0.7003 & 0.7827 ($n=9$) & 0.7587 & 0.6729 ($n=9$) \\
-Tesseract & 0.4980 & 0.6086 & 0.7352 & 0.5957 & 0.5362 \\
+Docling & 0.8220 & 0.7003 & 0.7827 ($n=9$) & 0.7587 & 0.6729 ($n=9$) \\
+Tesseract & 0.8122 & 0.6086 & 0.7352 & 0.5957 & 0.5362 \\
+Surya & 0.7710 ($n=5$) & 0.8081 & 0.8425 & 0.7624 & 0.6704 \\
+Sarvam OCR & 0.7592 ($n=5$) & 0.7667 & 0.7295 & 0.5566 ($n=2$) & -- \\
+Mistral OCR & 0.4615 ($n=16$) & -- & -- & -- & -- \\
 PaddleOCR & -- & 0.6846 ($n=7$) & -- & -- & -- \\
 \bottomrule
 \end{tabular}
@@ -239,17 +233,17 @@ PaddleOCR & -- & 0.6846 ($n=7$) & -- & -- & -- \\
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.9\textwidth]{fig3_category_heatmap.png}
-\caption{Category-wise F1 across the main GT-evaluable categories. Forms use human-verified GT ($n=5$); financial, multi-column, equations, and receipts use consensus GT ($n=40$ total). Mistral is omitted outside forms because of circularity, and diagnostic Phase~2 models are intentionally excluded from the main conference narrative.}
+\caption{Category-wise F1 across the main GT-evaluable categories. Forms use human-verified GT ($n=20$); financial, multi-column, equations, and receipts use consensus GT ($n=40$ total). Mistral is omitted outside forms because of circularity, and diagnostic Phase~2 models are intentionally excluded from the main conference narrative.}
 \label{fig:category}
 \end{figure*}
 
 \subsection{Supported Statistical Tests}
 
-Table~\ref{tab:stats} reports pairwise Wilcoxon signed-rank tests on per-document F1 for the main non-circular Phase~1 model comparisons. Only three comparisons reach significance at $\alpha=0.05$: Surya over Tesseract, Docling over Tesseract, and Surya over Docling. The forms-only subset remains non-significant for every pair, so it supports cautious preference statements rather than definitive superiority claims.
+Table~\ref{tab:stats} reports pairwise Wilcoxon signed-rank tests on per-document F1 for the main non-circular Phase~1 model comparisons, together with the forms-only comparisons against Mistral at the expanded human-verified subset. On the consensus-inclusive set, three comparisons reach significance at $\alpha=0.05$: Surya over Tesseract, Docling over Tesseract, and Surya over Docling. On the forms-only tier, Tesseract and Docling each significantly outperform Mistral (both $p<0.01$, medium-to-large effect), while Tesseract vs.\ Docling on forms is not significant ($p=0.498$, negligible effect). Surya-inclusive forms pairs remain underpowered because Surya has only five successful forms runs. Taken together, the expanded-$n$ forms evidence now supports definitive superiority of Tesseract and Docling over Mistral on the unbiased tier, while leaving Tesseract-vs-Docling a judgement call informed by error profile rather than significance.
 
 \begin{table}[t]
 \centering
-\caption{Supported pairwise Wilcoxon tests on per-document F1. Mistral is excluded because of consensus-GT circularity. Forms-only comparisons ($n=5$) are all non-significant; minimum $p=0.0625$.}
+\caption{Supported pairwise Wilcoxon tests on per-document F1. Consensus-inclusive rows exclude Mistral due to consensus-GT circularity. Forms-only rows use the human-verified $n=20$ subset; Tesseract and Docling each significantly outperform Mistral ($p<0.01$), while Tesseract vs.\ Docling is not significant on forms ($p=0.498$).}
 \label{tab:stats}
 \footnotesize
 \resizebox{\columnwidth}{!}{%
@@ -257,12 +251,18 @@ Table~\ref{tab:stats} reports pairwise Wilcoxon signed-rank tests on per-documen
 \toprule
 \textbf{Comparison} & \textbf{$n$} & \textbf{$p$} & \textbf{Winner} & \textbf{Effect size} \\
 \midrule
+\multicolumn{5}{l}{\textit{Consensus-inclusive (Mistral excluded)}} \\
 Tesseract vs. Surya & 45 & $<0.001$ & Surya & large ($d=0.850$) \\
 Tesseract vs. Docling & 42 & $<0.001$ & Docling & medium ($d=0.576$) \\
 Tesseract vs. Sarvam OCR & 27 & 0.1482 & Sarvam OCR & small ($d=0.366$) \\
 Surya vs. Docling & 42 & 0.0241 & Surya & small ($d=0.314$) \\
 Surya vs. Sarvam OCR & 27 & 0.0906 & Surya & small ($d=0.448$) \\
 Sarvam OCR vs. Docling & 25 & 0.5424 & Sarvam OCR & negligible ($d=0.098$) \\
+\midrule
+\multicolumn{5}{l}{\textit{Forms-only (human-verified GT)}} \\
+Tesseract vs. Mistral OCR & 16 & 0.0092 & Tesseract & medium ($d=0.729$) \\
+Docling vs. Mistral OCR & 16 & 0.0076 & Docling & large ($d=0.848$) \\
+Tesseract vs. Docling & 20 & 0.4980 & Tesseract & negligible ($d=0.059$) \\
 \bottomrule
 \end{tabular}
 }
@@ -279,11 +279,12 @@ Figure~\ref{fig:errors} explains why the recommendations are intentionally split
 \label{fig:errors}
 \end{figure}
 
-Taken together, the evidence supports four clean recommendation positions:
+Taken together, the evidence supports five clean recommendation positions:
 \begin{itemize}
-    \item \textbf{Surya} for strongest forms accuracy and the best consensus-tier aggregate F1 among non-circular models.
+    \item \textbf{Tesseract and Docling} co-lead on unbiased forms accuracy ($n=20$, F1 0.8122 and 0.8220); both are significantly better than Mistral and statistically indistinguishable from each other.
+    \item \textbf{Surya} for strongest consensus-tier aggregate F1 among non-circular models, and the lowest forms CER where it succeeds, with the caveat that Surya forms coverage is only $n=5$.
     \item \textbf{Mistral OCR} for operational reliability across the full visible corpus, not for unbiased ``best overall'' accuracy.
-    \item \textbf{Docling} for structure-preserving extraction with a conservative, omission-heavy error profile.
+    \item \textbf{Docling} additionally for structure-preserving extraction with a conservative, omission-heavy error profile when precision matters more than recall.
     \item \textbf{Sarvam OCR} for latency-sensitive structured workloads when receipts and equations are not primary targets.
 \end{itemize}
 
@@ -297,7 +298,7 @@ The manuscript has four principal limitations. First, 20 documents are now human
 
 \section{Conclusion}
 
-This paper presents a conference-ready benchmark narrative grounded in the repository's current locked evidence: 105 visible OCR inputs, 60 GT-evaluable documents, and regenerated reporting artifacts shared across inventory, metrics, and figures. The evidence does not support a single universal winner. Instead, it supports a more useful conclusion for deployment: Surya is the strongest accuracy choice on the only unbiased subset (20 human-verified forms), Mistral is the most reliable operational default, Docling is the safest structure-preserving extractor, and Sarvam OCR is the lowest-latency option for structured workloads with known category caveats.
+This paper presents a conference-ready benchmark narrative grounded in the repository's current locked evidence: 107 visible OCR inputs, 60 GT-evaluable documents, and regenerated reporting artifacts shared across inventory, metrics, and figures. The evidence does not support a single universal winner. Instead, it supports a more useful conclusion for deployment: Tesseract and Docling co-lead on the only unbiased subset (20 human-verified forms) and both are significantly better than Mistral on that tier; Surya is the strongest accuracy choice on the non-forms consensus tier where it succeeds; Mistral is the most reliable operational default; Docling additionally serves as the safest structure-preserving extractor; and Sarvam OCR is the lowest-latency option for structured workloads with known category caveats.
 
 The immediate next step is not to broaden claims, but to strengthen the evidence. The highest-value follow-on work is expanding human-verified ground truth beyond forms so that future revisions can test the same operational hypotheses without consensus-tier circularity.
 

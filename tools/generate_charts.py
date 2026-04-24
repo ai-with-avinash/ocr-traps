@@ -118,8 +118,9 @@ def fig1_f1_comparison(rows, summaries, corpus_summary):
 
 def fig2_cer_comparison(rows, summaries, corpus_summary):
     """Bar chart of avg CER by model."""
-    models = ['tesseract', 'surya', 'sarvam_ocr', 'docling', 'paddleocr']
+    candidates = ['tesseract', 'surya', 'sarvam_ocr', 'docling', 'paddleocr']
     # Exclude Mistral (circular) and GOT-OCR (off-scale CER=4.76)
+    models = [m for m in candidates if m in summaries]
 
     fig, ax = plt.subplots(figsize=(8, 5))
     x = np.arange(len(models))
@@ -388,7 +389,8 @@ def fig8_forms_comparison(rows):
 
 def fig9_radar(summaries):
     """Radar chart comparing top models across dimensions."""
-    models = ['surya', 'docling', 'sarvam_ocr', 'tesseract']
+    candidates = ['surya', 'docling', 'sarvam_ocr', 'tesseract']
+    models = [m for m in candidates if m in summaries]
     dims = ['F1', '1-CER', 'Precision', 'Recall', 'Word Acc', '1-EditDist']
     _ = ['avg_f1', 'avg_cer', 'avg_precision', 'avg_recall', 'avg_word_accuracy', 'avg_edit_dist']
 

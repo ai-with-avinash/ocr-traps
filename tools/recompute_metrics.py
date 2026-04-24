@@ -1,7 +1,5 @@
 """Recompute metrics and corpus summaries for the whitepaper artifacts.
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+
 Reads raw outputs from the latest results directories, matches them against the
 current visible dataset snapshot, recomputes metrics on the GT-evaluable subset,
 and emits:
@@ -19,6 +17,8 @@ import json
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent))
 from typing import Any
 
 from scipy.stats import wilcoxon
@@ -163,10 +163,10 @@ def load_latest_raw_outputs(results_dir: Path) -> dict[str, dict[str, Any]]:
         per_model_outputs: dict[str, dict[str, Path]] = defaultdict(dict)
         for output_file in raw_dir.glob("*.txt"):
             parts = output_file.stem.split("__")
-            if len(parts) < 2:
+            if len(parts) < 3:
                 continue
             model = parts[0]
-            doc_stem = parts[-1]
+            doc_stem = "__".join(parts[2:])
             per_model_outputs[model][doc_stem] = output_file
 
         for model, outputs in per_model_outputs.items():
@@ -443,9 +443,9 @@ def build_statistical_tests(all_results: list[dict[str, Any]], model_summaries: 
             else:
                 not_significant.append(record)
 
-    forms_note = "At n=5, no pairwise comparisons reach significance."
-    form_pairs = []
-    form_models = [model for model in ["tesseract", "mistral_ocr", "surya", "sarvam_ocr", "docling"] if model in forms_docs]
+    forms_pairwise: list[dict[str, Any]] = []
+    forms_max_n = 0
+    form_models = [model for model in ["tesseract", "mistral_ocr", "surya", "sarvam_ocr", "docling", "paddleocr", "got_ocr"] if model in forms_docs]
     for i, model_a in enumerate(form_models):
         for model_b in form_models[i + 1:]:
             shared_docs = sorted(set(forms_docs[model_a]) & set(forms_docs[model_b]))
@@ -460,9 +460,35 @@ def build_statistical_tests(all_results: list[dict[str, Any]], model_summaries: 
                 _, p_value = wilcoxon(f1_a, f1_b)
             except (ValueError, TypeError):
                 continue
-            form_pairs.append(round(float(p_value), 4))
-    if form_pairs:
-        forms_note = f"At n=5, no pairwise comparisons reach significance. Minimum p={min(form_pairs):.4f}."
+            mean_a = sum(f1_a) / len(f1_a)
+            mean_b = sum(f1_b) / len(f1_b)
+            winner = model_a if mean_a > mean_b else model_b
+            pair = {
+                "a": model_a,
+                "b": model_b,
+                "n": len(shared_docs),
+                "p": round(float(p_value), 4),
+                "delta": round(abs(mean_a - mean_b), 4),
+                "winner": winner,
+            }
+            label = effect_size_label(diffs)
+            if label:
+                pair["effect_size"] = label
+            pair["significant"] = bool(p_value < 0.05)
+            forms_pairwise.append(pair)
+            forms_max_n = max(forms_max_n, len(shared_docs))
+
+    forms_pairwise.sort(key=lambda row: (row["p"], row["a"], row["b"]))
+    sig_count = sum(1 for row in forms_pairwise if row["significant"])
+    if forms_pairwise:
+        min_p = min(row["p"] for row in forms_pairwise)
+        forms_note = (
+            f"Forms-only pairwise Wilcoxon on F1 (max n={forms_max_n}). "
+            f"{sig_count}/{len(forms_pairwise)} comparisons significant at p<0.05. "
+            f"Minimum p={min_p:.4f}."
+        )
+    else:
+        forms_note = "No forms-only pairwise comparisons available."
 
     ranking = []
     for model, summary in sorted(model_summaries.items(), key=lambda item: item[1]["avg_f1"], reverse=True):
@@ -479,8 +505,9 @@ def build_statistical_tests(all_results: list[dict[str, Any]], model_summaries: 
             "significant_at_005": significant,
             "not_significant": not_significant,
         },
-        "forms_only_n5": {
+        "forms_only": {
             "note": forms_note,
+            "pairwise": forms_pairwise,
         },
         "ranking_by_f1": ranking,
     }
