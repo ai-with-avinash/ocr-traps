@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ocr-traps: A Practitioner's OCR Benchmark"
+abstract: >
+  A reproducible evaluation framework that benchmarks six OCR systems
+  (Tesseract, Mistral OCR, Surya, Sarvam OCR, Docling, PaddleOCR) on 107
+  enterprise documents. Surfaces three structural traps that invalidate most
+  practitioner OCR bake-offs: consensus-seeded ground-truth circularity,
+  confidence calibration inversion, and API edge cases.
+authors:
+  - family-names: Seethalam
+    given-names: Avinash
+    email: sreethalam.avinash@gmail.com
+    affiliation: GenAI Practice
+    orcid: "https://orcid.org/0009-0007-1068-6156"
+repository-code: "https://github.com/ai-with-avinash/ocr-traps"
+license: MIT
+type: software
+keywords:
+  - ocr
+  - document-intelligence
+  - benchmark
+  - evaluation-framework
+  - tesseract
+  - mistral-ocr
+preferred-citation:
+  type: article
+  title: "A Practitioner's OCR Benchmark: Three Traps Real Evaluations Hit"
+  authors:
+    - family-names: Seethalam
+      given-names: Avinash
+      orcid: "https://orcid.org/0009-0007-1068-6156"
+  year: 2026
+  url: "https://github.com/ai-with-avinash/ocr-traps"

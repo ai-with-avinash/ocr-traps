@@ -3,7 +3,11 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 .DS_Store
+.idea/
+.vscode/
 
 # Secrets
 .env
@@ -12,9 +16,33 @@ configs/config.local.yaml
 # Results (large, regenerable)
 results/
 
-# Temp
+# Temp / scratch
+.tmp/
 _tmp_*/
 *.log
 
+# LaTeX build artifacts
+*.aux
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.synctex.gz
+*.fdb_latexmk
+*.lof
+*.lot
+
+# Unused journal-variant backup (not part of arXiv submission)
+docs/whitepaper/latex/journal/
+
 # Claude Code runtime state
 .claude/scheduled_tasks.lock
+
+# Python build
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
