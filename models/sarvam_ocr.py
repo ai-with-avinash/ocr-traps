@@ -67,10 +67,20 @@ class SarvamOCR(BaseOCRModel):
         return text, metadata
 
     def _ocr_impl(self, image_path: str) -> OCRResult:
-        job = self._client.document_intelligence.create_job(
-            language=self._language,
-            output_format=self._output_format,
-        )
+        try:
+            job = self._client.document_intelligence.create_job(
+                language=self._language,
+                output_format=self._output_format,
+            )
+        except Exception as exc:
+            status_code = getattr(exc, "status_code", None)
+            body = getattr(exc, "body", None)
+            msg = f"{type(exc).__name__}"
+            if status_code is not None:
+                msg += f" (status_code: {status_code})"
+            if body:
+                msg += f" body={body}"
+            return OCRResult(error=msg)
         job.upload_file(image_path)
         job.start()
         status = job.wait_until_complete(timeout=300)
