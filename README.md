@@ -1,276 +1,176 @@
-# OCR Evaluation Framework
+# ocr-traps
 
-A unified Python framework to evaluate open-source OCR models on a standardized test dataset.
-Captures accuracy, latency, throughput, cost, and structured extraction quality.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![uv](https://img.shields.io/badge/built%20with-uv-000000.svg)](https://docs.astral.sh/uv/)
+[![arXiv](https://img.shields.io/badge/arXiv-pending-b31b1b.svg)](#citation)
 
-## Quick Start
+Reproducible benchmark of six OCR systems on 107 enterprise documents, with a focus on the structural traps that invalidate most practitioner OCR bake-offs.
 
-### macOS / Linux (uv, recommended)
+> **Companion paper:** *A Practitioner's OCR Benchmark: Three Traps Real Evaluations Hit* — arXiv preprint (link added at release).
+
+## Why this exists
+
+Most internal OCR evaluations produce confident rankings that invert the moment the evaluation protocol changes. After running ten integrated models over 107 documents, we surface three reproducible traps that every enterprise team hits:
+
+### Finding 1 — Consensus-seeded ground truth is circular
+
+If you seed ground truth from model *X*'s output and then score model *X* against that text, *X* will look perfect. In our corpus, Mistral OCR scores **F1 ≈ 1.00 on the four consensus-GT categories** (financial, multi-column, equations, receipts) and **F1 = 0.4615 on 20 independently human-verified forms**. The ranking change is larger than any real between-model difference in the benchmark.
+
+**Protocol rule we now enforce:** any model whose output contributed to consensus GT is excluded from cross-model ranking on that tier. The human-verified forms subset is the only tier used for headline accuracy claims.
+
+### Finding 2 — Confidence calibration flips the expected winner
+
+The open-source baseline (Tesseract) exposes per-word confidence that is strongly predictive of per-document F1: **Pearson r = 0.918, Spearman ρ = 0.925** (n=45, p<10⁻¹⁹). A Tesseract confidence below ~0.6 is a reliable rejection signal — you can send that document to human review instead of trusting the output.
+
+The commercial API models in this benchmark (Mistral OCR, Sarvam OCR) do **not** expose comparable per-document confidence. "Best accuracy" and "best production signal" are therefore different questions, and the answers diverge.
+
+### Finding 3 — Practitioner's edge cases dominate the final decision
+
+Three examples we hit during this benchmark that don't show up in academic OCR leaderboards:
+
+- **API page caps:** Sarvam OCR rejects any PDF > 10 pages. Four long federal-form PDFs (`fw2`=11pp, `f1040es`=16pp, `SF-85-questionnaire`=18pp, `sf2809`=18pp) failed before we even looked at accuracy.
+- **Wrapper API drift:** Surya required migrating to a new predictor architecture mid-benchmark; PaddleOCR required version-aware API handling; Sarvam OCR required an async job workflow rather than a single request/response. Benchmark reproducibility is a moving target.
+- **Language-pack cost:** Tesseract with `eng+hin+tel+tam+ben` is **2.24× the latency** of `eng` only on English forms, with **no measurable accuracy loss** (ΔCER = −0.0151, ΔF1 = −0.0015). The default multi-language configuration we shipped was paying for coverage it never used.
+
+## Phase 1 headline numbers (non-circular)
+
+| Tier | Rank | Models | F1 |
+|---|---|---|---|
+| **Forms** (n=20, human-verified) | Co-lead | Docling, Tesseract | 0.8220, 0.8122 |
+| **Consensus aggregate** (n=40, Mistral excluded) | Lead | Surya | 0.7717 |
+| **Operational reliability** (107-doc visible corpus) | Lead | Mistral OCR | 92/107 success |
+
+Full per-category tables, Wilcoxon pairwise tests, and error decomposition are in `docs/whitepaper/tables.md` and the paper.
+
+## Quick start
+
+### Reproducible setup (uv, recommended)
 ```bash
-# 1. Clone
-git clone <your-repo-url>
-cd ocr-eval-framework
+git clone https://github.com/ai-with-avinash/ocr-traps.git
+cd ocr-traps
 
-# 2. Install uv (https://docs.astral.sh/uv/) if not already present
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# 3. Create a Python 3.12 venv and sync locked deps
+curl -LsSf https://astral.sh/uv/install.sh | sh     # if uv not installed
 uv venv --python 3.12
 source .venv/bin/activate
-uv sync                         # runtime deps
-uv sync --group dev             # + dev tooling (pytest, ruff, pylint)
+uv sync                        # runtime deps
+uv sync --group dev            # + pytest, ruff, pylint
 
-# 4. Configure API keys
-cp .env.example .env
-# Edit .env with your API keys
+cp .env.example .env           # add Mistral + Sarvam API keys
+```
 
-# 5. Test dataset is already included — verify it's there
-ls test-dataset/
+### Reproduce the paper numbers
 
-# 6. Run evaluations
-python cli/run_single.py --model tesseract --input test-dataset/02_complex_tables/forms/0012199830.png
+```bash
+# Run each Phase 1 model on the full locked corpus
+python cli/run_model.py --model tesseract
+python cli/run_model.py --model docling
+python cli/run_model.py --model surya
 python cli/run_model.py --model mistral_ocr
-python cli/run_batch.py
+python cli/run_model.py --model paddleocr
+python tools/sarvam_rerun_throttled.py         # rate-limit friendly
 
-# 7. Generate report
-python cli/evaluate.py --results-dir results/latest
-```
+# Recompute all metrics against the expanded human-verified GT
+python tools/recompute_metrics.py
 
-### Legacy (pip + venv)
-The `requirements.txt` file is retained for compatibility. Prefer `uv sync` so your local environment matches CI.
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install --upgrade pip wheel setuptools
-pip install -r requirements.txt
-```
-
-### Windows
-```powershell
-# 1. Clone and setup
-git clone <your-repo-url>
-cd ocr-eval-framework
-
-# 2. Create and activate virtual environment
-python -m venv venv
-venv\Scripts\activate
-
-# 3. Install dependencies
-pip install --upgrade pip wheel setuptools
-pip install -r requirements.txt
-
-# 4. Install Tesseract (download from https://github.com/UB-Mannheim/tesseract/wiki)
-#    Add Tesseract install path to your system PATH
-
-# 5. Configure API keys
-copy .env.example .env
-# Edit .env with your API keys
-
-# 6. Test dataset is already included — verify it's there
-dir test-dataset
-
-# 7. Run evaluations
-python cli/run_single.py --model tesseract --input test-dataset/02_complex_tables/forms/0012199830.png
-python cli/run_model.py --model mistral_ocr
-python cli/run_batch.py
-
-# 8. Generate report
-python cli/evaluate.py --results-dir results/latest
-```
-
-## Test Dataset
-
-The curated test dataset (110-160 documents) is committed to the repo under `test-dataset/`. **No need to run the download script** — just clone the repo and you're ready to go.
-
-The dataset covers:
-- Printed English (invoices, contracts, reports)
-- Complex tables & layouts (financial, forms, nested)
-- Handwritten (English + Indian languages)
-- Indian languages (Hindi, Telugu, Tamil, Bengali)
-- European languages (Spanish, French, German)
-- Low quality scans (faded, skewed, noisy)
-- Mixed content (images, equations, receipts)
-- Organization internal documents
-
-Ground truth files are in `test-dataset/ground_truth/` and are automatically matched by the framework during evaluation.
-
-To add more documents later, you can still run:
-```bash
-python tools/download_dataset.py --output-dir ./test-dataset --samples 5
-```
-
-## Models Supported (10)
-
-| # | Model | Type | GPU Needed? | Setup |
-|---|-------|------|-------------|-------|
-| 1 | Tesseract | Open Source | No (CPU) | System install |
-| 2 | PaddleOCR | Open Source | Optional | pip install |
-| 3 | Docling/SmolDocling | Open Source | Optional | pip install |
-| 4 | Surya OCR | Open Source | Optional | pip install |
-| 5 | Mistral OCR | API | No | API key |
-| 6 | Sarvam Vision OCR | API | No | API key |
-| 7 | DeepSeek OCR | Open Source | Yes (16GB+) | HuggingFace model |
-| 8 | olmOCR | Open Source | Yes (16GB+) | HuggingFace model |
-| 9 | Qwen2.5-VL | Open Source | Yes (16GB+) | HuggingFace model |
-| 10 | GOT-OCR 2.0 | Open Source | Yes (8-16GB) | HuggingFace model |
-
-## Prerequisites
-
-### HuggingFace Setup (Optional — only if adding more datasets)
-
-The test dataset is already committed to the repo. HuggingFace login is only needed if you want to download additional documents using the download script.
-
-1. Create a free account at https://huggingface.co/join
-2. Go to https://huggingface.co/settings/tokens
-3. Click **"New token"** → name it anything → select **"Read"** access → create
-4. In your terminal:
-```bash
-   pip install huggingface_hub
-   huggingface-cli login
-   # Paste your token when prompted
-```
-5. Some datasets are **"gated"** — visit these pages and click **"Accept"** if prompted:
-   - https://huggingface.co/datasets/getomni/ocr-benchmark
-   - https://huggingface.co/datasets/unstructured-io/SCORE-Bench
-   - https://huggingface.co/datasets/aharley/rvl_cdip
-
-### API Keys (Mistral OCR, Sarvam OCR)
-
-API keys are stored in `.env` (gitignored) and automatically loaded at runtime.
-Copy `.env.example` to `.env` and fill in your credentials:
-```bash
-# macOS / Linux
-cp .env.example .env
-
-# Windows
-copy .env.example .env
-```
-
-Non-secret settings (model IDs, regions, languages) remain in `configs/config.yaml`.
-
-## First Run Checklist (Verified ✅)
-
-After setup, validate the pipeline works with this exact command:
-```bash
-python cli/run_single.py --model tesseract --input test-dataset/02_complex_tables/forms/0012199830.png
-```
-
-**Expected output:** ~495 chars extracted, CER ~0.53, latency ~4000ms
-
-Then test a cloud model (requires Mistral API key in `.env`):
-```bash
-python cli/run_single.py --model mistral_ocr --input test-dataset/02_complex_tables/forms/0012199830.png
-```
-
-**Expected output:** ~517 chars extracted, CER ~0.33, latency ~1700ms
-
-If both commands produce results with metrics, the framework is working correctly.
-
-## Usage
-```bash
-# List all available models
-python cli/run_batch.py --list
-
-# Run one model on one document
-python cli/run_single.py --model tesseract --input path/to/document.jpg
-
-# Run one model on the entire dataset
-python cli/run_model.py --model mistral_ocr
-
-# Run all models on all documents (full evaluation)
-python cli/run_batch.py
-
-# Run specific models only
-python cli/run_batch.py --models tesseract paddleocr mistral_ocr surya
-
-# Generate comparison report + CSV export
+# Generate HTML report + CSV export
 python cli/evaluate.py --results-dir results/latest --export-csv
 ```
 
-## Platform Notes
+Authoritative numeric sources cited in the paper:
+- `results/expanded_gt_metrics/corpus_summary.json`
+- `results/expanded_gt_metrics/model_summaries.json`
+- `results/expanded_gt_metrics/per_doc_metrics.csv`
+- `results/expanded_gt_metrics/statistical_tests.json`
+- `test-dataset/manifest.json`
 
-### Apple Silicon (macOS)
+## Adding a new OCR model
 
-- Models marked "Optional" GPU work on M-series chips via MPS
-- 32GB+ unified memory can handle 7B-9B parameter models
-- Set `device: mps` in config for Apple Silicon
-- For 30B+ models, use cloud GPU (Colab Pro or equivalent)
+1. Create `models/<your_model>.py`
+2. Inherit `BaseOCRModel`, implement `_ocr_impl(image_path) -> OCRResult`
+3. Decorate class with `@register_model` — no manual wiring needed
+4. Add non-secret config to `configs/config.yaml`
+5. Add API key reference (if any) to `.env.example`
 
-### Windows
+## Models integrated (10 wrappers; 6 benchmarked in Phase 1)
 
-- Python 3.10+ required — download from [python.org](https://www.python.org/downloads/)
-- Tesseract must be installed separately — download from [UB-Mannheim](https://github.com/UB-Mannheim/tesseract/wiki) and add to PATH
-- PaddleOCR: install `paddlepaddle` (CPU) or `paddlepaddle-gpu` (CUDA) — see [PaddlePaddle docs](https://www.paddlepaddle.org.cn/en/install/quick)
-- CUDA GPU users: install PyTorch with CUDA support — `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121`
-- Use `venv\Scripts\activate` instead of `source venv/bin/activate`
+| # | Model | Type | GPU needed | Phase 1 benchmarked? |
+|---|-------|------|-------------|---|
+| 1 | Tesseract | Open source | No (CPU) | ✅ |
+| 2 | PaddleOCR | Open source | Optional | Partial (financial only) |
+| 3 | Docling / SmolDocling | Open source | Optional | ✅ |
+| 4 | Surya OCR | Open source | Optional | ✅ |
+| 5 | Mistral OCR | API | No | ✅ (forms-only ranking) |
+| 6 | Sarvam Vision OCR | API | No | ✅ (GT-backed subset) |
+| 7 | DeepSeek OCR | Open source | Yes (16GB+) | Phase 2 |
+| 8 | olmOCR | Open source | Yes (16GB+) | Phase 2 |
+| 9 | Qwen2.5-VL | Open source | Yes (16GB+) | Phase 2 |
+| 10 | GOT-OCR 2.0 | Open source | Yes (8–16GB) | Phase 2 |
 
-### Linux
+## Test dataset
 
-- Install Tesseract via package manager: `sudo apt install tesseract-ocr tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-tam tesseract-ocr-ben`
-- CUDA GPU users: install PyTorch with CUDA — `pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121`
-- CPU-only: cloud API models work fine; open-source VLMs will be slow
+107 documents committed under `test-dataset/`. No download required.
 
-## Known Issues
+| Category | Docs | Ground truth |
+|---|---:|---|
+| Forms | 20 | Human-verified |
+| Financial tables | 15 | 9 consensus |
+| Multi-column | 17 | 11 consensus |
+| Equations | 14 | 10 consensus |
+| Receipts | 10 | 10 consensus (seeded from Mistral — see Finding 1) |
+| Handwritten Devanagari | 30 | None (32×32 char crops, not page-scale) |
+| Hindi document | 1 | None |
+| **Total** | **107** | **60 GT-evaluable** (20 human + 40 consensus) |
 
-- **Tesseract not found error**: Tesseract is a system-level install (C++ binary), not a pip package. The `pytesseract` pip package is just a Python wrapper. Install the engine separately:
-  - macOS: `brew install tesseract tesseract-lang`
-  - Linux: `sudo apt install tesseract-ocr tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-tam tesseract-ocr-ben`
-  - Windows: Download from [UB-Mannheim](https://github.com/UB-Mannheim/tesseract/wiki) and add to PATH
-- **Mistral SDK import**: Use `from mistralai.client import Mistral` (not `from mistralai import Mistral`) — the import path changed in SDK v2
-- **Tesseract multi-lang garbling**: Setting `lang: eng+hin+tel+tam+ben` can cause English text to be misread as Indic scripts. Use `lang: eng` for English-only documents in `configs/config.yaml`
-- **HuggingFace 401 errors**: Run `huggingface-cli login` and accept gated dataset terms (see Prerequisites section above)
-- **IndicPhotoOCR download fails**: The download script may fail for some image URLs. Clone the repo manually instead:
-```bash
-  git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git /tmp/IndicPhotoOCR
-  cp /tmp/IndicPhotoOCR/test_images/*.jpg test-dataset/04_indian_languages/hindi/
-  rm -rf /tmp/IndicPhotoOCR
+## Platform notes
+
+**Apple Silicon:** MPS works for the optional-GPU models. 32 GB+ unified memory handles the 7B–9B VLMs. Set `device: mps` in `configs/config.yaml`. 30B+ models need cloud GPU.
+
+**Linux:** `sudo apt install tesseract-ocr tesseract-ocr-hin tesseract-ocr-tel tesseract-ocr-tam tesseract-ocr-ben`. CUDA users install PyTorch with CUDA.
+
+**Windows:** Tesseract needs separate install via [UB-Mannheim](https://github.com/UB-Mannheim/tesseract/wiki). PowerShell activation is `venv\Scripts\Activate.ps1`.
+
+## Known issues
+
+- **Tesseract not found**: system binary, not a pip package. macOS `brew install tesseract tesseract-lang`; Linux apt; Windows UB-Mannheim.
+- **Mistral SDK import path**: SDK v2 uses `from mistralai.client import Mistral` not `from mistralai import Mistral`.
+- **Tesseract multi-lang latency**: see Finding 3 above. Default is `eng` only in `configs/config.yaml`.
+- **Sarvam 10-page cap**: 4 federal-form PDFs exceed the limit and are logged as failures. Split the PDFs upstream if coverage matters.
+- **PaddleOCR on Apple Silicon**: set `use_gpu: false` in `configs/config.yaml` if GPU errors.
+
+## Project layout
+
 ```
-- **PaddleOCR on Apple Silicon**: If you get GPU errors, set `use_gpu: false` in `configs/config.yaml` under the `paddleocr` section
-- **Large VLM models (DeepSeek, Qwen, olmOCR)**: First run downloads several GB of model weights. Ensure sufficient disk space and a stable internet connection
-
-## Documentation
-
-| File | Description |
-|------|-------------|
-| [docs/OCR_Whitepaper_Plan_v2.docx](docs/OCR_Whitepaper_Plan_v2.docx) | Whitepaper plan — research methodology, evaluation criteria, and paper outline |
-| [docs/OCR_Test_Dataset_Tracker_v2.xlsx](docs/OCR_Test_Dataset_Tracker_v2.xlsx) | Test dataset tracker — document inventory, model registry, metrics guide, team assignments, references |
-
-## Project Structure
+ocr-traps/
+├── cli/                    # run_single, run_model, run_batch, evaluate
+├── models/                 # 10 OCR wrappers (self-registering)
+├── utils/                  # runner, metrics, report, helpers
+├── tools/                  # sarvam_rerun_throttled, recompute_metrics, generate_charts, ...
+├── configs/config.yaml     # non-secret settings only
+├── .env                    # API keys (gitignored)
+├── test-dataset/           # 107 documents + ground truth
+├── results/                # timestamped run dirs (gitignored)
+└── docs/whitepaper/        # paper source (LaTeX + tables.md + figures)
 ```
-ocr-eval-framework/
-├── scripts/
-│   ├── setup_env.sh           # Environment setup script (macOS/Linux)
-│   └── run_phase2_chain.sh   # Phase 2 chain execution
-├── download_dataset.py       # Download additional test documents
-├── requirements.txt          # Python dependencies
-├── .env.example              # API key template (copy to .env)
-├── docs/
-│   ├── OCR_Whitepaper_Plan_v2.docx       # Research plan & paper outline
-│   └── OCR_Test_Dataset_Tracker_v2.xlsx  # Dataset tracker (9 sheets)
-├── configs/
-│   └── config.yaml           # Model settings (non-secret config)
-├── models/
-│   ├── __init__.py           # Model registry
-│   ├── base.py               # Base interface + OCRResult dataclass
-│   ├── tesseract_model.py    # Tesseract (baseline)
-│   ├── paddleocr_model.py    # PaddleOCR
-│   ├── docling_model.py      # Docling / SmolDocling
-│   ├── surya_model.py        # Surya OCR
-│   ├── mistral_ocr.py        # Mistral OCR
-│   ├── deepseek_ocr.py       # DeepSeek OCR
-│   ├── olmocr_model.py       # olmOCR
-│   ├── qwen_vl.py            # Qwen2.5-VL
-│   ├── got_ocr.py            # GOT-OCR 2.0
-│   └── sarvam_ocr.py         # Sarvam Vision OCR
-├── utils/
-│   ├── metrics.py            # CER, WER, F1, table accuracy
-│   ├── runner.py             # Batch execution engine
-│   ├── report.py             # HTML report generator
-│   └── helpers.py            # Shared utilities
-├── run_single.py             # One model + one document
-├── run_model.py              # One model + all documents
-├── run_batch.py              # All models + all documents
-├── evaluate.py               # Compute metrics + generate report
-├── test-dataset/             # Curated test documents (committed to repo)
-└── results/                  # Evaluation results (gitignored)
+
+## Citation
+
+```bibtex
+@software{seethalam_ocrtraps_2026,
+  author  = {Seethalam, Avinash},
+  title   = {ocr-traps: A Practitioner's OCR Benchmark},
+  year    = {2026},
+  url     = {https://github.com/ai-with-avinash/ocr-traps},
+  orcid   = {0009-0007-1068-6156}
+}
 ```
+
+Preprint (arXiv) and Zenodo DOI links are added here once published. See `CITATION.cff` for structured metadata.
+
+## License
+
+Code is released under the [MIT License](./LICENSE). The companion paper and this README are released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+## Contact
+
+Avinash Seethalam · GenAI Practice · [sreethalam.avinash@gmail.com](mailto:sreethalam.avinash@gmail.com) · [ORCID](https://orcid.org/0009-0007-1068-6156)
