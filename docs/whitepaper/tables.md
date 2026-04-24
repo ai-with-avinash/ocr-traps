@@ -39,7 +39,7 @@ Caption rule:
 | Mistral OCR | Cloud API | 92/107 (86.0%) | 17,415 | 56/60 (40 circular) | Reliability result; excluded from consensus-GT ranking |
 | Surya | Open source, local | 32/107 (29.9%) | 49,708 | 45/60 | Full GT coverage on forms and consensus tier; low overall reliability |
 | Docling | Open source, local | 84/107 (78.5%) | 7,460 | 57/60 | Structure-preserving, deletion-dominant profile |
-| Sarvam OCR | Cloud API | 0/107 (0.0%)\* | 4,688 | 22/60 | Fast but unreliable; current re-execution produced no visible-corpus output |
+| Sarvam OCR | Cloud API | 51/55 GT-backed (92.7%)\* | 7,910 | 51/60 | Competitive accuracy on GT-backed subset; 10-page API cap blocks 4 long PDFs |
 | Tesseract | Open source, local CPU | 76/107 (71.0%) | 9,852 | 60/60 | Baseline reference |
 | PaddleOCR | Open source, local | 4/107 (3.7%) | — | 3/60 | Partial financial-only run; not ranked overall |
 
@@ -48,7 +48,7 @@ Caption rule:
 - Success denominator is the full visible corpus (`n=107`).
 - Mean latency is computed over successful visible-corpus runs.
 - PaddleOCR is shown for coverage transparency, not as a full-run peer.
-- `*` Sarvam rate reflects the current checked-in re-execution batch only.
+- `*` Sarvam was executed on the 55 GT-backed documents only (20 human-verified forms + 35 consensus-GT docs — receipts/equations/financial/multi-column). Four failures were all PDFs exceeding the Sarvam 10-page API cap (`fw2`=11pp, `f1040es`=16pp, `SF-85-questionnaire`=18pp, `sf2809`=18pp).
 
 ## Table 3: Human-Verified Forms Results
 
@@ -59,6 +59,7 @@ Unbiased cross-model comparison (`n=20` human-verified forms; `n` reflects each 
 | Docling | 20 | 0.4125 | 0.4980 | 0.8220 | 0.9147 |
 | Tesseract | 20 | 0.3607 | 0.4845 | 0.8122 | 0.8353 |
 | Surya | 5 | 0.3028 | 0.4483 | 0.7710 | 0.7943 |
+| Sarvam OCR | 11 | 0.5018 | 0.9091 | 0.7313 | 0.6959 |
 | Mistral OCR | 16 | 0.6791 | 0.7310 | 0.4615 | 0.8918 |
 
 Caption rule:
@@ -75,7 +76,7 @@ Mistral excluded because of circularity. PaddleOCR excluded because its checked-
 |:---|---:|---:|---:|---:|---:|---:|
 | Surya | 40 | 0.5673 | 0.7707 | 0.7717 | 0.7275 | 0.8650 |
 | Docling | 37 | 0.4417 | 0.5308 | 0.7294 | 0.8090 | 0.7098 |
-| Sarvam OCR | 22 | 0.6544 | 0.7859 | 0.7290 | 0.6801 | 0.8524 |
+| Sarvam OCR | 40 | 0.6192 | 0.8080 | 0.7230 | 0.6469 | 0.8849 |
 | Tesseract | 40 | 0.5110 | 0.7585 | 0.6221 | 0.5904 | 0.7087 |
 
 Caption rule:
@@ -92,7 +93,7 @@ Token-level F1 by category.
 | Docling | 0.8220 | 0.7003 | 0.7827 (`n=9`) | 0.7587 | 0.6729 (`n=9`) |
 | Tesseract | 0.8122 | 0.6086 | 0.7352 | 0.5957 | 0.5362 |
 | Surya | 0.7710 (`n=5`) | 0.8081 | 0.8425 | 0.7624 | 0.6704 |
-| Sarvam OCR | 0.7592 (`n=5`) | 0.7667 | 0.7295 | 0.5566 (`n=2`) | — |
+| Sarvam OCR | 0.7313 (`n=11`) | 0.7619 (`n=9`) | 0.7410 (`n=11`) | 0.7227 (`n=10`) | 0.6684 (`n=10`) |
 | Mistral OCR | 0.4615 (`n=16`) | — | — | — | — |
 | PaddleOCR | — | 0.6846 (`n=7`) | — | — | — |
 
