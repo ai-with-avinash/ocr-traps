@@ -99,7 +99,11 @@ class EvalRunner:
         else:
             metrics_list = []
 
-        already_done = {r.get("document_path") for r in results if r.get("success")}
+        already_done = {
+            str(Path(r["document_path"]).resolve(strict=False))
+            for r in results
+            if r.get("success") and r.get("document_path")
+        }
 
         for doc_path in tqdm(docs, desc=model.display_name):
             cat_slug = get_document_category(str(doc_path)).replace("/", "_")
