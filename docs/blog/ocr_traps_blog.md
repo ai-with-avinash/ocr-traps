@@ -2,6 +2,9 @@
 
 *A practitioner's tour through the structural mistakes that make most OCR evaluations lie to you, with the numbers from a 6-model, 107-document benchmark to show what each trap looks like when you actually measure it.*
 
+> **Published:** [Medium — 3 OCR Traps](https://medium.com/@buildwithavinashai/3-ocr-traps-4cfd1ef0ea6b)
+> **Companion paper:** [github.com/ai-with-avinash/ocr-traps](https://github.com/ai-with-avinash/ocr-traps) · arXiv preprint pending · [Zenodo DOI 10.5281/zenodo.19741773](https://doi.org/10.5281/zenodo.19741773)
+
 ---
 
 **TL;DR**

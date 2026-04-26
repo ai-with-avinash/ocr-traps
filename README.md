@@ -5,6 +5,7 @@
 [![uv](https://img.shields.io/badge/built%20with-uv-000000.svg)](https://docs.astral.sh/uv/)
 [![arXiv](https://img.shields.io/badge/arXiv-pending-b31b1b.svg)](#citation)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19741773.svg)](https://doi.org/10.5281/zenodo.19741773)
+[![Medium](https://img.shields.io/badge/Medium-3%20OCR%20Traps-12100E.svg?logo=medium&logoColor=white)](https://medium.com/@buildwithavinashai/3-ocr-traps-4cfd1ef0ea6b)
 
 Reproducible benchmark of six OCR systems on 107 enterprise documents, with a focus on the structural traps that invalidate most practitioner OCR bake-offs.
 
