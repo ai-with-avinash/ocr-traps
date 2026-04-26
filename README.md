@@ -14,11 +14,15 @@ Reproducible benchmark of six OCR systems on 107 enterprise documents, with a fo
 
 Most internal OCR evaluations produce confident rankings that invert the moment the evaluation protocol changes. After running ten integrated models over 107 documents, we surface three reproducible traps that every enterprise team hits:
 
-### Finding 1 — Consensus-seeded ground truth is circular
+### Finding 1 — Consensus-seeded ground truth leaks at practitioner-relevant magnitude
 
-If you seed ground truth from model *X*'s output and then score model *X* against that text, *X* will look perfect. In our corpus, Mistral OCR scores **F1 ≈ 1.00 on the four consensus-GT categories** (financial, multi-column, equations, receipts) and **F1 = 0.4615 on 20 independently human-verified forms**. The ranking change is larger than any real between-model difference in the benchmark.
+The underlying principle (do not score a model against ground truth its own output helped construct) is the deployment-side cousin of the well-known train-on-test antipattern. The contribution here is not the principle but the **empirical magnitude on a deployed practitioner corpus** and a concrete protocol rule.
 
-**Protocol rule we now enforce:** any model whose output contributed to consensus GT is excluded from cross-model ranking on that tier. The human-verified forms subset is the only tier used for headline accuracy claims.
+The mechanism is GT-construction leakage, not training contamination: a seed model's output is shown to human verifiers, who accept or edit rather than transcribe blind, and the resulting "human-verified" reference inherits the seed model's idiosyncrasies. Practitioner teams routinely conflate "human-edited" with "human-verified" and report the result as unbiased ground truth.
+
+In our corpus, Mistral OCR scores **F1 ≈ 1.00 on the four consensus-seeded categories** (financial, multi-column, equations, receipts) and **F1 = 0.4615 on 20 forms transcribed independently of any model output**. The gap is larger than any genuine between-model difference in the benchmark and reflects evaluation protocol, not model quality.
+
+**Protocol rule we now enforce:** any model whose output contributed to a tier's reference text is excluded from cross-model ranking on that tier. The independently transcribed forms subset is the only tier used for headline accuracy claims.
 
 ### Finding 2 — Confidence calibration flips the expected winner
 
